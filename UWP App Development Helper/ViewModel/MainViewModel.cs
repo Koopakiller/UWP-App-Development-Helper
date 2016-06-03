@@ -24,6 +24,12 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 },
                 new HamburgerMenuItemViewModel()
                 {
+                    Header = "Font Icons",
+                    Glyph = "\uE128",
+                    ViewModel = new FontIconViewModel(),
+                },
+                new HamburgerMenuItemViewModel()
+                {
                     Header = "About",
                     Glyph = "\uE946",
                     ViewModel = new AboutViewModel(),
