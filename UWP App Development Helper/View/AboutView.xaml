@@ -1,0 +1,41 @@
+﻿<view:ViewBase
+    x:Class="Koopakiller.Apps.UwpAppDevelopmentHelper.View.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:Koopakiller.Apps.UwpAppDevelopmentHelper.View"
+    xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:AboutViewModel}">
+
+    <Grid >
+
+        <StackPanel Margin="10">
+            <TextBlock>
+                <Run Text="Assembly Version: "/>
+                <Run Text="{Binding AssemblyVersion}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="Assembly File Version: "/>
+                <Run Text="{Binding AssemblyFileVersion}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="Package Version: "/>
+                <Run Text="{Binding PackageVersion}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="Assembly Copyright: "/>
+                <Run Text="{Binding AssemblyCopyright}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="Product: "/>
+                <Run Text="{Binding AssemblyProduct}"/>
+            </TextBlock>
+            <TextBlock>
+                <Run Text="Package Architecture: "/>
+                <Run Text="{Binding PackageArchitecture}"/>
+            </TextBlock>
+        </StackPanel>
+        
+    </Grid>
+</view:ViewBase>
