@@ -9,6 +9,31 @@
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:FontIconViewModel}">
 
     <Grid >
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox FontSize="24" PlaceholderText="Search Icons" Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+        <GridView Margin="0" Grid.Row="1" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" HorizontalAlignment="Center">
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="IsHoldingEnabled" Value="False"/>
+                    <Setter Property="Margin" Value="5"/>
+                </Style>
+            </GridView.ItemContainerStyle>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="100" Height="100" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" Padding="5">
+                        <FontIcon FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                  Glyph="{Binding Chars[0]}"
+                                  Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </view:ViewBase>

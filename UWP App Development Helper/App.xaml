@@ -10,24 +10,24 @@
         
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Default">
-                    <Color x:Key="NeutralDarkColorColor">#202020</Color>
-                    <Color x:Key="NeutralLightColorColor">#E0E0E0</Color>
-                    <Color x:Key="NeutralDarkColor2Color">#303030</Color>
-                    <Color x:Key="NeutralLightColor2Color">#D0D0D0</Color>
+                    <Color x:Key="NeutralDarkColor">#202020</Color>
+                    <Color x:Key="NeutralLightColor">#E0E0E0</Color>
+                    <Color x:Key="NeutralDark2Color">#303030</Color>
+                    <Color x:Key="NeutralLight2Color">#D0D0D0</Color>
 
-                    <SolidColorBrush x:Key="NeutralDarkColor" Color="{ThemeResource NeutralDarkColorColor}"/>
-                    <SolidColorBrush x:Key="NeutralLightColor" Color="{ThemeResource NeutralLightColorColor}"/>
-                    <SolidColorBrush x:Key="NeutralDarkColor2" Color="{ThemeResource NeutralDarkColor2Color}"/>
-                    <SolidColorBrush x:Key="NeutralLightColor2" Color="{ThemeResource NeutralLightColor2Color}"/>
+                    <SolidColorBrush x:Key="NeutralDark" Color="{ThemeResource NeutralDarkColor}"/>
+                    <SolidColorBrush x:Key="NeutralLight" Color="{ThemeResource NeutralLightColor}"/>
+                    <SolidColorBrush x:Key="NeutralDark2" Color="{ThemeResource NeutralDark2Color}"/>
+                    <SolidColorBrush x:Key="NeutralLight2" Color="{ThemeResource NeutralLight2Color}"/>
                 </ResourceDictionary>
 
             </ResourceDictionary.ThemeDictionaries>
 
             <Style TargetType="TextBlock">
-                <Setter Property="Foreground" Value="{ThemeResource NeutralDarkColor}"/>
+                <Setter Property="Foreground" Value="{ThemeResource NeutralDark}"/>
             </Style>
             <Style TargetType="Grid">
-                <Setter Property="Background" Value="{ThemeResource NeutralLightColor}"/>
+                <Setter Property="Background" Value="{ThemeResource NeutralLight}"/>
             </Style>
 
             <ui:AutoTypeTemplateSelector x:Key="AutoTypeTemplateSelector"/>
