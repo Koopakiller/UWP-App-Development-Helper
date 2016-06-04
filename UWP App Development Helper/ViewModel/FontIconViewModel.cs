@@ -22,7 +22,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         private IReadOnlyCollection<FontIcon> _filteredMdl2FontIcons;
         private string _searchTerm;
-        private bool _isLoading;
+        private bool _isLoading = true;
         private CancellationTokenSource _lastFilterFontIconListCancellationTokenSource = new CancellationTokenSource();
 
         #endregion
@@ -32,7 +32,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public FontIconViewModel()
         {
             this.LoadFontIconsCommand = new RelayCommand(async () => await this.LoadFontIconsAsync());
-            this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync(new CancellationTokenSource( )));
+            this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync(new CancellationTokenSource()));
 
             this.PropertyChanged += this.OnPropertyChanged;
         }
@@ -140,7 +140,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             this._lastFilterFontIconListCancellationTokenSource = cts;
 
             await DispatcherHelper.RunAsync(() => this.IsLoading = true);
-        await    Task.Delay(1000);
+            await Task.Delay(250);
             const int code = 1033;
 
             IReadOnlyCollection<FontIcon> result;

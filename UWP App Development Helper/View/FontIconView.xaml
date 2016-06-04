@@ -34,7 +34,9 @@
             <CheckBox IsChecked="{Binding SearchInTags, Mode=TwoWay}" Content="Tags"/>
         </StackPanel>
 
-        <ProgressBar IsIndeterminate="True" Grid.Row="2" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+        <Border Grid.Row="2" Height="15">
+        <ProgressBar IsIndeterminate="True" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+        </Border>
         
         <GridView Margin="0" Grid.Row="3" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" HorizontalAlignment="Center">
             <GridView.ItemContainerStyle>
