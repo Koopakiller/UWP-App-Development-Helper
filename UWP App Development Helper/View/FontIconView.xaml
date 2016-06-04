@@ -6,7 +6,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="using:Koopakiller.Apps.UwpAppDevelopmentHelper.View"
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:FontIconViewModel}">
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loading">
+            <core:InvokeCommandAction Command="{Binding LoadFontIconsCommand}"  />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
 
     <Grid >
 
@@ -24,7 +32,7 @@
             <CheckBox IsChecked="{Binding SearchInEnumValue, Mode=TwoWay}" Content="Enum-Value"/>
             <CheckBox IsChecked="{Binding SearchInTags, Mode=TwoWay}" Content="Tags"/>
         </StackPanel>
-        
+
         <GridView Margin="0" Grid.Row="2" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" HorizontalAlignment="Center">
             <GridView.ItemContainerStyle>
                 <Style TargetType="GridViewItem">

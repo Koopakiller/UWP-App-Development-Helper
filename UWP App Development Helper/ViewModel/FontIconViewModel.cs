@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Xml.Linq;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
@@ -21,52 +21,49 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public FontIconViewModel()
         {
-            this.LoadMdl2().Wait();
-
-            this.UpdateFilteredView();
+            this.LoadFontIconsCommand = new RelayCommand(this.LoadFontIcons);
         }
 
-        private async Task LoadMdl2()
+        public ICommand LoadFontIconsCommand { get; }
+
+        private async void LoadFontIcons()
         {
-            try
+            await this.LoadFontIconsAsync();
+        }
+
+        private async Task LoadFontIconsAsync()
+        {
+            var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
+
+            var xmlText = await FileIO.ReadTextAsync(xmlFile, UnicodeEncoding.Utf8);
+
+            var doc = XDocument.Parse(xmlText);
+
+            this.Mdl2 = new FontIconCollection(
+                doc.Root.Elements("FontIcon")
+                    .Select(x => new FontIcon(x.Elements("Code")
+                        .Select(y => (char)Convert.ToInt32(y.Value, 16))
+                        .ToArray(),
+                        x.Elements("Tags")
+                            .Select(y => new TagCollection(y.Elements("Tag")
+                                .Select(z => z.Value)
+                                .ToArray())
+                            {
+                                LanguageCode = int.Parse(y.Attribute("Language").Value)
+                            })
+                            .ToList(),
+                        x.Elements("Description")
+                            .Select(y => new Description(int.Parse(y.Attribute("Language").Value), y.Value))
+                            .ToList())
+                    {
+                        EnumValue = x.Element("EnumValue")?.Value,
+                    })
+                    .ToList())
             {
-                var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
+                FontName = "Segoe MDL2 Assets",
+            };
 
-                //using (var stream = await xmlFile.OpenStreamForReadAsync())
-                //{
-                var xmlText = await FileIO.ReadTextAsync(xmlFile, UnicodeEncoding.Utf8);
-
-                var doc = XDocument.Parse(xmlText);
-
-                this.Mdl2 = new FontIconCollection(
-                    doc.Root.Elements("FontIcon")
-                        .Select(x => new FontIcon(x.Elements("Code")
-                            .Select(y => (char)Convert.ToInt32(y.Value, 16))
-                            .ToArray(),
-                            x.Elements("Tags")
-                                .Select(y => new TagCollection(y.Elements("Tag")
-                                    .Select(z => z.Value)
-                                    .ToArray())
-                                {
-                                    LanguageCode = int.Parse(y.Attribute("Language").Value)
-                                })
-                                .ToList(),
-                            x.Elements("Description")
-                                .Select(y => new Description(int.Parse(y.Attribute("Language").Value), y.Value))
-                                .ToList())
-                        {
-                            EnumValue = x.Element("EnumValue")?.Value,
-                        })
-                        .ToList())
-                {
-                    FontName = "Segoe MDL2 Assets",
-                };
-                //}
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            this.UpdateFilteredView();
         }
 
         public string SearchTerm
