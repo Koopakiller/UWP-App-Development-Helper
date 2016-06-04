@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Xml.Linq;
@@ -22,6 +23,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         private IReadOnlyCollection<FontIcon> _filteredMdl2FontIcons;
         private string _searchTerm;
         private bool _isLoading;
+        private CancellationTokenSource _lastFilterFontIconListCancellationTokenSource = new CancellationTokenSource();
 
         #endregion
 
@@ -30,7 +32,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public FontIconViewModel()
         {
             this.LoadFontIconsCommand = new RelayCommand(async () => await this.LoadFontIconsAsync());
-            this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync());
+            this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync(new CancellationTokenSource( )));
 
             this.PropertyChanged += this.OnPropertyChanged;
         }
@@ -76,7 +78,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 FontName = "Segoe MDL2 Assets",
             };
 
-            await this.FilterFontIconListAsync();
+            await this.FilterFontIconListAsync(new CancellationTokenSource());
         }
 
         public string SearchTerm
@@ -132,10 +134,13 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-        private async Task FilterFontIconListAsync()
+        private async Task FilterFontIconListAsync(CancellationTokenSource cts)
         {
+            this._lastFilterFontIconListCancellationTokenSource.Cancel();
+            this._lastFilterFontIconListCancellationTokenSource = cts;
+
             await DispatcherHelper.RunAsync(() => this.IsLoading = true);
-            
+        await    Task.Delay(1000);
             const int code = 1033;
 
             IReadOnlyCollection<FontIcon> result;
@@ -148,7 +153,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 var parts = this.SearchTerm.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 result =
                     this.Mdl2.FontIcons
-                             .Select(x => Tuple.Create(x, 
+                             .Select(x => Tuple.Create(x,
                                                 (this.SearchInTags ? x.Tags
                                                                       .FirstOrDefault(y => y.LanguageCode == code)
                                                                       .LanguageSpecific
@@ -163,9 +168,13 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                              .Select(x => x.Item1)
                              .ToList();
             }
-            await DispatcherHelper.RunAsync(() => this.FilteredMdl2FontIcons = result);
 
-            await DispatcherHelper.RunAsync(() => this.IsLoading = false);
+            if (!cts.IsCancellationRequested)
+            {
+                await DispatcherHelper.RunAsync(() => this.FilteredMdl2FontIcons = result);
+
+                await DispatcherHelper.RunAsync(() => this.IsLoading = false);
+            }
         }
 
     }

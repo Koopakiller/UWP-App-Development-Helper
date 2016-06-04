@@ -56,7 +56,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.DevelopmentHelperCode
             {
                 var hex1 = new FileInfo(files[i]).Name;
                 hex1 = hex1.Substring(0, hex1.IndexOf(".", StringComparison.Ordinal));
-                if (!l.ContainsKey(hex1))
+                if (!l.Any(x => x.Value.Any(y => y == hex1)))
                 {
                     l.Add(hex1, new List<string>());
                 }
@@ -247,6 +247,24 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.DevelopmentHelperCode
             }
 
             source.Save("chars4.xml");
+        }
+
+        private void buttonDistinctTags_Click(object sender, EventArgs e)
+        {
+            var source = XDocument.Parse(File.ReadAllText("chars4.xml", Encoding.UTF8));
+
+            foreach (var tags in source.Descendants("Tags"))
+            {
+                var tagNames = tags.Elements("Tag").Select(x => x.Value).Distinct().ToList();
+                tags.RemoveAll();
+                tags.Add(new XAttribute("Language", "1033"));
+                foreach (var tag in tagNames)
+                {
+                    tags.Add(new XElement("Tag", tag));
+                }
+            }
+
+            source.Save("chars5.xml");
         }
     }
 }

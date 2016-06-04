@@ -96,29 +96,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e008</Code>
-    <Tags Language="1033">
-      <Tag>check</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>CheckMarkZeroWidthLegacy</EnumValue>
-    <Description Language="1033">Check mark (zero width)</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e009</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>square</Tag>
-      <Tag>fill</Tag>
-      <Tag>size</Tag>
-      <Tag>full</Tag>
-    </Tags>
-    <EnumValue>CheckboxFillZeroWidthLegacy</EnumValue>
-    <Description Language="1033">Fill (zero width)</Description>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e00a</Code>
     <!--  -->
@@ -152,15 +129,6 @@
     <Code>eb52</Code>
     <Tags Language="1033">
       <Tag>heart</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e00c</Code>
-    <Tags Language="1033">
-      <Tag>heart</Tag>
-      <Tag>broken</Tag>
       <Tag>fill</Tag>
     </Tags>
   </FontIcon>
@@ -257,74 +225,6 @@
     <EnumValue>ScrollChevronDownLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e012</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e013</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e014</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e015</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e016</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-    <EnumValue>ScrollChevronLeftBoldLegacy</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e017</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-    <EnumValue>ScrollChevronRightBoldLegacy</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e018</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-    <EnumValue>ScrollChevronUpBoldLegacy</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e019</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-    <EnumValue>ScrollChevronDownBoldLegacy</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e052</Code>
     <!--  -->
@@ -364,17 +264,6 @@
     <EnumValue>Accept</EnumValue>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e082</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-    <EnumValue>RatingStarFillReducedPaddingHTMLLegacy</EnumValue>
-    <Description Language="1033">Solid star (reduced padding for use in HTML)</Description>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e087</Code>
     <!--  -->
@@ -409,102 +298,6 @@
     <EnumValue>FindLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e096</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e097</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e098</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e099</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e09a</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e09b</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e09c</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e09d</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e09e</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e09f</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0a0</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0a1</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e0a2</Code>
     <!--  -->
@@ -516,14 +309,6 @@
     </Tags>
     <EnumValue>CheckboxCompositeLegacy</EnumValue>
     <Description Language="1033">Composite</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0a5</Code>
-    <Tags Language="1033">
-      <Tag>heart</Tag>
-      <Tag>fill</Tag>
-    </Tags>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -562,110 +347,12 @@
     <Description Language="1033">Mirrored version of E0D5</Description>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e0ad</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0ae</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>right</Tag>
-    </Tags>
-    <EnumValue>ArrowHTMLMirroredLegacy</EnumValue>
-    <Description Language="1033">Mirrored version of E0D5</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0b4</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-    <EnumValue>RatingStarFillLegacy</EnumValue>
-    <Description Language="1033">Solid star</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0b5</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-    <EnumValue>RatingStarFillSmallLegacy</EnumValue>
-    <Description Language="1033">Small star</Description>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e0b8</Code>
     <Tags Language="1033">
       <Tag>rectangle</Tag>
       <Tag>top</Tag>
       <Tag>fill</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0c4</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0d5</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>left</Tag>
-    </Tags>
-    <EnumValue>ArrowHTMLLegacy</EnumValue>
-    <Description Language="1033">Arrow for HTML use</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0e2</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0e3</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0e4</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0e5</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e0e7</Code>
-    <Tags Language="1033">
-      <Tag>check</Tag>
-      <Tag>outline</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -741,6 +428,7 @@
     <Tags Language="1033">
       <Tag>x</Tag>
       <Tag>delete</Tag>
+      <Tag>cancel</Tag>
     </Tags>
     <EnumValue>Clear</EnumValue>
   </FontIcon>
@@ -790,14 +478,6 @@
     <EnumValue>Cancel</EnumValue>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e10b</Code>
-    <Tags Language="1033">
-      <Tag>check</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e10c</Code>
     <!--  -->
@@ -837,9 +517,6 @@
       <Tag>home</Tag>
       <Tag>house</Tag>
       <Tag>outline</Tag>
-      <Tag>house</Tag>
-      <Tag>home</Tag>
-      <Tag>outline</Tag>
     </Tags>
     <EnumValue>Home</EnumValue>
   </FontIcon>
@@ -853,31 +530,6 @@
       <Tag>up</Tag>
     </Tags>
     <EnumValue>Up</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e111</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e112</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e113</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -923,6 +575,7 @@
       <Tag>update</Tag>
       <Tag>arrow</Tag>
       <Tag>circle</Tag>
+      <Tag>repeat</Tag>
     </Tags>
     <EnumValue>Sync</EnumValue>
   </FontIcon>
@@ -935,6 +588,7 @@
       <Tag>download</Tag>
       <Tag>arrow</Tag>
       <Tag>down</Tag>
+      <Tag>arrow-down</Tag>
     </Tags>
     <EnumValue>Download</EnumValue>
   </FontIcon>
@@ -948,16 +602,6 @@
       <Tag>outline</Tag>
     </Tags>
     <EnumValue>Mail</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e11a</Code>
-    <Tags Language="1033">
-      <Tag>search</Tag>
-      <Tag>outline</Tag>
-      <Tag>magnifier</Tag>
-    </Tags>
-    <EnumValue>FindLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -981,8 +625,7 @@
       <Tag>upload</Tag>
       <Tag>arrow</Tag>
       <Tag>up</Tag>
-      <Tag>arrow</Tag>
-      <Tag>up</Tag>
+      <Tag>arrow-up</Tag>
     </Tags>
     <EnumValue>Upload</EnumValue>
   </FontIcon>
@@ -995,6 +638,7 @@
       <Tag>smile</Tag>
       <Tag>emoji</Tag>
       <Tag>grin</Tag>
+      <Tag>smiley</Tag>
     </Tags>
     <EnumValue>Emoji</EnumValue>
   </FontIcon>
@@ -1020,6 +664,7 @@
       <Tag>outline</Tag>
       <Tag>arrow</Tag>
       <Tag>left</Tag>
+      <Tag>arrow-left</Tag>
     </Tags>
     <EnumValue>LeaveChat</EnumValue>
   </FontIcon>
@@ -1033,6 +678,8 @@
       <Tag>outline</Tag>
       <Tag>arrow</Tag>
       <Tag>right</Tag>
+      <Tag>arrow-right</Tag>
+      <Tag>mail</Tag>
     </Tags>
     <EnumValue>MailForward</EnumValue>
   </FontIcon>
@@ -1078,6 +725,7 @@
       <Tag>camera</Tag>
       <Tag>turn</Tag>
       <Tag>outline</Tag>
+      <Tag>arrow</Tag>
     </Tags>
     <EnumValue>RotateCamera</EnumValue>
   </FontIcon>
@@ -1104,6 +752,8 @@
       <Tag>right</Tag>
       <Tag>box</Tag>
       <Tag>rectangle</Tag>
+      <Tag>outline</Tag>
+      <Tag>arrow-right</Tag>
     </Tags>
     <EnumValue>ClosePane</EnumValue>
   </FontIcon>
@@ -1117,6 +767,8 @@
       <Tag>left</Tag>
       <Tag>box</Tag>
       <Tag>rectangle</Tag>
+      <Tag>outline</Tag>
+      <Tag>arrow-left</Tag>
     </Tags>
     <EnumValue>OpenPane</EnumValue>
   </FontIcon>
@@ -1129,6 +781,7 @@
       <Tag>world</Tag>
       <Tag>globe</Tag>
       <Tag>fill</Tag>
+      <Tag>earth</Tag>
     </Tags>
     <EnumValue>World</EnumValue>
   </FontIcon>
@@ -1153,6 +806,7 @@
     <Tags Language="1033">
       <Tag>control</Tag>
       <Tag>panel</Tag>
+      <Tag>newspaper</Tag>
     </Tags>
     <EnumValue>PreviewLink</EnumValue>
   </FontIcon>
@@ -1191,6 +845,7 @@
       <Tag>camera</Tag>
       <Tag>outline</Tag>
       <Tag>cable</Tag>
+      <Tag>remote-release</Tag>
     </Tags>
     <EnumValue>AttachCamera</EnumValue>
   </FontIcon>
@@ -1204,6 +859,7 @@
       <Tag>magnifier</Tag>
       <Tag>zoom</Tag>
       <Tag>zoom-in</Tag>
+      <Tag>zoomin</Tag>
     </Tags>
     <EnumValue>ZoomIn</EnumValue>
   </FontIcon>
@@ -1216,6 +872,8 @@
       <Tag>editing</Tag>
       <Tag>right align</Tag>
       <Tag>list</Tag>
+      <Tag>dot</Tag>
+      <Tag>right-align</Tag>
     </Tags>
     <EnumValue>Bookmarks</EnumValue>
   </FontIcon>
@@ -1227,6 +885,7 @@
     <Tags Language="1033">
       <Tag>blank</Tag>
       <Tag>outline</Tag>
+      <Tag>shape</Tag>
     </Tags>
     <EnumValue>Document</EnumValue>
   </FontIcon>
@@ -1239,6 +898,7 @@
       <Tag>blank</Tag>
       <Tag>outline</Tag>
       <Tag>lock</Tag>
+      <Tag>shape</Tag>
     </Tags>
     <EnumValue>ProtectedDocument</EnumValue>
   </FontIcon>
@@ -1270,6 +930,7 @@
     <Tags Language="1033">
       <Tag>comment</Tag>
       <Tag>outline</Tag>
+      <Tag>message</Tag>
     </Tags>
     <EnumValue>Comment</EnumValue>
   </FontIcon>
@@ -1283,8 +944,6 @@
     <Tags Language="1033">
       <Tag>rectangle</Tag>
       <Tag>top</Tag>
-      <Tag>fill</Tag>
-      <Tag>rectangle</Tag>
       <Tag>fill</Tag>
     </Tags>
     <EnumValue>MailFill</EnumValue>
@@ -1356,6 +1015,8 @@
       <Tag>comment</Tag>
       <Tag>photo</Tag>
       <Tag>outline</Tag>
+      <Tag>message</Tag>
+      <Tag>camera</Tag>
     </Tags>
     <EnumValue>VideoChat</EnumValue>
   </FontIcon>
@@ -1368,6 +1029,7 @@
       <Tag>arrow</Tag>
       <Tag>left</Tag>
       <Tag>right</Tag>
+      <Tag>left-right</Tag>
     </Tags>
     <EnumValue>Switch</EnumValue>
   </FontIcon>
@@ -1393,6 +1055,7 @@
     <Tags Language="1033">
       <Tag>search</Tag>
       <Tag>input</Tag>
+      <Tag>password</Tag>
     </Tags>
     <EnumValue>Rename</EnumValue>
   </FontIcon>
@@ -1406,6 +1069,7 @@
       <Tag>square</Tag>
       <Tag>left</Tag>
       <Tag>outline</Tag>
+      <Tag>arrow-left</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -1448,6 +1112,7 @@
     <Tags Language="1033">
       <Tag>arrow</Tag>
       <Tag>top-right</Tag>
+      <Tag>arrow-top-right</Tag>
     </Tags>
     <EnumValue>Go</EnumValue>
   </FontIcon>
@@ -1507,6 +1172,7 @@
       <Tag>chevron</Tag>
       <Tag>right</Tag>
       <Tag>left</Tag>
+      <Tag>chevorn-left-right</Tag>
     </Tags>
     <EnumValue>Remote</EnumValue>
   </FontIcon>
@@ -1551,6 +1217,7 @@
       <Tag>right</Tag>
       <Tag>shuffle</Tag>
       <Tag>crossed-over</Tag>
+      <Tag>arrow-right</Tag>
     </Tags>
     <EnumValue>Shuffle</EnumValue>
   </FontIcon>
@@ -1565,8 +1232,6 @@
       <Tag>list</Tag>
       <Tag>dot</Tag>
       <Tag>text</Tag>
-      <Tag>list</Tag>
-      <Tag>dot</Tag>
       <Tag>left-align</Tag>
     </Tags>
     <EnumValue>BulletedList</EnumValue>
@@ -1616,6 +1281,7 @@
     <Tags Language="1033">
       <Tag>arrow</Tag>
       <Tag>left</Tag>
+      <Tag>arrow-left</Tag>
     </Tags>
     <EnumValue>Import</EnumValue>
   </FontIcon>
@@ -1628,6 +1294,7 @@
       <Tag>grid</Tag>
       <Tag>move</Tag>
       <Tag>left</Tag>
+      <Tag>arrow-left</Tag>
     </Tags>
     <EnumValue>ImportAll</EnumValue>
   </FontIcon>
@@ -1650,14 +1317,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e154</Code>
-    <Tags Language="1033">
-      <Tag>grid</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e155</Code>
     <!--  -->
@@ -1666,7 +1325,6 @@
       <Tag>images</Tag>
       <Tag>zoom</Tag>
       <Tag>magnify</Tag>
-      <Tag>stack</Tag>
       <Tag>stack</Tag>
       <Tag>search</Tag>
       <Tag>outline</Tag>
@@ -1683,6 +1341,7 @@
       <Tag>contact</Tag>
       <Tag>outline</Tag>
       <Tag>card</Tag>
+      <Tag>person</Tag>
     </Tags>
     <EnumValue>Webcam</EnumValue>
   </FontIcon>
@@ -1694,6 +1353,7 @@
     <Tags Language="1033">
       <Tag>images</Tag>
       <Tag>stack</Tag>
+      <Tag>image</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -1738,6 +1398,7 @@
     <Tags Language="1033">
       <Tag>list</Tag>
       <Tag>text</Tag>
+      <Tag>dot</Tag>
     </Tags>
     <EnumValue>ShowResults</EnumValue>
   </FontIcon>
@@ -1750,8 +1411,6 @@
       <Tag>volume</Tag>
       <Tag>speaker</Tag>
       <Tag>outline</Tag>
-      <Tag>speaker</Tag>
-      <Tag>volume</Tag>
     </Tags>
     <EnumValue>Volume</EnumValue>
   </FontIcon>
@@ -1798,6 +1457,7 @@
     <Tags Language="1033">
       <Tag>calender</Tag>
       <Tag>columns</Tag>
+      <Tag>calendar</Tag>
     </Tags>
     <EnumValue>CalendarDay</EnumValue>
   </FontIcon>
@@ -1810,6 +1470,7 @@
       <Tag>calender</Tag>
       <Tag>columns</Tag>
       <Tag>week</Tag>
+      <Tag>calendar</Tag>
     </Tags>
     <EnumValue>CalendarWeek</EnumValue>
   </FontIcon>
@@ -1858,6 +1519,7 @@
       <Tag>mail</Tag>
       <Tag>open</Tag>
       <Tag>outline</Tag>
+      <Tag>opened</Tag>
     </Tags>
     <EnumValue>Read</EnumValue>
   </FontIcon>
@@ -1909,6 +1571,7 @@
       <Tag>dropdown</Tag>
       <Tag>down</Tag>
       <Tag>up</Tag>
+      <Tag>collapsed</Tag>
     </Tags>
     <EnumValue>HideBCC</EnumValue>
   </FontIcon>
@@ -1920,6 +1583,7 @@
     <Tags Language="1033">
       <Tag>cut</Tag>
       <Tag>editing</Tag>
+      <Tag>scissors</Tag>
     </Tags>
     <EnumValue>Cut</EnumValue>
   </FontIcon>
@@ -1990,6 +1654,7 @@
     <Code>e8c9</Code>
     <Tags Language="1033">
       <Tag>exclamation</Tag>
+      <Tag>bold</Tag>
     </Tags>
     <EnumValue>Important</EnumValue>
   </FontIcon>
@@ -2002,6 +1667,7 @@
       <Tag>mail</Tag>
       <Tag>answer</Tag>
       <Tag>outline</Tag>
+      <Tag>reply</Tag>
     </Tags>
     <EnumValue>MailReply</EnumValue>
   </FontIcon>
@@ -2027,6 +1693,7 @@
       <Tag>arrow</Tag>
       <Tag>up</Tag>
       <Tag>down</Tag>
+      <Tag>arrow-up-down</Tag>
     </Tags>
     <EnumValue>Sort</EnumValue>
   </FontIcon>
@@ -2041,8 +1708,7 @@
       <Tag>list</Tag>
       <Tag>right-align</Tag>
       <Tag>dot</Tag>
-      <Tag>list</Tag>
-      <Tag>dot</Tag>
+      <Tag>lines</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2054,6 +1720,8 @@
       <Tag>box</Tag>
       <Tag>arrow</Tag>
       <Tag>right</Tag>
+      <Tag>square</Tag>
+      <Tag>arrow-right</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2075,6 +1743,7 @@
       <Tag>toolbox</Tag>
       <Tag>rectangle</Tag>
       <Tag>border</Tag>
+      <Tag>screen</Tag>
     </Tags>
     <EnumValue>Manage</EnumValue>
   </FontIcon>
@@ -2100,6 +1769,7 @@
       <Tag>network</Tag>
       <Tag>outline</Tag>
       <Tag>disconnected</Tag>
+      <Tag>network-drive</Tag>
     </Tags>
     <EnumValue>DisconnectDrive</EnumValue>
   </FontIcon>
@@ -2113,6 +1783,7 @@
       <Tag>network</Tag>
       <Tag>outline</Tag>
       <Tag>connected</Tag>
+      <Tag>network-drive</Tag>
     </Tags>
     <EnumValue>MapDrive</EnumValue>
   </FontIcon>
@@ -2125,7 +1796,6 @@
       <Tag>rectangle</Tag>
       <Tag>arrow</Tag>
       <Tag>up</Tag>
-      <Tag>rectangle</Tag>
       <Tag>arrow-up</Tag>
     </Tags>
     <EnumValue>NewWindow</EnumValue>
@@ -2141,9 +1811,7 @@
       <Tag>up</Tag>
       <Tag>left-align</Tag>
       <Tag>text</Tag>
-      <Tag>list</Tag>
       <Tag>arrow-up</Tag>
-      <Tag>left-align</Tag>
       <Tag>reorder</Tag>
     </Tags>
     <EnumValue>OpenWith</EnumValue>
@@ -2169,16 +1837,9 @@
       <Tag>arrow</Tag>
       <Tag>down</Tag>
       <Tag>exclamation</Tag>
+      <Tag>arrow-down</Tag>
     </Tags>
     <EnumValue>Priority</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e183</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>up</Tag>
-    </Tags>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -2189,6 +1850,8 @@
       <Tag>calender</Tag>
       <Tag>arrow</Tag>
       <Tag>up</Tag>
+      <Tag>day</Tag>
+      <Tag>calendar</Tag>
     </Tags>
     <EnumValue>GoToToday</EnumValue>
   </FontIcon>
@@ -2226,6 +1889,8 @@
       <Tag>contact</Tag>
       <Tag>outline</Tag>
       <Tag>profile</Tag>
+      <Tag>person</Tag>
+      <Tag>badge</Tag>
     </Tags>
     <EnumValue>Contact2</EnumValue>
   </FontIcon>
@@ -2238,6 +1903,7 @@
       <Tag>folder</Tag>
       <Tag>fill</Tag>
       <Tag>directory</Tag>
+      <Tag>closed</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2259,15 +1925,6 @@
     <Tags Language="1033">
       <Tag>square</Tag>
       <Tag>rhomb</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e18b</Code>
-    <Tags Language="1033">
-      <Tag>password</Tag>
-      <Tag>eye</Tag>
       <Tag>outline</Tag>
     </Tags>
   </FontIcon>
@@ -2295,6 +1952,8 @@
       <Tag>rectangle</Tag>
       <Tag>arrow</Tag>
       <Tag>up</Tag>
+      <Tag>arrow-up</Tag>
+      <Tag>square</Tag>
     </Tags>
     <EnumValue>SetTile</EnumValue>
   </FontIcon>
@@ -2364,6 +2023,8 @@
       <Tag>repeat</Tag>
       <Tag>reload</Tag>
       <Tag>update</Tag>
+      <Tag>circle</Tag>
+      <Tag>arrow</Tag>
     </Tags>
     <EnumValue>DisableUpdates</EnumValue>
   </FontIcon>
@@ -2377,6 +2038,7 @@
       <Tag>star</Tag>
       <Tag>favorite</Tag>
       <Tag>fill</Tag>
+      <Tag>cancel</Tag>
     </Tags>
     <EnumValue>UnFavorite</EnumValue>
   </FontIcon>
@@ -2402,6 +2064,7 @@
       <Tag>outline</Tag>
       <Tag>open</Tag>
       <Tag>arrow-up</Tag>
+      <Tag>directory</Tag>
     </Tags>
     <EnumValue>OpenLocal</EnumValue>
   </FontIcon>
@@ -2463,6 +2126,7 @@
       <Tag>folder</Tag>
       <Tag>arrow-left</Tag>
       <Tag>outline</Tag>
+      <Tag>directory</Tag>
     </Tags>
     <EnumValue>MoveToFolder</EnumValue>
   </FontIcon>
@@ -2509,6 +2173,8 @@
     <Tags Language="1033">
       <Tag>text</Tag>
       <Tag>right-align</Tag>
+      <Tag>editing</Tag>
+      <Tag>format</Tag>
     </Tags>
     <EnumValue>Alignright</EnumValue>
   </FontIcon>
@@ -2520,6 +2186,8 @@
     <Tags Language="1033">
       <Tag>text</Tag>
       <Tag>center-align</Tag>
+      <Tag>editing</Tag>
+      <Tag>format</Tag>
     </Tags>
     <EnumValue>AlignCenter</EnumValue>
   </FontIcon>
@@ -2531,6 +2199,8 @@
     <Tags Language="1033">
       <Tag>text</Tag>
       <Tag>left-align</Tag>
+      <Tag>editing</Tag>
+      <Tag>format</Tag>
     </Tags>
     <EnumValue>AlignLeft</EnumValue>
   </FontIcon>
@@ -2540,9 +2210,6 @@
     <!--  -->
     <Code>e71e</Code>
     <Tags Language="1033">
-      <Tag>search</Tag>
-      <Tag>outline</Tag>
-      <Tag>magnifier</Tag>
       <Tag>search</Tag>
       <Tag>outline</Tag>
       <Tag>magnifier</Tag>
@@ -2571,6 +2238,7 @@
       <Tag>file</Tag>
       <Tag>upload</Tag>
       <Tag>outline</Tag>
+      <Tag>arrow-up</Tag>
     </Tags>
     <EnumValue>OpenFile</EnumValue>
   </FontIcon>
@@ -2606,6 +2274,7 @@
       <Tag>mail</Tag>
       <Tag>reply</Tag>
       <Tag>send</Tag>
+      <Tag>message</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2616,6 +2285,7 @@
     <Tags Language="1033">
       <Tag>arrow</Tag>
       <Tag>top-left</Tag>
+      <Tag>arrow-top-left</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2648,6 +2318,7 @@
     <Tags Language="1033">
       <Tag>arrow</Tag>
       <Tag>right</Tag>
+      <Tag>arrow-right</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2670,6 +2341,8 @@
       <Tag>outline</Tag>
       <Tag>reply</Tag>
       <Tag>arrow</Tag>
+      <Tag>send</Tag>
+      <Tag>message</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2827,6 +2500,7 @@
     <Tags Language="1033">
       <Tag>rectangle</Tag>
       <Tag>arrow-left</Tag>
+      <Tag>aplitted</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2837,6 +2511,7 @@
     <Tags Language="1033">
       <Tag>rectangle</Tag>
       <Tag>arrow-right</Tag>
+      <Tag>splitted</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2847,6 +2522,7 @@
     <Tags Language="1033">
       <Tag>edit</Tag>
       <Tag>outline</Tag>
+      <Tag>pen</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -2859,6 +2535,7 @@
       <Tag>garden</Tag>
       <Tag>house</Tag>
       <Tag>outline</Tag>
+      <Tag>tree</Tag>
     </Tags>
     <EnumValue>Street</EnumValue>
   </FontIcon>
@@ -2935,6 +2612,7 @@
     <Tags Language="1033">
       <Tag>handy</Tag>
       <Tag>smartphone</Tag>
+      <Tag>device</Tag>
     </Tags>
     <EnumValue>Cellphone</EnumValue>
   </FontIcon>
@@ -2947,6 +2625,7 @@
       <Tag>update</Tag>
       <Tag>rectangle</Tag>
       <Tag>arrow</Tag>
+      <Tag>square</Tag>
     </Tags>
     <EnumValue>Reshare</EnumValue>
   </FontIcon>
@@ -2972,19 +2651,9 @@
       <Tag>reload</Tag>
       <Tag>update</Tag>
       <Tag>1</Tag>
+      <Tag>repeat</Tag>
     </Tags>
     <EnumValue>RepeatOne</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e1cd</Code>
-    <Tags Language="1033">
-      <Tag>repeat</Tag>
-      <Tag>reload</Tag>
-      <Tag>update</Tag>
-      <Tag>circle</Tag>
-      <Tag>arrow</Tag>
-    </Tags>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -3006,16 +2675,6 @@
     <Description Language="1033">Outlined star</Description>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e1cf</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-    <EnumValue>SolidStarLegacy</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e1d0</Code>
     <!--  -->
@@ -3023,6 +2682,7 @@
     <Tags Language="1033">
       <Tag>calculator</Tag>
       <Tag>outline</Tag>
+      <Tag>device</Tag>
     </Tags>
     <EnumValue>Calculator</EnumValue>
   </FontIcon>
@@ -3057,6 +2717,7 @@
       <Tag>library</Tag>
       <Tag>outline</Tag>
       <Tag>books</Tag>
+      <Tag>book</Tag>
     </Tags>
     <EnumValue>Library</EnumValue>
   </FontIcon>
@@ -3103,6 +2764,7 @@
       <Tag>run</Tag>
       <Tag>execute</Tag>
       <Tag>newspaper</Tag>
+      <Tag>delivery</Tag>
     </Tags>
     <EnumValue>PostUpdate</EnumValue>
   </FontIcon>
@@ -3155,6 +2817,7 @@
       <Tag>day</Tag>
       <Tag>month</Tag>
       <Tag>open</Tag>
+      <Tag>calendar</Tag>
     </Tags>
     <EnumValue>CalendarReply</EnumValue>
   </FontIcon>
@@ -3257,6 +2920,8 @@
       <Tag>home-screen</Tag>
       <Tag>monitor</Tag>
       <Tag>device</Tag>
+      <Tag>display</Tag>
+      <Tag>start-screen</Tag>
     </Tags>
     <EnumValue>GoToStart</EnumValue>
   </FontIcon>
@@ -3342,6 +3007,7 @@
       <Tag>text</Tag>
       <Tag>list</Tag>
       <Tag>right-align</Tag>
+      <Tag>circle</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3402,6 +3068,8 @@
       <Tag>mail</Tag>
       <Tag>outline</Tag>
       <Tag>reply</Tag>
+      <Tag>send</Tag>
+      <Tag>message</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3467,47 +3135,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e206</Code>
-    <Tags Language="1033">
-      <Tag>comment</Tag>
-      <Tag>message</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e208</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e209</Code>
-    <Tags Language="1033">
-      <Tag>up-vote</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e20a</Code>
-    <Tags Language="1033">
-      <Tag>camera</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e20b</Code>
-    <Tags Language="1033">
-      <Tag>rectangle</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e211</Code>
     <!--  -->
@@ -3516,6 +3143,7 @@
       <Tag>pc</Tag>
       <Tag>computer</Tag>
       <Tag>device</Tag>
+      <Tag>display</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3527,18 +3155,8 @@
       <Tag>laptop</Tag>
       <Tag>computer</Tag>
       <Tag>device</Tag>
+      <Tag>tablet</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e224</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>RatingStarLegacy</EnumValue>
-    <Description Language="1033">Outlined star</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -3550,6 +3168,7 @@
       <Tag>arrow</Tag>
       <Tag>down</Tag>
       <Tag>bold</Tag>
+      <Tag>chevron-down</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3561,32 +3180,7 @@
       <Tag>back</Tag>
       <Tag>arrow</Tag>
       <Tag>half-circle</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e249</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e24a</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e25a</Code>
-    <Tags Language="1033">
-      <Tag>handy</Tag>
-      <Tag>smartphone</Tag>
+      <Tag>arrow-back</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3615,17 +3209,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e25e</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>square</Tag>
-      <Tag>fill</Tag>
-      <Tag>size</Tag>
-      <Tag>full</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e26b</Code>
     <!--  -->
@@ -3635,6 +3218,7 @@
       <Tag>arrow</Tag>
       <Tag>right</Tag>
       <Tag>bold</Tag>
+      <Tag>chevron-right</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3647,6 +3231,7 @@
       <Tag>arrow</Tag>
       <Tag>left</Tag>
       <Tag>bold</Tag>
+      <Tag>chevron-left</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3673,15 +3258,6 @@
       <Tag>indent</Tag>
       <Tag>increase</Tag>
       <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e292</Code>
-    <Tags Language="1033">
-      <Tag>list</Tag>
-      <Tag>dot</Tag>
-      <Tag>left-align</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3727,14 +3303,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e299</Code>
-    <Tags Language="1033">
-      <Tag>list</Tag>
-      <Tag>dot</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e29b</Code>
     <Tags Language="1033">
@@ -3771,15 +3339,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e2af</Code>
-    <Tags Language="1033">
-      <Tag>person</Tag>
-      <Tag>contact</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e2b0</Code>
     <!--  -->
@@ -3787,6 +3346,7 @@
     <Tags Language="1033">
       <Tag>device</Tag>
       <Tag>rotate</Tag>
+      <Tag>border</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3813,6 +3373,8 @@
     <Code>e944</Code>
     <Tags Language="1033">
       <Tag>decrease-size</Tag>
+      <Tag>rectangle</Tag>
+      <Tag>shrink</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3822,6 +3384,8 @@
     <Code>e8a7</Code>
     <Tags Language="1033">
       <Tag>increase-size</Tag>
+      <Tag>arrow-top-right</Tag>
+      <Tag>size</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -3906,17 +3470,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e707</Code>
-    <Tags Language="1033">
-      <Tag>map</Tag>
-      <Tag>point</Tag>
-      <Tag>pin</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Mappin</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e708</Code>
     <Tags Language="1033">
@@ -3959,229 +3512,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e70d</Code>
-    <Tags Language="1033">
-      <Tag>chevron-down</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e70e</Code>
-    <Tags Language="1033">
-      <Tag>chevron-up</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e70f</Code>
-    <Tags Language="1033">
-      <Tag>edit</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Edit</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e710</Code>
-    <Tags Language="1033">
-      <Tag>plus</Tag>
-    </Tags>
-    <EnumValue>Add</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e711</Code>
-    <Tags Language="1033">
-      <Tag>x</Tag>
-      <Tag>delete</Tag>
-      <Tag>top</Tag>
-    </Tags>
-    <EnumValue>Cancel</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e712</Code>
-    <Tags Language="1033">
-      <Tag>dots</Tag>
-      <Tag>top</Tag>
-    </Tags>
-    <EnumValue>More</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e713</Code>
-    <Tags Language="1033">
-      <Tag>settings</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Settings</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e714</Code>
-    <Tags Language="1033">
-      <Tag>camera</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e715</Code>
-    <Tags Language="1033">
-      <Tag>mail</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Mail</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e716</Code>
-    <Tags Language="1033">
-      <Tag>contact</Tag>
-      <Tag>person</Tag>
-      <Tag>outline</Tag>
-      <Tag>multiple</Tag>
-    </Tags>
-    <EnumValue>People</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e717</Code>
-    <Tags Language="1033">
-      <Tag>phone</Tag>
-      <Tag>call</Tag>
-    </Tags>
-    <EnumValue>Phone</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e718</Code>
-    <Tags Language="1033">
-      <Tag>pin</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Pin</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e719</Code>
-    <Tags Language="1033">
-      <Tag>store</Tag>
-      <Tag>bag</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Shop</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e71a</Code>
-    <Tags Language="1033">
-      <Tag>square</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Stop</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e71b</Code>
-    <Tags Language="1033">
-      <Tag>link</Tag>
-      <Tag>chain</Tag>
-    </Tags>
-    <EnumValue>Link</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e71c</Code>
-    <Tags Language="1033">
-      <Tag>hopper</Tag>
-      <Tag>funnel</Tag>
-      <Tag>outline</Tag>
-      <Tag>filter</Tag>
-    </Tags>
-    <EnumValue>Filter</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e71d</Code>
-    <Tags Language="1033">
-      <Tag>list</Tag>
-      <Tag>square</Tag>
-      <Tag>left-align</Tag>
-    </Tags>
-    <EnumValue>AllApps</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e71e</Code>
-    <Tags Language="1033">
-      <Tag>search</Tag>
-      <Tag>outline</Tag>
-      <Tag>magnifier</Tag>
-    </Tags>
-    <EnumValue>Zoom</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e71f</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>magnifier</Tag>
-      <Tag>zoom</Tag>
-      <Tag>zoom-out</Tag>
-    </Tags>
-    <EnumValue>ZoomOut</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e720</Code>
-    <Tags Language="1033">
-      <Tag>microphone</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Microphone</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e721</Code>
-    <Tags Language="1033">
-      <Tag>search</Tag>
-      <Tag>outline</Tag>
-      <Tag>magnifier</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e722</Code>
-    <Tags Language="1033">
-      <Tag>photo</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Camera</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e723</Code>
-    <Tags Language="1033">
-      <Tag>clip</Tag>
-    </Tags>
-    <EnumValue>Attach</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e724</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>send</Tag>
-      <Tag>right</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Send</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e725</Code>
     <Tags Language="1033">
@@ -4220,44 +3550,6 @@
     <EnumValue>FavoriteList</EnumValue>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e729</Code>
-    <Tags Language="1033">
-      <Tag>file</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e72a</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>right</Tag>
-    </Tags>
-    <EnumValue>Forward</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e72b</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>left</Tag>
-    </Tags>
-    <EnumValue>Back</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e72c</Code>
-    <Tags Language="1033">
-      <Tag>repeat</Tag>
-      <Tag>reload</Tag>
-      <Tag>update</Tag>
-      <Tag>circle</Tag>
-      <Tag>arrow</Tag>
-    </Tags>
-    <EnumValue>Refresh</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e72d</Code>
     <Tags Language="1033">
@@ -4265,139 +3557,6 @@
       <Tag>outline</Tag>
     </Tags>
     <EnumValue>Share</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e72e</Code>
-    <Tags Language="1033">
-      <Tag>lock</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e730</Code>
-    <Tags Language="1033">
-      <Tag>shield</Tag>
-      <Tag>exclamation</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>ReportHacked</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e734</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>FavoriteStar</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e735</Code>
-    <Tags Language="1033">
-      <Tag>star</Tag>
-      <Tag>favorite</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-    <EnumValue>FavoriteStarFill</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e738</Code>
-    <Tags Language="1033">
-      <Tag>line</Tag>
-      <Tag>top</Tag>
-    </Tags>
-    <EnumValue>Remove</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e739</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>square</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Checkbox</EnumValue>
-    <Description Language="1033">Checkbox</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e73a</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>check</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>CheckboxComposite</EnumValue>
-    <Description Language="1033">Composite checkbox</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e73b</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>square</Tag>
-      <Tag>fill</Tag>
-      <Tag>size</Tag>
-      <Tag>full</Tag>
-    </Tags>
-    <EnumValue>CheckboxFill</EnumValue>
-    <Description Language="1033">Filled checkbox</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e73c</Code>
-    <Tags Language="1033">
-      <Tag>square</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-    <EnumValue>CheckboxIndeterminate</EnumValue>
-    <Description Language="1033">Indeterminate state</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e73d</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>check</Tag>
-    </Tags>
-    <EnumValue>CheckboxCompositeReversed</EnumValue>
-    <Description Language="1033">Reversed composite</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e73e</Code>
-    <Tags Language="1033">
-      <Tag>check</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>CheckMark</EnumValue>
-    <Description Language="1033">Check mark</Description>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e73f</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>collision</Tag>
-      <Tag>bottom-left</Tag>
-      <Tag>top-right</Tag>
-    </Tags>
-    <EnumValue>BackToWindow</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e740</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>bottom-left</Tag>
-      <Tag>top-right</Tag>
-    </Tags>
-    <EnumValue>FullScreen</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -4455,17 +3614,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e747</Code>
-    <Tags Language="1033">
-      <Tag>checkbox</Tag>
-      <Tag>square</Tag>
-      <Tag>fill</Tag>
-      <Tag>size</Tag>
-      <Tag>full</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e748</Code>
     <Tags Language="1033">
@@ -4475,64 +3623,12 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e749</Code>
-    <Tags Language="1033">
-      <Tag>printer</Tag>
-      <Tag>device</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e74a</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>up</Tag>
-    </Tags>
-    <EnumValue>Up</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e74b</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e74c</Code>
     <Tags Language="1033">
       <Tag>squares</Tag>
       <Tag>part</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e74d</Code>
-    <Tags Language="1033">
-      <Tag>delete</Tag>
-      <Tag>trash</Tag>
-    </Tags>
-    <EnumValue>Delete</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e74e</Code>
-    <Tags Language="1033">
-      <Tag>save</Tag>
-    </Tags>
-    <EnumValue>Save</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e74f</Code>
-    <Tags Language="1033">
-      <Tag>mute</Tag>
-      <Tag>speaker</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Mute</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -4678,14 +3774,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e762</Code>
-    <Tags Language="1033">
-      <Tag>list</Tag>
-      <Tag>check</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e763</Code>
     <Tags Language="1033">
@@ -4702,83 +3790,12 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e765</Code>
-    <Tags Language="1033">
-      <Tag>keyboard</Tag>
-      <Tag>full</Tag>
-    </Tags>
-    <EnumValue>KeyboardClassic</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e766</Code>
-    <Tags Language="1033">
-      <Tag>keyboard</Tag>
-      <Tag>splitted</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e767</Code>
-    <Tags Language="1033">
-      <Tag>speaker</Tag>
-      <Tag>volume</Tag>
-    </Tags>
-    <EnumValue>Volume</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e768</Code>
-    <Tags Language="1033">
-      <Tag>media</Tag>
-      <Tag>play</Tag>
-    </Tags>
-    <EnumValue>Play</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e769</Code>
-    <Tags Language="1033">
-      <Tag>media</Tag>
-      <Tag>pause</Tag>
-    </Tags>
-    <EnumValue>Pause</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e76b</Code>
-    <Tags Language="1033">
-      <Tag>chevron-left</Tag>
-      <Tag>arrow-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e76c</Code>
-    <Tags Language="1033">
-      <Tag>chevron-right</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e76d</Code>
     <Tags Language="1033">
       <Tag>pen</Tag>
       <Tag>outline</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e76e</Code>
-    <Tags Language="1033">
-      <Tag>smile</Tag>
-      <Tag>smiley</Tag>
-      <Tag>outline</Tag>
-      <Tag>emoji</Tag>
-    </Tags>
-    <EnumValue>Emoji2</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -4825,16 +3842,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e774</Code>
-    <Tags Language="1033">
-      <Tag>globe</Tag>
-      <Tag>outline</Tag>
-      <Tag>grid</Tag>
-    </Tags>
-    <EnumValue>Globe</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e775</Code>
     <Tags Language="1033">
@@ -4843,14 +3850,6 @@
       <Tag>clock</Tag>
       <Tag>culture</Tag>
       <Tag>asia</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e776</Code>
-    <Tags Language="1033">
-      <Tag>easy-access</Tag>
-      <Tag>outline</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -4864,74 +3863,6 @@
       <Tag>recovery</Tag>
       <Tag>arrow</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e778</Code>
-    <Tags Language="1033">
-      <Tag>ring-of</Tag>
-      <Tag>phone</Tag>
-      <Tag>arrow</Tag>
-      <Tag>down</Tag>
-    </Tags>
-    <EnumValue>Hangup</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e779</Code>
-    <Tags Language="1033">
-      <Tag>contact</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>ContactInfo</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e77a</Code>
-    <Tags Language="1033">
-      <Tag>unpin</Tag>
-      <Tag>pin</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>UnPin</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e77b</Code>
-    <Tags Language="1033">
-      <Tag>person</Tag>
-      <Tag>contact</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Contact</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e77c</Code>
-    <Tags Language="1033">
-      <Tag>tape</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Memo</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e77f</Code>
-    <Tags Language="1033">
-      <Tag>paste</Tag>
-      <Tag>outline</Tag>
-      <Tag>editing</Tag>
-    </Tags>
-    <EnumValue>Paste</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e780</Code>
-    <Tags Language="1033">
-      <Tag>phone-book</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>PhoneBook</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -4959,36 +3890,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e785</Code>
-    <Tags Language="1033">
-      <Tag>lock</Tag>
-      <Tag>outline</Tag>
-      <Tag>open</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e786</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>media</Tag>
-      <Tag>play</Tag>
-      <Tag>device</Tag>
-    </Tags>
-    <EnumValue>Slideshow</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e787</Code>
-    <Tags Language="1033">
-      <Tag>calender</Tag>
-      <Tag>day</Tag>
-      <Tag>month</Tag>
-    </Tags>
-    <EnumValue>Calendar</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e788</Code>
     <Tags Language="1033">
@@ -5004,37 +3905,6 @@
       <Tag>megaphone</Tag>
       <Tag>outline</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e78a</Code>
-    <Tags Language="1033">
-      <Tag>size</Tag>
-      <Tag>imaging</Tag>
-      <Tag>focus</Tag>
-      <Tag>area</Tag>
-      <Tag>measurement</Tag>
-    </Tags>
-    <EnumValue>Trim</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e78b</Code>
-    <Tags Language="1033">
-      <Tag>rectangle</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-    <EnumValue>NewWindow</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e78c</Code>
-    <Tags Language="1033">
-      <Tag>save</Tag>
-      <Tag>arrow</Tag>
-      <Tag>down</Tag>
-    </Tags>
-    <EnumValue>SaveLocal</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -5063,75 +3933,6 @@
     <Code>e7a5</Code>
     <Tags Language="1033">
       <Tag>other</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7a6</Code>
-    <Tags Language="1033">
-      <Tag>redo</Tag>
-    </Tags>
-    <EnumValue>Redo</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7a7</Code>
-    <Tags Language="1033">
-      <Tag>undo</Tag>
-    </Tags>
-    <EnumValue>Undo</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7a8</Code>
-    <Tags Language="1033">
-      <Tag>crop</Tag>
-      <Tag>editing</Tag>
-    </Tags>
-    <EnumValue>Crop</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7ac</Code>
-    <Tags Language="1033">
-      <Tag>text</Tag>
-      <Tag>list</Tag>
-      <Tag>arrow-up</Tag>
-      <Tag>left-align</Tag>
-      <Tag>reorder</Tag>
-    </Tags>
-    <EnumValue>OpenWith</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7ad</Code>
-    <Tags Language="1033">
-      <Tag>disc</Tag>
-      <Tag>play</Tag>
-      <Tag>read</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Rotate</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7b5</Code>
-    <Tags Language="1033">
-      <Tag>rectangle</Tag>
-      <Tag>arrow</Tag>
-      <Tag>up</Tag>
-      <Tag>device</Tag>
-      <Tag>display</Tag>
-      <Tag>stream</Tag>
-    </Tags>
-    <EnumValue>SetLockScreen</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7b7</Code>
-    <Tags Language="1033">
-      <Tag>pin</Tag>
-      <Tag>outline</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -5180,24 +3981,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e7c1</Code>
-    <Tags Language="1033">
-      <Tag>flag</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Flag</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7c3</Code>
-    <Tags Language="1033">
-      <Tag>file</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Page</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e7c4</Code>
     <Tags Language="1033">
@@ -5207,17 +3990,6 @@
       <Tag>area</Tag>
       <Tag>measurement</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7c5</Code>
-    <Tags Language="1033">
-      <Tag>stack</Tag>
-      <Tag>search</Tag>
-      <Tag>outline</Tag>
-      <Tag>magnifier</Tag>
-    </Tags>
-    <EnumValue>BrowsePhotos</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -5238,25 +4010,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e7c8</Code>
-    <Tags Language="1033">
-      <Tag>point</Tag>
-      <Tag>circle</Tag>
-      <Tag>fill</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7c9</Code>
-    <Tags Language="1033">
-      <Tag>hand</Tag>
-      <Tag>arrow</Tag>
-      <Tag>cursor</Tag>
-    </Tags>
-    <EnumValue>TouchPointer</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e7de</Code>
     <Tags Language="1033">
@@ -5274,15 +4027,6 @@
       <Tag>ship</Tag>
       <Tag>outline</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7e6</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>marker</Tag>
-    </Tags>
-    <EnumValue>Highlight</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -5331,26 +4075,6 @@
       <Tag>clock</Tag>
       <Tag>cancel</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7ef</Code>
-    <Tags Language="1033">
-      <Tag>shield</Tag>
-      <Tag>protect</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Admin</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e7f0</Code>
-    <Tags Language="1033">
-      <Tag>cc</Tag>
-      <Tag>mail</Tag>
-      <Tag>carbon-copy</Tag>
-    </Tags>
-    <EnumValue>CC</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -5475,14 +4199,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e804</Code>
-    <Tags Language="1033">
-      <Tag>car</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e805</Code>
     <Tags Language="1033">
@@ -5530,16 +4246,6 @@
       <Tag>arrow</Tag>
       <Tag>arc</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e80f</Code>
-    <Tags Language="1033">
-      <Tag>house</Tag>
-      <Tag>home</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Home</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -5607,14 +4313,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e81b</Code>
-    <Tags Language="1033">
-      <Tag>flag</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e81c</Code>
     <Tags Language="1033">
@@ -5622,15 +4320,6 @@
       <Tag>clock</Tag>
       <Tag>outline</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e81d</Code>
-    <Tags Language="1033">
-      <Tag>point</Tag>
-      <Tag>map</Tag>
-    </Tags>
-    <EnumValue>Location</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -5664,15 +4353,6 @@
       <Tag>cross-walk</Tag>
       <Tag>outline</Tag>
       <Tag>worker</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e823</Code>
-    <Tags Language="1033">
-      <Tag>time</Tag>
-      <Tag>clock</Tag>
-      <Tag>outline</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -6478,13 +5158,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e88a</Code>
-    <Tags Language="1033">
-      <Tag>antenna</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e88b</Code>
     <Tags Language="1033">
@@ -6523,16 +5196,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e890</Code>
-    <Tags Language="1033">
-      <Tag>eye</Tag>
-      <Tag>outline</Tag>
-      <Tag>password</Tag>
-    </Tags>
-    <EnumValue>View</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e891</Code>
     <Tags Language="1033">
@@ -6541,273 +5204,11 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e892</Code>
-    <Tags Language="1033">
-      <Tag>media</Tag>
-      <Tag>back</Tag>
-    </Tags>
-    <EnumValue>Previous</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e893</Code>
-    <Tags Language="1033">
-      <Tag>media</Tag>
-      <Tag>next</Tag>
-    </Tags>
-    <EnumValue>Next</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e894</Code>
-    <Tags Language="1033">
-      <Tag>x</Tag>
-      <Tag>cancel</Tag>
-      <Tag>delete</Tag>
-    </Tags>
-    <EnumValue>Clear</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e895</Code>
-    <Tags Language="1033">
-      <Tag>circle</Tag>
-      <Tag>arrow</Tag>
-      <Tag>reload</Tag>
-      <Tag>update</Tag>
-      <Tag>repeat</Tag>
-    </Tags>
-    <EnumValue>Sync</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e896</Code>
-    <Tags Language="1033">
-      <Tag>arrow-down</Tag>
-      <Tag>download</Tag>
-    </Tags>
-    <EnumValue>Download</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e897</Code>
-    <Tags Language="1033">
-      <Tag>question</Tag>
-    </Tags>
-    <EnumValue>Help</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e898</Code>
-    <Tags Language="1033">
-      <Tag>upload</Tag>
-      <Tag>arrow-up</Tag>
-    </Tags>
-    <EnumValue>Upload</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e899</Code>
-    <Tags Language="1033">
-      <Tag>grin</Tag>
-      <Tag>smiley</Tag>
-      <Tag>emoji</Tag>
-    </Tags>
-    <EnumValue>Emoji</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e89a</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>file</Tag>
-      <Tag>copy</Tag>
-    </Tags>
-    <EnumValue>TwoPage</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e89b</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>arrow-left</Tag>
-      <Tag>comment</Tag>
-    </Tags>
-    <EnumValue>LeaveChat</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e89c</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>arrow-right</Tag>
-      <Tag>mail</Tag>
-    </Tags>
-    <EnumValue>MailForward</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e89e</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>turn</Tag>
-      <Tag>camera</Tag>
-    </Tags>
-    <EnumValue>RotateCamera</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e89f</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>arrow-right</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-    <EnumValue>ClosePane</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a0</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>arrow-left</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-    <EnumValue>OpenPane</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a1</Code>
-    <Tags Language="1033">
-      <Tag>newspaper</Tag>
-    </Tags>
-    <EnumValue>PreviewLink</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a2</Code>
-    <Tags Language="1033">
-      <Tag>remote-release</Tag>
-      <Tag>cable</Tag>
-      <Tag>camera</Tag>
-    </Tags>
-    <EnumValue>AttachCamera</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a3</Code>
-    <Tags Language="1033">
-      <Tag>zoomin</Tag>
-      <Tag>zoom</Tag>
-      <Tag>magnifier</Tag>
-    </Tags>
-    <EnumValue>ZoomIn</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a4</Code>
-    <Tags Language="1033">
-      <Tag>dot</Tag>
-      <Tag>right-align</Tag>
-      <Tag>list</Tag>
-    </Tags>
-    <EnumValue>Bookmarks</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a5</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>shape</Tag>
-    </Tags>
-    <EnumValue>Document</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a6</Code>
-    <Tags Language="1033">
-      <Tag>lock</Tag>
-      <Tag>outline</Tag>
-      <Tag>shape</Tag>
-    </Tags>
-    <EnumValue>ProtectedDocument</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a7</Code>
-    <Tags Language="1033">
-      <Tag>arrow-top-right</Tag>
-      <Tag>size</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a8</Code>
-    <Tags Language="1033">
-      <Tag>fill</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-    <EnumValue>MailFill</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8a9</Code>
-    <Tags Language="1033">
-      <Tag>grid</Tag>
-    </Tags>
-    <EnumValue>ViewAll</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8aa</Code>
-    <Tags Language="1033">
-      <Tag>comment</Tag>
-      <Tag>message</Tag>
-      <Tag>camera</Tag>
-    </Tags>
-    <EnumValue>VideoChat</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ab</Code>
-    <Tags Language="1033">
-      <Tag>left-right</Tag>
-      <Tag>arrow</Tag>
-    </Tags>
-    <EnumValue>Switch</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ac</Code>
-    <Tags Language="1033">
-      <Tag>input</Tag>
-      <Tag>password</Tag>
-    </Tags>
-    <EnumValue>Rename</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ad</Code>
-    <Tags Language="1033">
-      <Tag>arrow-top-right</Tag>
-    </Tags>
-    <EnumValue>Go</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e8ae</Code>
     <Tags Language="1033">
       <Tag>screen</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8af</Code>
-    <Tags Language="1033">
-      <Tag>chevorn-left-right</Tag>
-    </Tags>
-    <EnumValue>Remote</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -6818,57 +5219,12 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e8b1</Code>
-    <Tags Language="1033">
-      <Tag>arrow-right</Tag>
-      <Tag>crossed-over</Tag>
-      <Tag>shuffle</Tag>
-    </Tags>
-    <EnumValue>Shuffle</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e8b2</Code>
     <Tags Language="1033">
       <Tag>video</Tag>
       <Tag>film</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8b3</Code>
-    <Tags Language="1033">
-      <Tag>selection</Tag>
-      <Tag>grid</Tag>
-    </Tags>
-    <EnumValue>SelectAll</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8b4</Code>
-    <Tags Language="1033">
-      <Tag>arrow</Tag>
-      <Tag>rotate</Tag>
-    </Tags>
-    <EnumValue>Orientation</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8b5</Code>
-    <Tags Language="1033">
-      <Tag>arrow-left</Tag>
-    </Tags>
-    <EnumValue>Import</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8b6</Code>
-    <Tags Language="1033">
-      <Tag>arrow-left</Tag>
-      <Tag>grid</Tag>
-    </Tags>
-    <EnumValue>ImportAll</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -6882,32 +5238,6 @@
     <EnumValue>Folder</EnumValue>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e8b8</Code>
-    <Tags Language="1033">
-      <Tag>contact</Tag>
-      <Tag>person</Tag>
-    </Tags>
-    <EnumValue>Webcam</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8b9</Code>
-    <Tags Language="1033">
-      <Tag>stack</Tag>
-      <Tag>image</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ba</Code>
-    <Tags Language="1033">
-      <Tag>subtitle</Tag>
-      <Tag>image</Tag>
-    </Tags>
-    <EnumValue>Caption</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e8bb</Code>
     <Tags Language="1033">
@@ -6917,143 +5247,12 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e8bc</Code>
-    <Tags Language="1033">
-      <Tag>dot</Tag>
-      <Tag>list</Tag>
-    </Tags>
-    <EnumValue>ShowResults</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8bd</Code>
-    <Tags Language="1033">
-      <Tag>comment</Tag>
-      <Tag>message</Tag>
-    </Tags>
-    <EnumValue>Message</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e8be</Code>
     <Tags Language="1033">
       <Tag>energy-saver</Tag>
       <Tag>leaf</Tag>
     </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8bf</Code>
-    <Tags Language="1033">
-      <Tag>calendar</Tag>
-      <Tag>columns</Tag>
-    </Tags>
-    <EnumValue>CalendarDay</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c0</Code>
-    <Tags Language="1033">
-      <Tag>calendar</Tag>
-      <Tag>columns</Tag>
-      <Tag>week</Tag>
-    </Tags>
-    <EnumValue>CalendarWeek</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c1</Code>
-    <Tags Language="1033">
-      <Tag>latin</Tag>
-      <Tag>asia</Tag>
-      <Tag>language</Tag>
-    </Tags>
-    <EnumValue>Characters</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c2</Code>
-    <Tags Language="1033">
-      <Tag>reply</Tag>
-      <Tag>outline</Tag>
-      <Tag>mail</Tag>
-    </Tags>
-    <EnumValue>MailReplyAll</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c3</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>opened</Tag>
-      <Tag>mail</Tag>
-    </Tags>
-    <EnumValue>Read</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c4</Code>
-    <Tags Language="1033">
-      <Tag>expanded</Tag>
-      <Tag>list</Tag>
-    </Tags>
-    <EnumValue>ShowBCC</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c5</Code>
-    <Tags Language="1033">
-      <Tag>collapsed</Tag>
-      <Tag>list</Tag>
-    </Tags>
-    <EnumValue>HideBCC</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c6</Code>
-    <Tags Language="1033">
-      <Tag>cut</Tag>
-      <Tag>scissors</Tag>
-    </Tags>
-    <EnumValue>Cut</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c8</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>file</Tag>
-      <Tag>copy</Tag>
-    </Tags>
-    <EnumValue>Copy</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8c9</Code>
-    <Tags Language="1033">
-      <Tag>bold</Tag>
-      <Tag>exclamation</Tag>
-    </Tags>
-    <EnumValue>Important</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ca</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>reply</Tag>
-      <Tag>mail</Tag>
-    </Tags>
-    <EnumValue>MailReply</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8cb</Code>
-    <Tags Language="1033">
-      <Tag>arrow-up-down</Tag>
-    </Tags>
-    <EnumValue>Sort</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -7065,363 +5264,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e8cd</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>network-drive</Tag>
-      <Tag>disconnected</Tag>
-    </Tags>
-    <EnumValue>DisconnectDrive</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ce</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>network-drive</Tag>
-      <Tag>connected</Tag>
-    </Tags>
-    <EnumValue>MapDrive</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8cf</Code>
-    <Tags Language="1033">
-      <Tag>person</Tag>
-      <Tag>contact</Tag>
-    </Tags>
-    <EnumValue>ContactPresence</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d0</Code>
-    <Tags Language="1033">
-      <Tag>exclamation</Tag>
-      <Tag>arrow-down</Tag>
-    </Tags>
-    <EnumValue>Priority</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d1</Code>
-    <Tags Language="1033">
-      <Tag>day</Tag>
-      <Tag>calendar</Tag>
-    </Tags>
-    <EnumValue>GoToToday</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d2</Code>
-    <Tags Language="1033">
-      <Tag>font-size</Tag>
-      <Tag>latin</Tag>
-    </Tags>
-    <EnumValue>Font</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d3</Code>
-    <Tags Language="1033">
-      <Tag>latin</Tag>
-      <Tag>underline</Tag>
-      <Tag>text-color</Tag>
-    </Tags>
-    <EnumValue>Fontcolor</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d4</Code>
-    <Tags Language="1033">
-      <Tag>person</Tag>
-      <Tag>contact</Tag>
-      <Tag>badge</Tag>
-      <Tag>profile</Tag>
-    </Tags>
-    <EnumValue>Contact2</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d5</Code>
-    <Tags Language="1033">
-      <Tag>directory</Tag>
-      <Tag>closed</Tag>
-      <Tag>fill</Tag>
-      <Tag>folder</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d6</Code>
-    <Tags Language="1033">
-      <Tag>sound</Tag>
-      <Tag>music</Tag>
-    </Tags>
-    <EnumValue>Audio</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d7</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>key</Tag>
-    </Tags>
-    <EnumValue>Permissions</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d8</Code>
-    <Tags Language="1033">
-      <Tag>repeat</Tag>
-      <Tag>circle</Tag>
-      <Tag>arrow</Tag>
-      <Tag>cancel</Tag>
-    </Tags>
-    <EnumValue>DisableUpdates</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8d9</Code>
-    <Tags Language="1033">
-      <Tag>fill</Tag>
-      <Tag>cancel</Tag>
-      <Tag>star</Tag>
-      <Tag>unstar</Tag>
-    </Tags>
-    <EnumValue>UnFavorite</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8da</Code>
-    <Tags Language="1033">
-      <Tag>open</Tag>
-      <Tag>arrow-up</Tag>
-      <Tag>directory</Tag>
-      <Tag>folder</Tag>
-    </Tags>
-    <EnumValue>OpenLocal</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8db</Code>
-    <Tags Language="1033">
-      <Tag>slash</Tag>
-      <Tag>editing</Tag>
-      <Tag>format</Tag>
-      <Tag>italic</Tag>
-    </Tags>
-    <EnumValue>Italic</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8dc</Code>
-    <Tags Language="1033">
-      <Tag>underline</Tag>
-      <Tag>editing</Tag>
-      <Tag>format</Tag>
-    </Tags>
-    <EnumValue>Underline</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8dd</Code>
-    <Tags Language="1033">
-      <Tag>bold</Tag>
-      <Tag>editing</Tag>
-      <Tag>format</Tag>
-    </Tags>
-    <EnumValue>Bold</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8de</Code>
-    <Tags Language="1033">
-      <Tag>arrow-left</Tag>
-      <Tag>folder</Tag>
-      <Tag>directory</Tag>
-    </Tags>
-    <EnumValue>MoveToFolder</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8df</Code>
-    <Tags Language="1033">
-      <Tag>up-down-vote</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>LikeDislike</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e0</Code>
-    <Tags Language="1033">
-      <Tag>down-vote</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Dislike</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e1</Code>
-    <Tags Language="1033">
-      <Tag>up-vote</Tag>
-      <Tag>outline</Tag>
-    </Tags>
-    <EnumValue>Like</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e2</Code>
-    <Tags Language="1033">
-      <Tag>right-align</Tag>
-      <Tag>editing</Tag>
-      <Tag>format</Tag>
-    </Tags>
-    <EnumValue>Alignright</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e3</Code>
-    <Tags Language="1033">
-      <Tag>center-align</Tag>
-      <Tag>editing</Tag>
-      <Tag>format</Tag>
-    </Tags>
-    <EnumValue>AlignCenter</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e4</Code>
-    <Tags Language="1033">
-      <Tag>left-align</Tag>
-      <Tag>editing</Tag>
-      <Tag>format</Tag>
-    </Tags>
-    <EnumValue>AlignLeft</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e5</Code>
-    <Tags Language="1033">
-      <Tag>arrow-up</Tag>
-      <Tag>upload</Tag>
-      <Tag>outline</Tag>
-      <Tag>file</Tag>
-    </Tags>
-    <EnumValue>OpenFile</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e6</Code>
-    <Tags Language="1033">
-      <Tag>undo</Tag>
-      <Tag>selection</Tag>
-    </Tags>
-    <EnumValue>ClearSelection</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e7</Code>
-    <Tags Language="1033">
-      <Tag>decrease</Tag>
-      <Tag>font-size</Tag>
-    </Tags>
-    <EnumValue>FontDecrease</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e8</Code>
-    <Tags Language="1033">
-      <Tag>increase</Tag>
-      <Tag>font-size</Tag>
-    </Tags>
-    <EnumValue>FontIncrease</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8e9</Code>
-    <Tags Language="1033">
-      <Tag>font-size</Tag>
-    </Tags>
-    <EnumValue>FontSize</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ea</Code>
-    <Tags Language="1033">
-      <Tag>device</Tag>
-      <Tag>smartphone</Tag>
-    </Tags>
-    <EnumValue>Cellphone</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8eb</Code>
-    <Tags Language="1033">
-      <Tag>square</Tag>
-      <Tag>arrow</Tag>
-    </Tags>
-    <EnumValue>Reshare</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ec</Code>
-    <Tags Language="1033">
-      <Tag>ring</Tag>
-      <Tag>tag</Tag>
-    </Tags>
-    <EnumValue>Tag</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ed</Code>
-    <Tags Language="1033">
-      <Tag>reload</Tag>
-      <Tag>update</Tag>
-      <Tag>1</Tag>
-      <Tag>repeat</Tag>
-    </Tags>
-    <EnumValue>RepeatOne</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ee</Code>
-    <Tags Language="1033">
-      <Tag>reload</Tag>
-      <Tag>update</Tag>
-      <Tag>repeat</Tag>
-    </Tags>
-    <EnumValue>RepeatAll</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ef</Code>
-    <Tags Language="1033">
-      <Tag>calculator</Tag>
-      <Tag>device</Tag>
-    </Tags>
-    <EnumValue>Calculator</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f0</Code>
-    <Tags Language="1033">
-      <Tag>arrow-up</Tag>
-    </Tags>
-    <EnumValue>Directions</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f1</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>book</Tag>
-      <Tag>library</Tag>
-    </Tags>
-    <EnumValue>Library</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e8f2</Code>
     <Tags Language="1033">
@@ -7431,287 +5273,11 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e8f3</Code>
-    <Tags Language="1033">
-      <Tag>execute</Tag>
-      <Tag>run</Tag>
-      <Tag>delivery</Tag>
-      <Tag>newspaper</Tag>
-    </Tags>
-    <EnumValue>PostUpdate</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f4</Code>
-    <Tags Language="1033">
-      <Tag>plus</Tag>
-      <Tag>add</Tag>
-      <Tag>directory</Tag>
-      <Tag>folder</Tag>
-    </Tags>
-    <EnumValue>NewFolder</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f5</Code>
-    <Tags Language="1033">
-      <Tag>open</Tag>
-      <Tag>calendar</Tag>
-    </Tags>
-    <EnumValue>CalendarReply</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f6</Code>
-    <Tags Language="1033">
-      <Tag>directory</Tag>
-      <Tag>cancel-reload</Tag>
-      <Tag>folder</Tag>
-    </Tags>
-    <EnumValue>UnSyncFolder</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f7</Code>
-    <Tags Language="1033">
-      <Tag>directory</Tag>
-      <Tag>reload</Tag>
-      <Tag>folder</Tag>
-    </Tags>
-    <EnumValue>SyncFolder</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f8</Code>
-    <Tags Language="1033">
-      <Tag>cancel</Tag>
-      <Tag>contact</Tag>
-      <Tag>person</Tag>
-    </Tags>
-    <EnumValue>BlockContact</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8f9</Code>
-    <Tags Language="1033">
-      <Tag>other</Tag>
-    </Tags>
-    <EnumValue>SwitchApps</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8fa</Code>
-    <Tags Language="1033">
-      <Tag>person</Tag>
-      <Tag>add</Tag>
-      <Tag>contact</Tag>
-    </Tags>
-    <EnumValue>AddFriend</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8fb</Code>
-    <Tags Language="1033">
-      <Tag>check</Tag>
-    </Tags>
-    <EnumValue>Accept</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8fc</Code>
-    <Tags Language="1033">
-      <Tag>display</Tag>
-      <Tag>start-screen</Tag>
-      <Tag>home-screen</Tag>
-    </Tags>
-    <EnumValue>GoToStart</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8fd</Code>
-    <Tags Language="1033">
-      <Tag>dot</Tag>
-      <Tag>list</Tag>
-    </Tags>
-    <EnumValue>BulletedList</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8fe</Code>
-    <Tags Language="1033">
-      <Tag>device</Tag>
-      <Tag>scanner</Tag>
-    </Tags>
-    <EnumValue>Scan</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e8ff</Code>
-    <Tags Language="1033">
-      <Tag>hidden</Tag>
-      <Tag>selection</Tag>
-      <Tag>file</Tag>
-    </Tags>
-    <EnumValue>Preview</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e904</Code>
-    <Tags Language="1033">
-      <Tag>0</Tag>
-      <Tag>outline</Tag>
-      <Tag>wlan</Tag>
-    </Tags>
-    <EnumValue>ZeroBars</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e905</Code>
-    <Tags Language="1033">
-      <Tag>1</Tag>
-      <Tag>outline</Tag>
-      <Tag>wlan</Tag>
-    </Tags>
-    <EnumValue>OneBar</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e906</Code>
-    <Tags Language="1033">
-      <Tag>2</Tag>
-      <Tag>outline</Tag>
-      <Tag>wlan</Tag>
-    </Tags>
-    <EnumValue>TwoBars</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e907</Code>
-    <Tags Language="1033">
-      <Tag>3</Tag>
-      <Tag>outline</Tag>
-      <Tag>wlan</Tag>
-    </Tags>
-    <EnumValue>ThreeBars</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e908</Code>
-    <Tags Language="1033">
-      <Tag>4</Tag>
-      <Tag>outline</Tag>
-      <Tag>wlan</Tag>
-    </Tags>
-    <EnumValue>FourBars</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e909</Code>
-    <Tags Language="1033">
-      <Tag>earth</Tag>
-      <Tag>globe</Tag>
-    </Tags>
-    <EnumValue>World</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e90a</Code>
-    <Tags Language="1033">
-      <Tag>comment</Tag>
-      <Tag>message</Tag>
-    </Tags>
-    <EnumValue>Comment</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e90b</Code>
-    <Tags Language="1033">
-      <Tag>text</Tag>
-      <Tag>music</Tag>
-    </Tags>
-    <EnumValue>MusicInfo</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e90c</Code>
-    <Tags Language="1033">
-      <Tag>splitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-    <EnumValue>DockLeft</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e90d</Code>
-    <Tags Language="1033">
-      <Tag>splitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-    <EnumValue>DockRight</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e90e</Code>
-    <Tags Language="1033">
-      <Tag>splitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-    <EnumValue>DockBottom</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e90f</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>tool</Tag>
-    </Tags>
-    <EnumValue>Repair</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e910</Code>
-    <Tags Language="1033">
-      <Tag>@</Tag>
-      <Tag>at</Tag>
-    </Tags>
-    <EnumValue>Accounts</EnumValue>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e911</Code>
     <Tags Language="1033">
       <Tag>accent</Tag>
       <Tag>other</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e912</Code>
-    <Tags Language="1033">
-      <Tag>screen</Tag>
-      <Tag>toolbox</Tag>
-    </Tags>
-    <EnumValue>Manage</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e913</Code>
-    <Tags Language="1033">
-      <Tag>house</Tag>
-      <Tag>outline</Tag>
-      <Tag>tree</Tag>
-      <Tag>home</Tag>
-    </Tags>
-    <EnumValue>Street</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e914</Code>
-    <Tags Language="1033">
-      <Tag>game-console</Tag>
-      <Tag>xbox</Tag>
-      <Tag>device</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -7848,13 +5414,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e92e</Code>
-    <Tags Language="1033">
-      <Tag>keyboard</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e92f</Code>
     <Tags Language="1033">
@@ -7971,14 +5530,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e944</Code>
-    <Tags Language="1033">
-      <Tag>rectangle</Tag>
-      <Tag>shrink</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e945</Code>
     <Tags Language="1033">
@@ -8053,15 +5604,6 @@
     <Code>e94e</Code>
     <Tags Language="1033">
       <Tag>equality-sign</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e94f</Code>
-    <Tags Language="1033">
-      <Tag>back</Tag>
-      <Tag>remove</Tag>
-      <Tag>delete</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -8270,30 +5812,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>e96e</Code>
-    <Tags Language="1033">
-      <Tag>bold</Tag>
-      <Tag>chevron-down</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e96f</Code>
-    <Tags Language="1033">
-      <Tag>bold</Tag>
-      <Tag>chevron-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e970</Code>
-    <Tags Language="1033">
-      <Tag>right</Tag>
-      <Tag>chevron-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>e971</Code>
     <Tags Language="1033">
@@ -8319,71 +5837,6 @@
     <Code>e974</Code>
     <Tags Language="1033">
       <Tag>chevron-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e975</Code>
-    <Tags Language="1033">
-      <Tag>tablet</Tag>
-      <Tag>laptop</Tag>
-      <Tag>device</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e976</Code>
-    <Tags Language="1033">
-      <Tag>arrow-left</Tag>
-      <Tag>square</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e977</Code>
-    <Tags Language="1033">
-      <Tag>display</Tag>
-      <Tag>computer</Tag>
-      <Tag>pc</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e978</Code>
-    <Tags Language="1033">
-      <Tag>fill</Tag>
-      <Tag>square</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e979</Code>
-    <Tags Language="1033">
-      <Tag>fill</Tag>
-      <Tag>camera</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e97a</Code>
-    <Tags Language="1033">
-      <Tag>arrow-back</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e97b</Code>
-    <Tags Language="1033">
-      <Tag>arrow-up</Tag>
-      <Tag>square</Tag>
-    </Tags>
-    <EnumValue>SetTile</EnumValue>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>e97c</Code>
-    <Tags Language="1033">
-      <Tag>border</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -8841,31 +6294,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>ea40</Code>
-    <Tags Language="1033">
-      <Tag>right-align</Tag>
-      <Tag>circle</Tag>
-      <Tag>list</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea41</Code>
-    <Tags Language="1033">
-      <Tag>dot</Tag>
-      <Tag>left-align</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea42</Code>
-    <Tags Language="1033">
-      <Tag>lines</Tag>
-      <Tag>dot</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>ea43</Code>
     <Tags Language="1033">
@@ -8891,23 +6319,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>ea48</Code>
-    <Tags Language="1033">
-      <Tag>redo</Tag>
-      <Tag>selection</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea49</Code>
-    <Tags Language="1033">
-      <Tag>arrow-left</Tag>
-      <Tag>aplitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>ea4a</Code>
     <Tags Language="1033">
@@ -8917,64 +6328,10 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>ea4b</Code>
-    <Tags Language="1033">
-      <Tag>splitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea4c</Code>
-    <Tags Language="1033">
-      <Tag>splitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea4e</Code>
-    <Tags Language="1033">
-      <Tag>square</Tag>
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea4f</Code>
-    <Tags Language="1033">
-      <Tag>arrow-top-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>ea50</Code>
     <Tags Language="1033">
       <Tag>triangle-bottom-left</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea51</Code>
-    <Tags Language="1033">
-      <Tag>mirrored</Tag>
-      <Tag>question</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea52</Code>
-    <Tags Language="1033">
-      <Tag>arrow-right</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea53</Code>
-    <Tags Language="1033">
-      <Tag>arrow-right</Tag>
-      <Tag>grid</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -8992,53 +6349,6 @@
     <Tags Language="1033">
       <Tag>right-align</Tag>
       <Tag>lines</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea56</Code>
-    <Tags Language="1033">
-      <Tag>send</Tag>
-      <Tag>mail</Tag>
-      <Tag>message</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea57</Code>
-    <Tags Language="1033">
-      <Tag>send</Tag>
-      <Tag>mail</Tag>
-      <Tag>reply</Tag>
-      <Tag>message</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea58</Code>
-    <Tags Language="1033">
-      <Tag>send</Tag>
-      <Tag>mail</Tag>
-      <Tag>reply</Tag>
-      <Tag>message</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea5b</Code>
-    <Tags Language="1033">
-      <Tag>arrow-right</Tag>
-      <Tag>splitted</Tag>
-      <Tag>rectangle</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea5c</Code>
-    <Tags Language="1033">
-      <Tag>right-align</Tag>
-      <Tag>arrow-up</Tag>
-      <Tag>list</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -9099,15 +6409,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>ea65</Code>
-    <Tags Language="1033">
-      <Tag>right-align</Tag>
-      <Tag>dot</Tag>
-      <Tag>list</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>ea69</Code>
     <Tags Language="1033">
@@ -9132,14 +6433,6 @@
     <Tags Language="1033">
       <Tag>device</Tag>
       <Tag>screen</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>ea80</Code>
-    <Tags Language="1033">
-      <Tag>light-bulb</Tag>
-      <Tag>outline</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -9300,15 +6593,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>ea98</Code>
-    <Tags Language="1033">
-      <Tag>right-align</Tag>
-      <Tag>list</Tag>
-      <Tag>check</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>ea99</Code>
     <Tags Language="1033">
@@ -9422,22 +6706,6 @@
       <Tag>check</Tag>
       <Tag>outline</Tag>
       <Tag>light-bulb</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>eb51</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>heart</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>eb52</Code>
-    <Tags Language="1033">
-      <Tag>fill</Tag>
-      <Tag>heart</Tag>
     </Tags>
   </FontIcon>
   <FontIcon>
@@ -9595,15 +6863,6 @@
     </Tags>
   </FontIcon>
   <FontIcon>
-    <!--  -->
-    <Code>eb7e</Code>
-    <Tags Language="1033">
-      <Tag>outline</Tag>
-      <Tag>pen</Tag>
-      <Tag>edit</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
     <!--  -->
     <Code>eb82</Code>
     <!--  -->
@@ -9683,15 +6942,6 @@
   <FontIcon>
     <!--  -->
     <Code>eb8b</Code>
-    <Tags Language="1033">
-      <Tag>hand</Tag>
-      <Tag>device</Tag>
-      <Tag>finger-print</Tag>
-    </Tags>
-  </FontIcon>
-  <FontIcon>
-    <!--  -->
-    <Code>eb8c</Code>
     <Tags Language="1033">
       <Tag>hand</Tag>
       <Tag>device</Tag>

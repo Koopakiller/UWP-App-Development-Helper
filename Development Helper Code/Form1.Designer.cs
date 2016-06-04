@@ -33,6 +33,7 @@
             this.buttonCreateXML = new System.Windows.Forms.Button();
             this.buttonAddMSDNIconInfo = new System.Windows.Forms.Button();
             this.buttonLowerCaseTags = new System.Windows.Forms.Button();
+            this.buttonDistinctTags = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonOpenXmlAndWriteImages
@@ -85,11 +86,22 @@
             this.buttonLowerCaseTags.UseVisualStyleBackColor = true;
             this.buttonLowerCaseTags.Click += new System.EventHandler(this.buttonLowerCaseTags_Click);
             // 
+            // buttonDistinctTags
+            // 
+            this.buttonDistinctTags.Location = new System.Drawing.Point(12, 258);
+            this.buttonDistinctTags.Name = "buttonDistinctTags";
+            this.buttonDistinctTags.Size = new System.Drawing.Size(516, 43);
+            this.buttonDistinctTags.TabIndex = 5;
+            this.buttonDistinctTags.Text = "Distinct Tags";
+            this.buttonDistinctTags.UseVisualStyleBackColor = true;
+            this.buttonDistinctTags.Click += new System.EventHandler(this.buttonDistinctTags_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 457);
+            this.Controls.Add(this.buttonDistinctTags);
             this.Controls.Add(this.buttonLowerCaseTags);
             this.Controls.Add(this.buttonAddMSDNIconInfo);
             this.Controls.Add(this.buttonCreateXML);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.Button buttonCreateXML;
         private System.Windows.Forms.Button buttonAddMSDNIconInfo;
         private System.Windows.Forms.Button buttonLowerCaseTags;
+        private System.Windows.Forms.Button buttonDistinctTags;
     }
 }
 
