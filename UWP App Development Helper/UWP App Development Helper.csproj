@@ -99,6 +99,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
     <Compile Include="Dialogs\FontIconDetailsDialog.xaml.cs">
       <DependentUpon>FontIconDetailsDialog.xaml</DependentUpon>
     </Compile>

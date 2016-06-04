@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:ui="using:Koopakiller.Apps.UwpAppDevelopmentHelper.UI"
+    xmlns:converter="using:Koopakiller.Apps.UwpAppDevelopmentHelper.Converter"
     RequestedTheme="Light">
     <Application.Resources>
         
@@ -31,6 +32,8 @@
             </Style>
 
             <ui:AutoTypeTemplateSelector x:Key="AutoTypeTemplateSelector"/>
+            
+            <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
 
         </ResourceDictionary>
         

@@ -4,6 +4,7 @@ using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using GalaSoft.MvvmLight.Threading;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper
 {
@@ -69,6 +70,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
             }
             // Ensure the current window is active
             Window.Current.Activate();
+
+            DispatcherHelper.Initialize();
         }
 
         /// <summary>

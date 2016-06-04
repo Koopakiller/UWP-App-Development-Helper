@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -8,28 +9,40 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Threading;
+using PostSharp.Patterns.Model;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
+    [NotifyPropertyChanged]
     public class FontIconViewModel : ViewModelBase
     {
-        private string _searchTerm;
+        #region Fields
+
         private IReadOnlyCollection<FontIcon> _filteredMdl2FontIcons;
-        private bool _searchInTags = true;
-        private bool _searchInDescription = true;
-        private bool _searchInEnumValue = true;
+        private string _searchTerm;
+        private bool _isLoading;
+
+        #endregion
+
+        #region .ctor
 
         public FontIconViewModel()
         {
-            this.LoadFontIconsCommand = new RelayCommand(this.LoadFontIcons);
+            this.LoadFontIconsCommand = new RelayCommand(async () => await this.LoadFontIconsAsync());
+            this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync());
+
+            this.PropertyChanged += this.OnPropertyChanged;
         }
+
+        #endregion
+
+        #region Properties
 
         public ICommand LoadFontIconsCommand { get; }
 
-        private async void LoadFontIcons()
-        {
-            await this.LoadFontIconsAsync();
-        }
+        public ICommand FilterFontIconListCommand { get; }
+
 
         private async Task LoadFontIconsAsync()
         {
@@ -63,7 +76,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 FontName = "Segoe MDL2 Assets",
             };
 
-            this.UpdateFilteredView();
+            await this.FilterFontIconListAsync();
         }
 
         public string SearchTerm
@@ -73,44 +86,27 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             {
                 this._searchTerm = value;
                 this.RaisePropertyChanged();
-                this.UpdateFilteredView();
+                this.FilterFontIconListCommand.Execute(null);
             }
         }
 
-        public bool SearchInTags
-        {
-            get { return this._searchInTags; }
-            set
-            {
-                this._searchInTags = value;
-                this.RaisePropertyChanged();
-                this.UpdateFilteredView();
-            }
-        }
+        public bool SearchInTags { get; set; } = true;
 
-        public bool SearchInDescription
-        {
-            get { return this._searchInDescription; }
-            set
-            {
-                this._searchInDescription = value;
-                this.RaisePropertyChanged();
-                this.UpdateFilteredView();
-            }
-        }
+        public bool SearchInDescription { get; set; } = true;
 
-        public bool SearchInEnumValue
-        {
-            get { return this._searchInEnumValue; }
-            set
-            {
-                this._searchInEnumValue = value;
-                this.RaisePropertyChanged();
-                this.UpdateFilteredView();
-            }
-        }
+        public bool SearchInEnumValue { get; set; } = true;
 
         public FontIconCollection Mdl2 { get; set; }
+
+        public bool IsLoading
+        {
+            get { return this._isLoading; }
+            set
+            {
+                this._isLoading = value;
+                this.RaisePropertyChanged();
+            }
+        }
 
         public IReadOnlyCollection<FontIcon> FilteredMdl2FontIcons
         {
@@ -122,29 +118,54 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-        private void UpdateFilteredView()
+        #endregion
+
+        private void OnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
+            switch (propertyChangedEventArgs.PropertyName)
+            {
+                case nameof(this.SearchInEnumValue):
+                case nameof(this.SearchInDescription):
+                case nameof(this.SearchInTags):
+                    this.FilterFontIconListCommand.Execute(null);
+                    break;
+            }
+        }
+
+        private async Task FilterFontIconListAsync()
+        {
+            await DispatcherHelper.RunAsync(() => this.IsLoading = true);
+            
             const int code = 1033;
 
+            IReadOnlyCollection<FontIcon> result;
             if (string.IsNullOrEmpty(this.SearchTerm))
             {
-                this.FilteredMdl2FontIcons = this.Mdl2.FontIcons.ToList();
+                result = this.Mdl2.FontIcons.ToList();
             }
             else
             {
-                var parts = this.SearchTerm.Split(' ');
-                this.FilteredMdl2FontIcons =
-                    this.Mdl2.FontIcons.Select(x =>
-                        Tuple.Create(x,
-                            (this.SearchInTags ? x.Tags
-                                                  .FirstOrDefault(y => y.LanguageCode == code)
-                                                  .LanguageSpecific
-                                                  .Sum(y => parts.Count(z => y.IndexOf(z, StringComparison.OrdinalIgnoreCase) != -1))
-                                               : 0) +
-                            (this.SearchInDescription ? parts.Count(z => (x.Descriptions.FirstOrDefault(y => y.LanguageCode == code)?.Text?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1) : 0) +
-                            (this.SearchInEnumValue ? parts.Count(z => (x.EnumValue?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1) : 0)
-                            )).Where(x => x.Item2 > 0).OrderByDescending(x => x.Item2).Select(x => x.Item1).ToList();
+                var parts = this.SearchTerm.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                result =
+                    this.Mdl2.FontIcons
+                             .Select(x => Tuple.Create(x, 
+                                                (this.SearchInTags ? x.Tags
+                                                                      .FirstOrDefault(y => y.LanguageCode == code)
+                                                                      .LanguageSpecific
+                                                                      .Sum(y => parts.Count(z => y.IndexOf(z, StringComparison.OrdinalIgnoreCase) != -1))
+                                                                   : 0) +
+                                                (this.SearchInDescription ? parts.Count(z => (x.Descriptions.FirstOrDefault(y => y.LanguageCode == code)?.Text?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1)
+                                                                          : 0) +
+                                                (this.SearchInEnumValue ? parts.Count(z => (x.EnumValue?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1)
+                                                                        : 0)))
+                             .Where(x => x.Item2 > 0)
+                             .OrderByDescending(x => x.Item2)
+                             .Select(x => x.Item1)
+                             .ToList();
             }
+            await DispatcherHelper.RunAsync(() => this.FilteredMdl2FontIcons = result);
+
+            await DispatcherHelper.RunAsync(() => this.IsLoading = false);
         }
 
     }
