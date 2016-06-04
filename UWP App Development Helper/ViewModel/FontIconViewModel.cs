@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,10 +19,13 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
     {
         #region Fields
 
-        private IReadOnlyCollection<FontIcon> _filteredMdl2FontIcons;
+        private IReadOnlyCollection<SingleFontIconViewModel> _filteredMdl2FontIcons;
         private string _searchTerm;
         private bool _isLoading = true;
         private CancellationTokenSource _lastFilterFontIconListCancellationTokenSource = new CancellationTokenSource();
+        private bool _searchInTags = true;
+        private bool _searchInDescription = true;
+        private bool _searchInEnumValue = true;
 
         #endregion
 
@@ -33,8 +35,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             this.LoadFontIconsCommand = new RelayCommand(async () => await this.LoadFontIconsAsync());
             this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync(new CancellationTokenSource()));
-
-            this.PropertyChanged += this.OnPropertyChanged;
         }
 
         #endregion
@@ -45,7 +45,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public ICommand FilterFontIconListCommand { get; }
 
-
         private async Task LoadFontIconsAsync()
         {
             var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
@@ -54,13 +53,13 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
             var doc = XDocument.Parse(xmlText);
 
-            this.Mdl2 = new FontIconCollection(
+            this.Mdl2 = new FontIconCollectionViewModel(
                 doc.Root.Elements("FontIcon")
-                    .Select(x => new FontIcon(x.Elements("Code")
+                    .Select(x => new SingleFontIconViewModel(x.Elements("Code")
                         .Select(y => (char)Convert.ToInt32(y.Value, 16))
                         .ToArray(),
                         x.Elements("Tags")
-                            .Select(y => new TagCollection(y.Elements("Tag")
+                            .Select(y => new TagCollectionViewModel(y.Elements("Tag")
                                 .Select(z => z.Value)
                                 .ToArray())
                             {
@@ -68,7 +67,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                             })
                             .ToList(),
                         x.Elements("Description")
-                            .Select(y => new Description(int.Parse(y.Attribute("Language").Value), y.Value))
+                            .Select(y => new DescriptionViewModel(int.Parse(y.Attribute("Language").Value), y.Value))
                             .ToList())
                     {
                         EnumValue = x.Element("EnumValue")?.Value,
@@ -92,13 +91,40 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-        public bool SearchInTags { get; set; } = true;
+        public bool SearchInTags
+        {
+            get { return this._searchInTags; }
+            set
+            {
+                this._searchInTags = value;
+                this.RaisePropertyChanged();
+                this.FilterFontIconListCommand.Execute(null);
+            }
+        }
 
-        public bool SearchInDescription { get; set; } = true;
+        public bool SearchInDescription
+        {
+            get { return this._searchInDescription; }
+            set
+            {
+                this._searchInDescription = value;
+                this.RaisePropertyChanged();
+                this.FilterFontIconListCommand.Execute(null);
+            }
+        }
 
-        public bool SearchInEnumValue { get; set; } = true;
+        public bool SearchInEnumValue
+        {
+            get { return this._searchInEnumValue; }
+            set
+            {
+                this._searchInEnumValue = value;
+                this.RaisePropertyChanged();
+                this.FilterFontIconListCommand.Execute(null);
+            }
+        }
 
-        public FontIconCollection Mdl2 { get; set; }
+        public FontIconCollectionViewModel Mdl2 { get; set; }
 
         public bool IsLoading
         {
@@ -110,7 +136,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-        public IReadOnlyCollection<FontIcon> FilteredMdl2FontIcons
+        public IReadOnlyCollection<SingleFontIconViewModel> FilteredMdl2FontIcons
         {
             get { return this._filteredMdl2FontIcons; }
             private set
@@ -122,18 +148,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         #endregion
 
-        private void OnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
-        {
-            switch (propertyChangedEventArgs.PropertyName)
-            {
-                case nameof(this.SearchInEnumValue):
-                case nameof(this.SearchInDescription):
-                case nameof(this.SearchInTags):
-                    this.FilterFontIconListCommand.Execute(null);
-                    break;
-            }
-        }
-
         private async Task FilterFontIconListAsync(CancellationTokenSource cts)
         {
             this._lastFilterFontIconListCancellationTokenSource.Cancel();
@@ -143,7 +157,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             await Task.Delay(250);
             const int code = 1033;
 
-            IReadOnlyCollection<FontIcon> result;
+            IReadOnlyCollection<SingleFontIconViewModel> result;
             if (string.IsNullOrEmpty(this.SearchTerm))
             {
                 result = this.Mdl2.FontIcons.ToList();
@@ -176,57 +190,5 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 await DispatcherHelper.RunAsync(() => this.IsLoading = false);
             }
         }
-
-    }
-
-    public class FontIconCollection
-    {
-        public FontIconCollection(IList<FontIcon> fontIcons)
-        {
-            this.FontIcons = fontIcons;
-        }
-
-        public string FontName { get; set; }
-
-        public IList<FontIcon> FontIcons { get; }
-    }
-
-    public class FontIcon
-    {
-        public FontIcon(params char[] icons)
-        {
-            this.Chars = new List<char>(icons);
-        }
-        public FontIcon(char[] icons, IList<TagCollection> tags, IList<Description> descriptions) : this(icons)
-        {
-            this.Tags = tags;
-            this.Descriptions = descriptions;
-        }
-
-        public IList<char> Chars { get; }
-
-        public IList<TagCollection> Tags { get; } = new List<TagCollection>();
-        public IList<Description> Descriptions { get; } = new List<Description>();
-
-        public string EnumValue { get; set; }
-    }
-    public class TagCollection
-    {
-        public TagCollection(params string[] tags)
-        {
-            this.LanguageSpecific = new List<string>(tags);
-        }
-        public int LanguageCode { get; set; }
-        public IList<string> LanguageSpecific { get; }
-    }
-    public class Description
-    {
-        public Description(int langCode, string text)
-        {
-            this.LanguageCode = langCode;
-            this.Text = text;
-        }
-        public int LanguageCode { get; set; }
-        public string Text { get; }
     }
 }

@@ -100,21 +100,22 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Dialogs\FontIconDetailsDialog.xaml.cs">
-      <DependentUpon>FontIconDetailsDialog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Extensions\Package.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AutoTypeTemplateSelector.cs" />
+    <Compile Include="ViewModel\DescriptionViewModel.cs" />
+    <Compile Include="ViewModel\FontIconCollectionViewModel.cs" />
     <Compile Include="ViewModel\FontIconViewModel.cs" />
     <Compile Include="ViewModel\AboutViewModel.cs" />
     <Compile Include="ViewModel\CustomColorsViewModel.cs" />
     <Compile Include="ViewModel\HamburgerMenuItemViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\SingleFontIconViewModel.cs" />
+    <Compile Include="ViewModel\TagCollectionViewModel.cs" />
     <Compile Include="View\ViewBase.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,10 +139,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Dialogs\FontIconDetailsDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -164,6 +161,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Dialogs\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -9,52 +9,57 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:FontIconViewModel}">
-    
+
     <interactivity:Interaction.Behaviors>
         <core:EventTriggerBehavior EventName="Loading">
             <core:InvokeCommandAction Command="{Binding LoadFontIconsCommand}"  />
         </core:EventTriggerBehavior>
     </interactivity:Interaction.Behaviors>
 
-    <Grid >
+    <Grid>
+        <Grid >
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <TextBox FontSize="24" PlaceholderText="Search Icons (split multiple terms with a space)" Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            <TextBox FontSize="24" PlaceholderText="Search Icons (split multiple terms with a space)" Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15 5 15 5">
-            <TextBlock Margin="0 4 10 0" Text="Search in..."/>
-            <CheckBox IsChecked="{Binding SearchInDescription, Mode=TwoWay}" Content="Description"/>
-            <CheckBox IsChecked="{Binding SearchInEnumValue, Mode=TwoWay}" Content="Enum-Value"/>
-            <CheckBox IsChecked="{Binding SearchInTags, Mode=TwoWay}" Content="Tags"/>
-        </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15 5 15 5">
+                <TextBlock Margin="0 4 10 0" Text="Search in..."/>
+                <CheckBox IsChecked="{Binding SearchInDescription, Mode=TwoWay}" Content="Description"/>
+                <CheckBox IsChecked="{Binding SearchInEnumValue, Mode=TwoWay}" Content="Enum-Value"/>
+                <CheckBox IsChecked="{Binding SearchInTags, Mode=TwoWay}" Content="Tags"/>
+            </StackPanel>
 
-        <Border Grid.Row="2" Height="15">
-        <ProgressBar IsIndeterminate="True" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-        </Border>
-        
-        <GridView Margin="0" Grid.Row="3" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" HorizontalAlignment="Center">
-            <GridView.ItemContainerStyle>
-                <Style TargetType="GridViewItem">
-                    <Setter Property="IsHoldingEnabled" Value="False"/>
-                    <Setter Property="Margin" Value="5"/>
-                </Style>
-            </GridView.ItemContainerStyle>
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Width="100" Height="100" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" Padding="5">
-                        <FontIcon FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" 
+            <Border Grid.Row="2" Height="15">
+                <ProgressBar IsIndeterminate="True" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </Border>
+
+            <GridView Margin="0" Grid.Row="3" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" >
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="IsHoldingEnabled" Value="False"/>
+                        <Setter Property="Margin" Value="5"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="100" Height="100" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" Padding="5">
+                            <FontIcon FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" 
                                   Glyph="{Binding Chars[0]}"
                                   Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
-                    </Grid>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
+        </Grid>
+
+
 
     </Grid>
 </view:ViewBase>
