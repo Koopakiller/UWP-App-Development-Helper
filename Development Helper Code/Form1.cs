@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -173,6 +174,79 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.DevelopmentHelperCode
             }
             sb.AppendLine("</FontIcons>");
             File.WriteAllText("chars2.xml", sb.ToString());
+        }
+
+        private void buttonAddMSDNIconInfo_Click(object sender, EventArgs e)
+        {
+            var source = XDocument.Parse(File.ReadAllText("chars2.xml", Encoding.UTF8));
+            var msdnXml = XDocument.Load(@"MSDN MDL2 Font Icon.xml");
+
+            //Code
+            //Enum
+            //Desc
+
+            var msdn = msdnXml.Descendants("tr").Select(x =>
+              {
+                  var td = x.Elements("td").ToList();
+                  switch (td.Count)
+                  {
+                      case 0://Header
+                          return new Tuple<string, string, string>[0];
+                      case 3:
+                          return new[]
+                          {
+                            Tuple.Create(td[0].Value, td[2].Value, ""),
+                          };
+                      case 4:
+
+                          return new[]
+                          {
+                            Tuple.Create(td[0].Value, td[2].Value, td[3].Value),
+                          };
+                      case 6:
+                          return new[]
+                          {
+                            Tuple.Create(td[0].Value, td[2].Value, ""),
+                            Tuple.Create(td[3].Value, td[5].Value, ""),
+                          };
+                      default:
+                          throw new ArgumentOutOfRangeException();
+                  }
+              }).SelectMany(x => x).ToDictionary(x =>
+              {
+                  Debug.WriteLine(x.Item1); return x.Item1;
+              }, x => Tuple.Create(x.Item2, x.Item3));
+
+            foreach (var fi in source.Root.Elements("FontIcon"))
+            {
+                var codes = fi.Elements("Code").Select(x => x.Value).ToList();
+                var d = msdn.FirstOrDefault(x => codes.Any(y => string.Equals(x.Key, y, StringComparison.CurrentCultureIgnoreCase)));
+                if (!string.IsNullOrWhiteSpace(d.Key))
+                {
+                    var enu = new XElement("EnumValue", d.Value.Item1);
+                    fi.Add(enu);
+
+                    if (!string.IsNullOrWhiteSpace(d.Value.Item2))
+                    {
+                        var desc = new XElement("Description", new XAttribute("Language", "1033"), d.Value.Item2);
+                        fi.Add(desc);
+                    }
+                }
+            }
+
+            source.Save("chars3.xml");
+        }
+
+        private void buttonLowerCaseTags_Click(object sender, EventArgs e)
+        {
+            var source = XDocument.Parse(File.ReadAllText("chars3.xml", Encoding.UTF8));
+
+            foreach (var tag in source.Descendants("Tag"))
+            {
+                tag.Value = tag.Value.ToLower();
+            }
+
+            source.Save("chars4.xml");
         }
     }
 }

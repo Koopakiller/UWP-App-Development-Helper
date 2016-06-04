@@ -1,0 +1,2603 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  
+  <!-- SOURCE: https://msdn.microsoft.com/en-us/windows/uwp/controls-and-patterns/segoe-ui-symbol-font?f=255&MSPPError=-2147217396 -->
+
+  <table>
+    <colgroup>
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          E006
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/heartlegacy.png" alt="HeartLegacy" />
+        </td>
+        <td>
+          HeartLegacy
+        </td>
+        <td>
+          Outlined heart
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E0A5
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/heartfilllegacy.png" alt="HeartFillLegacy" />
+        </td>
+        <td>
+          HeartFillLegacy
+        </td>
+        <td>
+          Solid heart
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E007
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/heartbrokenlegacy.png" alt="HeartBrokenLegacy" />
+        </td>
+        <td>
+          HeartBrokenLegacy
+        </td>
+        <td>
+          Broken heart
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E00B
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/heartfillzerowidthlegacy.png" alt="HeartFillZeroWidthLegacy" />
+        </td>
+        <td>
+          HeartFillZeroWidthLegacy
+        </td>
+        <td>
+          Solid heart (zero width)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          E00C
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/heartbrokenzerowidthlegacy.png" alt="HeartBrokenZeroWidthLegacy" />
+        </td>
+        <td>
+          HeartBrokenZeroWidthLegacy
+        </td>
+        <td>
+          Broken heart (zero width)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  <table>
+    <colgroup>
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E224</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/ratingstarlegacy.png" alt="RatingStarLegacy" />
+        </td>
+        <td>RatingStarLegacy</td>
+        <td>Outlined star</td>
+      </tr>
+      <tr>
+        <td>E0B4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/ratingstarfilllegacy.png" alt="RatingStarFillLegacy" />
+        </td>
+        <td>RatingStarFillLegacy</td>
+        <td>Solid star</td>
+      </tr>
+      <tr>
+        <td>E00A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/ratingstarfillzerowidthlegacy.png" alt="RatingStarFillZeroWidthLegacy" />
+        </td>
+        <td>RatingStarFillZeroWidthLegacy</td>
+        <td>Solid star (zero width)</td>
+      </tr>
+      <tr>
+        <td>E082</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/ratingstarfillreducedpaddinghtmllegacy.png" alt="RatingStarFillReducedPaddingHTMLLegacy" />
+        </td>
+        <td>RatingStarFillReducedPaddingHTMLLegacy</td>
+        <td>Solid star (reduced padding for use in HTML)</td>
+      </tr>
+      <tr>
+        <td>E0B5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/ratingstarfillsmalllegacy.png" alt="RatingStarFillSmallLegacy" />
+        </td>
+        <td>RatingStarFillSmallLegacy</td>
+        <td>Small star</td>
+      </tr>
+      <tr>
+        <td>E7C6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/halfstarleft.png" alt="HalfStarLeft" />
+        </td>
+        <td>HalfStarLeft</td>
+        <td>Half star, left side</td>
+      </tr>
+      <tr>
+        <td>
+          E7C7
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/halfstarright.png" alt="HalfStarRight" />
+        </td>
+        <td>HalfStarRight</td>
+        <td>Half star, right side</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Code</td>
+        <td>Symbol</td>
+        <td>Enum</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td>E001</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkmarklegacy.png" alt="checkmarklegacy" />
+        </td>
+        <td>CheckMarkLegacy</td>
+        <td>Check mark</td>
+      </tr>
+      <tr>
+        <td>E002</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxfilllegacy.png" alt="checkboxfilllegacy" />
+        </td>
+        <td>CheckboxFillLegacy</td>
+        <td>Filled checkbox</td>
+      </tr>
+      <tr>
+        <td>E003</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxlegacy.png" alt="checkboxlegacy" />
+        </td>
+        <td>CheckboxLegacy</td>
+        <td>Checkbox</td>
+      </tr>
+      <tr>
+        <td>E004</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxindeterminatelegacy.png" alt="checkboxindeterminatelegacy" />
+        </td>
+        <td>CheckboxIndeterminateLegacy</td>
+        <td>Indeterminate state</td>
+      </tr>
+      <tr>
+        <td>E005</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxcompositereversedlegacy.png" alt="checkboxcompositereversedlegacy" />
+        </td>
+        <td>CheckboxCompositeReversedLegacy</td>
+        <td>Reversed</td>
+      </tr>
+      <tr>
+        <td>E008</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkmarkzerowidthlegacy.png" alt="checkmarkzerowidthlegacy" />
+        </td>
+        <td>CheckMarkZeroWidthLegacy</td>
+        <td>Check mark (zero width)</td>
+      </tr>
+      <tr>
+        <td>E009</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxfillzerowidthlegacy.png" alt="checkboxfillzerowidthlegacy" />
+        </td>
+        <td>CheckboxFillZeroWidthLegacy</td>
+        <td>Fill (zero width)</td>
+      </tr>
+      <tr>
+        <td>E0A2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxcompositelegacy.png" alt="checkboxcompositelegacy" />
+        </td>
+        <td>CheckboxCompositeLegacy</td>
+        <td>Composite</td>
+      </tr>
+      <tr>
+        <td>E739</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkbox.png" alt="checkbox" />
+        </td>
+        <td>Checkbox</td>
+        <td>Checkbox</td>
+      </tr>
+      <tr>
+        <td>E73A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxcomposite.png" alt="checkboxcomposite" />
+        </td>
+        <td>CheckboxComposite</td>
+        <td>Composite checkbox</td>
+      </tr>
+      <tr>
+        <td>E73B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxfill.png" alt="checkboxfill" />
+        </td>
+        <td>CheckboxFill</td>
+        <td>Filled checkbox</td>
+      </tr>
+      <tr>
+        <td>E73C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxindeterminate.png" alt="checkboxindeterminate" />
+        </td>
+        <td>CheckboxIndeterminate</td>
+        <td>Indeterminate state</td>
+      </tr>
+      <tr>
+        <td>E73D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkboxcompositereversed.png" alt="checkboxcompositereversed" />
+        </td>
+        <td>CheckboxCompositeReversed</td>
+        <td>Reversed composite</td>
+      </tr>
+      <tr>
+        <td>E73E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/checkmark.png" alt="checkmark" />
+        </td>
+        <td>CheckMark</td>
+        <td>Check mark</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  <table>
+    <colgroup>
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          E134
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/commentlegacy.png" alt="CommentLegacy" />
+        </td>
+        <td>CommentLegacy</td>
+        <td>Comment</td>
+      </tr>
+      <tr>
+        <td>
+          E113
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritelegacy.png" alt="FavoriteLegacy" />
+        </td>
+        <td>FavoriteLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E195
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unfavoritelegacy.png" alt="UnfavoriteLegacy" />
+        </td>
+        <td>UnfavoriteLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E734
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritestar.png" alt="FavoriteStar" />
+        </td>
+        <td>FavoriteStar</td>
+        <td>Favorite outlined</td>
+      </tr>
+      <tr>
+        <td>
+          E735
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritestarfill.png" alt="FavoriteStarFill" />
+        </td>
+        <td>FavoriteStarFill</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E8D9
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unfavorite.png" alt="Unfavorite" />
+        </td>
+        <td>Unfavorite</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E19F
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/likelegacy.png" alt="LikeLegacy" />
+        </td>
+        <td>LikeLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E19E
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/dislikelegacy.png" alt="DislikeLegacy" />
+        </td>
+        <td>DislikeLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E19D
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/likedislikelegacy.png" alt="LikeDislikeLegacy" />
+        </td>
+        <td>LikeDislikeLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E116
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/videolegacy.png" alt="VideoLegacy" />
+        </td>
+        <td>VideoLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E714
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/video.png" alt="Video" />
+        </td>
+        <td>Video</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          E20B
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mailmessagelegacy.png" alt="MailMessageLegacy" />
+        </td>
+        <td>MailMessageLegacy</td>
+        <td>Mail legacy</td>
+      </tr>
+      <tr>
+        <td>
+          E248
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/replylegacy.png" alt="ReplyLegacy" />
+        </td>
+        <td>ReplyLegacy</td>
+        <td>Reply</td>
+      </tr>
+      <tr>
+        <td>
+          E249
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favorite2legacy.png" alt="Favorite2Legacy" />
+        </td>
+        <td>Favorite2Legacy</td>
+        <td>Favorite filled</td>
+      </tr>
+      <tr>
+        <td>
+          E24E
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unfavorite2legacy.png" alt="Unfavorite2Legacy" />
+        </td>
+        <td>Unfavorite2Legacy</td>
+        <td>Unfavorite</td>
+      </tr>
+      <tr>
+        <td>
+          E25A
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobilecontactlegacy.png" alt="MobileContactLegacy" />
+        </td>
+        <td>MobileContactLegacy</td>
+        <td>Mobile contact</td>
+      </tr>
+      <tr>
+        <td>
+          E25B
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/blockedlegacy.png" alt="BlockedLegacy" />
+        </td>
+        <td>BlockedLegacy</td>
+        <td>Blocked contact</td>
+      </tr>
+      <tr>
+        <td>
+          E25C
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/typingindicatorlegacy.png" alt="TypingIndicatorLegacy" />
+        </td>
+        <td>TypingIndicatorLegacy</td>
+        <td>Typing indicator</td>
+      </tr>
+      <tr>
+        <td>
+          E25D
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/presencechickletvideolegacy.png" alt="PresenceChickletVideoLegacy" />
+        </td>
+        <td>PresenceChickletVideoLegacy</td>
+        <td>Video presence chicklet</td>
+      </tr>
+      <tr>
+        <td>
+          E25E
+        </td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/presencechickletlegacy.png" alt="PresenceChickletLegacy" />
+        </td>
+        <td>PresenceChickletLegacy</td>
+        <td>Presence chicklet</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  <!-- w/o desc -->
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E00E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevronleftlegacy.png" alt="scrollchevronleftlegacy" />
+        </td>
+        <td>ScrollChevronLeftLegacy</td>
+      </tr>
+      <tr>
+        <td>E00F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevronrightlegacy.png" alt="scrollchevronrightlegacy" />
+        </td>
+        <td>ScrollChevronRightLegacy</td>
+      </tr>
+      <tr>
+        <td>E010</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevronuplegacy.png" alt="scrollchevronuplegacy" />
+        </td>
+        <td>ScrollChevronUpLegacy</td>
+      </tr>
+      <tr>
+        <td>E011</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevrondownlegacy.png" alt="scrollchevrondownlegacy" />
+        </td>
+        <td>ScrollChevronDownLegacy</td>
+      </tr>
+      <tr>
+        <td>E016</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevronleftboldlegacy.png" alt="scrollchevronleftboldlegacy" />
+        </td>
+        <td>ScrollChevronLeftBoldLegacy</td>
+      </tr>
+      <tr>
+        <td>E017</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevronrightboldlegacy.png" alt="scrollchevronrightboldlegacy" />
+        </td>
+        <td>ScrollChevronRightBoldLegacy</td>
+      </tr>
+      <tr>
+        <td>E018</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevronupboldlegacy.png" alt="scrollchevronupboldlegacy" />
+        </td>
+        <td>ScrollChevronUpBoldLegacy</td>
+      </tr>
+      <tr>
+        <td>E019</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scrollchevrondownboldlegacy.png" alt="scrollchevrondownboldlegacy" />
+        </td>
+        <td>ScrollChevronDownBoldLegacy</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E0D5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/arrowhtmllegacy.png" alt="arrowhtmllegacy" />
+        </td>
+        <td>ArrowHTMLLegacy</td>
+        <td>Arrow for HTML use</td>
+      </tr>
+      <tr>
+        <td>E0AE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/arrowhtmlmirroredlegacy.png" alt="arrowhtmlmirroredlegacy" />
+        </td>
+        <td>ArrowHTMLMirroredLegacy</td>
+        <td>Mirrored version of E0D5</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  
+  
+  <table>
+    <colgroup>
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+      <col width="25%" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E8FB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/accept.png" alt="Accept" />
+        </td>
+        <td>Accept</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E910</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/accounts.png" alt="Accounts" />
+        </td>
+        <td>Accounts</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E710</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/add.png" alt="Add" />
+        </td>
+        <td>Add</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8FA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/addfriend.png" alt="Addfriend" />
+        </td>
+        <td>AddFriend</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7EF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/admin.png" alt="Admin" />
+        </td>
+        <td>Admin</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/aligncenter.png" alt="Aligncenter" />
+        </td>
+        <td>AlignCenter</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/alignleft.png" alt="Alignleft" />
+        </td>
+        <td>AlignLeft</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/alignright.png" alt="Alignright" />
+        </td>
+        <td>Alignright</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E71D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/allapps.png" alt="Allapps" />
+        </td>
+        <td>AllApps</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E723</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/attach.png" alt="Attach" />
+        </td>
+        <td>Attach</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/attachcamera.png" alt="Attachcamera" />
+        </td>
+        <td>AttachCamera</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/audio.png" alt="Audio" />
+        </td>
+        <td>Audio</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E72B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/back.png" alt="Back" />
+        </td>
+        <td>Back</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E73F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/backtowindow.png" alt="Backtowindow" />
+        </td>
+        <td>BackToWindow</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/blockcontact.png" alt="Blockcontact" />
+        </td>
+        <td>BlockContact</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8DD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/bold.png" alt="Bold" />
+        </td>
+        <td>Bold</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/bookmarks.png" alt="Bookmarks" />
+        </td>
+        <td>Bookmarks</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7C5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/browsephotos.png" alt="Browsephotos" />
+        </td>
+        <td>BrowsePhotos</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8FD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/bulletedlist.png" alt="Bulletedlist" />
+        </td>
+        <td>BulletedList</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8EF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/calculator.png" alt="Calculator" />
+        </td>
+        <td>Calculator</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E787</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/calendar.png" alt="Calendar" />
+        </td>
+        <td>Calendar</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8BF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/calendarday.png" alt="Calendarday" />
+        </td>
+        <td>CalendarDay</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/calendarreply.png" alt="Calendarreply" />
+        </td>
+        <td>CalendarReply</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/calendarweek.png" alt="Calendarweek" />
+        </td>
+        <td>CalendarWeek</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E722</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/camera.png" alt="Camera" />
+        </td>
+        <td>Camera</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E711</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/cancel.png" alt="Cancel" />
+        </td>
+        <td>Cancel</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8BA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/caption.png" alt="Caption" />
+        </td>
+        <td>Caption</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7F0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/cc.png" alt="CC" />
+        </td>
+        <td>CC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8EA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/cellphone.png" alt="Cellphone" />
+        </td>
+        <td>Cellphone</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/characters.png" alt="Characters" />
+        </td>
+        <td>Characters</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E894</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/clear.png" alt="Clear" />
+        </td>
+        <td>Clear</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/clearselection.png" alt="Clearselection" />
+        </td>
+        <td>ClearSelection</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E89F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/closepane.png" alt="Closepane" />
+        </td>
+        <td>ClosePane</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E753</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/cloud.png" alt="Cloud" />
+        </td>
+        <td>Cloud</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E90A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/comment.png" alt="Comment" />
+        </td>
+        <td>Comment</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E77B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/contact.png" alt="Contact" />
+        </td>
+        <td>Contact</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/contact2.png" alt="Contact2" />
+        </td>
+        <td>Contact2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E779</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/contactinfo.png" alt="Contactinfo" />
+        </td>
+        <td>ContactInfo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8CF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/contactpresence.png" alt="Contactpresence" />
+        </td>
+        <td>ContactPresence</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/copy.png" alt="Copy" />
+        </td>
+        <td>Copy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7A8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/crop.png" alt="Crop" />
+        </td>
+        <td>Crop</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/cut.png" alt="Cut" />
+        </td>
+        <td>Cut</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E74D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/delete.png" alt="Delete" />
+        </td>
+        <td>Delete</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/directions.png" alt="Directions" />
+        </td>
+        <td>Directions</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/disableupdates.png" alt="Disableupdates" />
+        </td>
+        <td>DisableUpdates</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8CD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/disconnectdrive.png" alt="Disconnectdrive" />
+        </td>
+        <td>DisconnectDrive</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/dislike.png" alt="Dislike" />
+        </td>
+        <td>Dislike</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E90E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/dockbottom.png" alt="Dockbottom" />
+        </td>
+        <td>DockBottom</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E90C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/dockleft.png" alt="Dockleft" />
+        </td>
+        <td>DockLeft</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E90D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/dockright.png" alt="Dockright" />
+        </td>
+        <td>DockRight</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/document.png" alt="Document" />
+        </td>
+        <td>Document</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E896</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/download.png" alt="Download" />
+        </td>
+        <td>Download</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E70F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/edit.png" alt="Edit" />
+        </td>
+        <td>Edit</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E899</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/emoji.png" alt="Emoji" />
+        </td>
+        <td>Emoji</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E76E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/emoji2.png" alt="Emoji2" />
+        </td>
+        <td>Emoji2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E728</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritelist.png" alt="Favoritelist" />
+        </td>
+        <td>FavoriteList</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E734</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritestar.png" alt="Favoritestar" />
+        </td>
+        <td>FavoriteStar</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E735</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritestarfill.png" alt="Favoritestarfill" />
+        </td>
+        <td>FavoriteStarFill</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E71C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/filter.png" alt="Filter" />
+        </td>
+        <td>Filter</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E11A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/findlegacy.png" alt="Findlegacy" />
+        </td>
+        <td>FindLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7C1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/flag.png" alt="Flag" />
+        </td>
+        <td>Flag</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/folder.png" alt="Folder" />
+        </td>
+        <td>Folder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/font.png" alt="Font" />
+        </td>
+        <td>Font</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/fontcolor.png" alt="Fontcolor" />
+        </td>
+        <td>Fontcolor</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/fontdecrease.png" alt="Fontdecrease" />
+        </td>
+        <td>FontDecrease</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/fontincrease.png" alt="Fontincrease" />
+        </td>
+        <td>FontIncrease</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/fontsize.png" alt="Fontsize" />
+        </td>
+        <td>FontSize</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E72A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/forward.png" alt="Forward" />
+        </td>
+        <td>Forward</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E908</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/fourbars.png" alt="Fourbars" />
+        </td>
+        <td>FourBars</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E740</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/fullscreen.png" alt="Fullscreen" />
+        </td>
+        <td>FullScreen</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E774</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/globe.png" alt="Globe" />
+        </td>
+        <td>Globe</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8AD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/go.png" alt="Go" />
+        </td>
+        <td>Go</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8FC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/gotostart.png" alt="Gotostart" />
+        </td>
+        <td>GoToStart</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/gototoday.png" alt="Gototoday" />
+        </td>
+        <td>GoToToday</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E778</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/hangup.png" alt="Hangup" />
+        </td>
+        <td>Hangup</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E897</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/help.png" alt="Help" />
+        </td>
+        <td>Help</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/hidebcc.png" alt="Hidebcc" />
+        </td>
+        <td>HideBCC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7E6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/highlight.png" alt="Highlight" />
+        </td>
+        <td>Highlight</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E80F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/home.png" alt="Home" />
+        </td>
+        <td>Home</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/import.png" alt="Import" />
+        </td>
+        <td>Import</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/importall.png" alt="Importall" />
+        </td>
+        <td>ImportAll</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/important.png" alt="Important" />
+        </td>
+        <td>Important</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8DB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/italic.png" alt="Italic" />
+        </td>
+        <td>Italic</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E765</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/keyboardclassic.png" alt="Keyboardclassic" />
+        </td>
+        <td>KeyboardClassic</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E89B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/leavechat.png" alt="Leavechat" />
+        </td>
+        <td>LeaveChat</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/library.png" alt="Library" />
+        </td>
+        <td>Library</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/like.png" alt="Like" />
+        </td>
+        <td>Like</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8DF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/likedislike.png" alt="Likedislike" />
+        </td>
+        <td>LikeDislike</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E71B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/link.png" alt="Link" />
+        </td>
+        <td>Link</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>EA37</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/list.png" alt="List" />
+        </td>
+        <td>List</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E81D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/location.png" alt="Location" />
+        </td>
+        <td>Location</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E715</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mail.png" alt="Mail" />
+        </td>
+        <td>Mail</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mailfill.png" alt="Mailfill" />
+        </td>
+        <td>MailFill</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E89C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mailforward.png" alt="Mailforward" />
+        </td>
+        <td>MailForward</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8CA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mailreply.png" alt="Mailreply" />
+        </td>
+        <td>MailReply</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mailreplyall.png" alt="Mailreplyall" />
+        </td>
+        <td>MailReplyAll</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E912</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/manage.png" alt="Manage" />
+        </td>
+        <td>Manage</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8CE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mapdrive.png" alt="Mapdrive" />
+        </td>
+        <td>MapDrive</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E707</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mappin.png" alt="Mappin" />
+        </td>
+        <td>Mappin</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E77C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/memo.png" alt="Memo" />
+        </td>
+        <td>Memo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8BD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/message.png" alt="Message" />
+        </td>
+        <td>Message</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E720</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/microphone.png" alt="Microphone" />
+        </td>
+        <td>Microphone</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E712</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/more.png" alt="More" />
+        </td>
+        <td>More</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8DE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/movetofolder.png" alt="Movetofolder" />
+        </td>
+        <td>MoveToFolder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E90B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/musicinfo.png" alt="Musicinfo" />
+        </td>
+        <td>MusicInfo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E74F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mute.png" alt="Mute" />
+        </td>
+        <td>Mute</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/newfolder.png" alt="Newfolder" />
+        </td>
+        <td>NewFolder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E78B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/newwindow.png" alt="Newwindow" />
+        </td>
+        <td>NewWindow</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E893</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/next.png" alt="Next" />
+        </td>
+        <td>Next</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E905</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/onebar.png" alt="Onebar" />
+        </td>
+        <td>OneBar</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8E5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/openfile.png" alt="Openfile" />
+        </td>
+        <td>OpenFile</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8DA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/openlocal.png" alt="Openlocal" />
+        </td>
+        <td>OpenLocal</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/openpane.png" alt="Openpane" />
+        </td>
+        <td>OpenPane</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7AC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/openwith.png" alt="Openwith" />
+        </td>
+        <td>OpenWith</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/orientation.png" alt="Orientation" />
+        </td>
+        <td>Orientation</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7EE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/otheruser.png" alt="Otheruser" />
+        </td>
+        <td>OtherUser</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E1CE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/outlinestarlegacy.png" alt="Outlinestarlegacy" />
+        </td>
+        <td>OutlineStarLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7C3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/page.png" alt="Page" />
+        </td>
+        <td>Page</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E77F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/paste.png" alt="Paste" />
+        </td>
+        <td>Paste</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E769</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/pause.png" alt="Pause" />
+        </td>
+        <td>Pause</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E716</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/people.png" alt="People" />
+        </td>
+        <td>People</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/permissions.png" alt="Permissions" />
+        </td>
+        <td>Permissions</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E717</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/phone.png" alt="Phone" />
+        </td>
+        <td>Phone</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E780</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/phonebook.png" alt="Phonebook" />
+        </td>
+        <td>PhoneBook</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E718</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/pin.png" alt="Pin" />
+        </td>
+        <td>Pin</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E768</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/play.png" alt="Play" />
+        </td>
+        <td>Play</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/postupdate.png" alt="Postupdate" />
+        </td>
+        <td>PostUpdate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8FF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/preview.png" alt="Preview" />
+        </td>
+        <td>Preview</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/previewlink.png" alt="Previewlink" />
+        </td>
+        <td>PreviewLink</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E892</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/previous.png" alt="Previous" />
+        </td>
+        <td>Previous</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/priority.png" alt="Priority" />
+        </td>
+        <td>Priority</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/protecteddocument.png" alt="Protecteddocument" />
+        </td>
+        <td>ProtectedDocument</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/read.png" alt="Read" />
+        </td>
+        <td>Read</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7A6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/redo.png" alt="Redo" />
+        </td>
+        <td>Redo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E72C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/refresh.png" alt="Refresh" />
+        </td>
+        <td>Refresh</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8AF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/remote.png" alt="Remote" />
+        </td>
+        <td>Remote</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E738</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/remove.png" alt="Remove" />
+        </td>
+        <td>Remove</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8AC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/rename.png" alt="Rename" />
+        </td>
+        <td>Rename</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E90F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/repair.png" alt="Repair" />
+        </td>
+        <td>Repair</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8EE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/repeatall.png" alt="Repeatall" />
+        </td>
+        <td>RepeatAll</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8ED</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/repeatone.png" alt="Repeatone" />
+        </td>
+        <td>RepeatOne</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E730</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/reporthacked.png" alt="Reporthacked" />
+        </td>
+        <td>ReportHacked</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8EB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/reshare.png" alt="Reshare" />
+        </td>
+        <td>Reshare</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7AD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/rotate.png" alt="Rotate" />
+        </td>
+        <td>Rotate</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E89E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/rotatecamera.png" alt="Rotatecamera" />
+        </td>
+        <td>RotateCamera</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E74E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/save.png" alt="Save" />
+        </td>
+        <td>Save</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E78C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/savelocal.png" alt="Savelocal" />
+        </td>
+        <td>SaveLocal</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8FE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/scan.png" alt="Scan" />
+        </td>
+        <td>Scan</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/selectall.png" alt="Selectall" />
+        </td>
+        <td>SelectAll</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E724</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/send.png" alt="Send" />
+        </td>
+        <td>Send</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7B5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/setlockscreen.png" alt="Setlockscreen" />
+        </td>
+        <td>SetLockScreen</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E97B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/settile.png" alt="Settile" />
+        </td>
+        <td>SetTile</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E713</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/settings.png" alt="Settings" />
+        </td>
+        <td>Settings</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E72D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/share.png" alt="Share" />
+        </td>
+        <td>Share</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E719</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/shop.png" alt="Shop" />
+        </td>
+        <td>Shop</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8C4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/showbcc.png" alt="Showbcc" />
+        </td>
+        <td>ShowBCC</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8BC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/showresults.png" alt="Showresults" />
+        </td>
+        <td>ShowResults</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/shuffle.png" alt="Shuffle" />
+        </td>
+        <td>Shuffle</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E786</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/slideshow.png" alt="Slideshow" />
+        </td>
+        <td>Slideshow</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E1CF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/solidstarlegacy.png" alt="Solidstarlegacy" />
+        </td>
+        <td>SolidStarLegacy</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8CB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/sort.png" alt="Sort" />
+        </td>
+        <td>Sort</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E71A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/stop.png" alt="Stop" />
+        </td>
+        <td>Stop</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E913</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/street.png" alt="Street" />
+        </td>
+        <td>Street</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8AB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/switch.png" alt="Switch" />
+        </td>
+        <td>Switch</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/switchapps.png" alt="Switchapps" />
+        </td>
+        <td>SwitchApps</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E895</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/sync.png" alt="Sync" />
+        </td>
+        <td>Sync</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/syncfolder.png" alt="Syncfolder" />
+        </td>
+        <td>SyncFolder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8EC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/tag.png" alt="Tag" />
+        </td>
+        <td>Tag</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E907</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/threebars.png" alt="Threebars" />
+        </td>
+        <td>ThreeBars</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7C9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/touchpointer.png" alt="Touchpointer" />
+        </td>
+        <td>TouchPointer</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E78A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/trim.png" alt="Trim" />
+        </td>
+        <td>Trim</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E906</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/twobars.png" alt="Twobars" />
+        </td>
+        <td>TwoBars</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E89A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/twopage.png" alt="Twopage" />
+        </td>
+        <td>TwoPage</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8DC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/underline.png" alt="Underline" />
+        </td>
+        <td>Underline</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E7A7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/undo.png" alt="Undo" />
+        </td>
+        <td>Undo</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8D9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unfavorite.png" alt="Unfavorite" />
+        </td>
+        <td>UnFavorite</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E77A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unpin.png" alt="Unpin" />
+        </td>
+        <td>UnPin</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8F6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unsyncfolder.png" alt="Unsyncfolder" />
+        </td>
+        <td>UnSyncFolder</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E74A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/up.png" alt="Up" />
+        </td>
+        <td>Up</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E898</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/upload.png" alt="Upload" />
+        </td>
+        <td>Upload</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8AA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/videochat.png" alt="Videochat" />
+        </td>
+        <td>VideoChat</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E890</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/view.png" alt="View" />
+        </td>
+        <td>View</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/viewall.png" alt="Viewall" />
+        </td>
+        <td>ViewAll</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E767</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/volume.png" alt="Volume" />
+        </td>
+        <td>Volume</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8B8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/webcam.png" alt="Webcam" />
+        </td>
+        <td>Webcam</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E909</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/world.png" alt="World" />
+        </td>
+        <td>World</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E904</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/zerobars.png" alt="Zerobars" />
+        </td>
+        <td>ZeroBars</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E71E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/zoom.png" alt="Zoom" />
+        </td>
+        <td>Zoom</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E8A3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/zoomin.png" alt="Zoomin" />
+        </td>
+        <td>ZoomIn</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E71F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/zoomout.png" alt="Zoomout" />
+        </td>
+        <td>ZoomOut</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  
+  
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+        <th>Code</th>
+        <th>Symbol</th>
+        <th>Enum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E996</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batteryunknown.png" alt="batteryunknown" />
+        </td>
+        <td>BatteryUnknown</td>
+        <td>EC02</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatteryunknown.png" alt="mobbatteryunknown" />
+        </td>
+        <td>MobBatteryUnknown</td>
+      </tr>
+      <tr>
+        <td>E850</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery0.png" alt="battery0" />
+        </td>
+        <td>Battery0</td>
+        <td>EBA0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery0.png" alt="mobbattery0" />
+        </td>
+        <td>MobBattery0</td>
+      </tr>
+      <tr>
+        <td>E851</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery1.png" alt="battery1" />
+        </td>
+        <td>Battery1</td>
+        <td>EBA1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery1.png" alt="mobbattery1" />
+        </td>
+        <td>MobBattery1</td>
+      </tr>
+      <tr>
+        <td>E852</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery2.png" alt="battery2" />
+        </td>
+        <td>Battery2</td>
+        <td>EBA2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery2.png" alt="mobbattery2" />
+        </td>
+        <td>MobBattery2</td>
+      </tr>
+      <tr>
+        <td>E853</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery3.png" alt="battery3" />
+        </td>
+        <td>Battery3</td>
+        <td>EBA3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery3.png" alt="mobbattery3" />
+        </td>
+        <td>MobBattery3</td>
+      </tr>
+      <tr>
+        <td>E854</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery4.png" alt="battery4" />
+        </td>
+        <td>Battery4</td>
+        <td>EBA4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery4.png" alt="mobbattery4" />
+        </td>
+        <td>MobBattery4</td>
+      </tr>
+      <tr>
+        <td>E855</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery5.png" alt="battery5" />
+        </td>
+        <td>Battery5</td>
+        <td>EBA5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery5.png" alt="mobbattery5" />
+        </td>
+        <td>MobBattery5</td>
+      </tr>
+      <tr>
+        <td>E856</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery6.png" alt="battery6" />
+        </td>
+        <td>Battery6</td>
+        <td>EBA6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery6.png" alt="mobbattery6" />
+        </td>
+        <td>MobBattery6</td>
+      </tr>
+      <tr>
+        <td>E857</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery7.png" alt="battery7" />
+        </td>
+        <td>Battery7</td>
+        <td>EBA7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery7.png" alt="mobbattery7" />
+        </td>
+        <td>MobBattery7</td>
+      </tr>
+      <tr>
+        <td>E858</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery8.png" alt="battery8" />
+        </td>
+        <td>Battery8</td>
+        <td>EBA8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery8.png" alt="mobbattery8" />
+        </td>
+        <td>MobBattery8</td>
+      </tr>
+      <tr>
+        <td>E859</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery9.png" alt="battery9" />
+        </td>
+        <td>Battery9</td>
+        <td>EBA9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery9.png" alt="mobbattery9" />
+        </td>
+        <td>MobBattery9</td>
+      </tr>
+      <!--It's the same as MobBattery0 with EBA0-->
+      <!--<tr>
+        <td>E83F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/battery10.png" alt="battery10" />
+        </td>
+        <td>Battery10</td>
+        <td>EBA0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbattery10.png" alt="mobbatter10" />
+        </td>
+        <td>MobBatter10</td>
+      </tr>-->
+      <tr>
+        <td>E85A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging0.png" alt="batterycharging0" />
+        </td>
+        <td>BatteryCharging0</td>
+        <td>EBAB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging0.png" alt="mobbatterycharging0" />
+        </td>
+        <td>MobBatteryCharging0</td>
+      </tr>
+      <tr>
+        <td>E85B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging1.png" alt="batterycharging1" />
+        </td>
+        <td>BatteryCharging1</td>
+        <td>EBAC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging1.png" alt="mobbatterycharging1" />
+        </td>
+        <td>MobBatteryCharging1</td>
+      </tr>
+      <tr>
+        <td>E85C</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging2.png" alt="batterycharging2" />
+        </td>
+        <td>BatteryCharging2</td>
+        <td>EBAD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging2.png" alt="mobbatterycharging2" />
+        </td>
+        <td>MobBatteryCharging2</td>
+      </tr>
+      <tr>
+        <td>E85D</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging3.png" alt="batterycharging3" />
+        </td>
+        <td>BatteryCharging3</td>
+        <td>EBAE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging3.png" alt="mobbatterycharging3" />
+        </td>
+        <td>MobBatteryCharging3</td>
+      </tr>
+      <tr>
+        <td>E85E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging4.png" alt="batterycharging4" />
+        </td>
+        <td>BatteryCharging4</td>
+        <td>EBAF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging4.png" alt="mobbatterycharging4" />
+        </td>
+        <td>MobBatteryCharging4</td>
+      </tr>
+      <tr>
+        <td>E85F</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging5.png" alt="batterycharging5" />
+        </td>
+        <td>BatteryCharging5</td>
+        <td>EBB0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging5.png" alt="mobbatterycharging5" />
+        </td>
+        <td>MobBatteryCharging5</td>
+      </tr>
+      <tr>
+        <td>E860</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging6.png" alt="batterycharging6" />
+        </td>
+        <td>BatteryCharging6</td>
+        <td>EBB1</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging6.png" alt="mobbatterycharging6" />
+        </td>
+        <td>MobBatteryCharging6</td>
+      </tr>
+      <tr>
+        <td>E861</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging7.png" alt="batterycharging7" />
+        </td>
+        <td>BatteryCharging7</td>
+        <td>EBB2</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging7.png" alt="mobbatterycharging7" />
+        </td>
+        <td>MobBatteryCharging7</td>
+      </tr>
+      <tr>
+        <td>E862</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging8.png" alt="batterycharging8" />
+        </td>
+        <td>BatteryCharging8</td>
+        <td>EBB3</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging8.png" alt="mobbatterycharging8" />
+        </td>
+        <td>MobBatteryCharging8</td>
+      </tr>
+      <tr>
+        <td>E83E</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging9.png" alt="batterycharging9" />
+        </td>
+        <td>BatteryCharging9</td>
+        <td>EBB4</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging9.png" alt="mobbatterycharging9" />
+        </td>
+        <td>MobBatteryCharging9</td>
+      </tr>
+      <tr>
+        <td>ea93</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterycharging10.png" alt="batterycharging10" />
+        </td>
+        <td>BatteryCharging10</td>
+        <td>EBB5</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterycharging10.png" alt="mobbatterychargin10" />
+        </td>
+        <td>MobBatteryChargin10</td>
+      </tr>
+      <tr>
+        <td>E863</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver0.png" alt="batterysaver0" />
+        </td>
+        <td>BatterySaver0</td>
+        <td>EBB6</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver0.png" alt="mobbatterysaver0" />
+        </td>
+        <td>MobBatterySaver0</td>
+      </tr>
+      <tr>
+        <td>E864</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver1.png" alt="batterysaver1" />
+        </td>
+        <td>BatterySaver1</td>
+        <td>EBB7</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver1.png" alt="mobbatterysaver1" />
+        </td>
+        <td>MobBatterySaver1</td>
+      </tr>
+      <tr>
+        <td>E865</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver2.png" alt="batterysaver2" />
+        </td>
+        <td>BatterySaver2</td>
+        <td>EBB8</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver2.png" alt="mobbatterysaver2" />
+        </td>
+        <td>MobBatterySaver2</td>
+      </tr>
+      <tr>
+        <td>E866</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver3.png" alt="batterysaver3" />
+        </td>
+        <td>BatterySaver3</td>
+        <td>EBB9</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver3.png" alt="mobbatterysaver3" />
+        </td>
+        <td>MobBatterySaver3</td>
+      </tr>
+      <tr>
+        <td>E867</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver4.png" alt="batterysaver4" />
+        </td>
+        <td>BatterySaver4</td>
+        <td>EBBA</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver4.png" alt="mobbatterysaver4" />
+        </td>
+        <td>MobBatterySaver4</td>
+      </tr>
+      <tr>
+        <td>E868</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver5.png" alt="batterysaver5" />
+        </td>
+        <td>BatterySaver5</td>
+        <td>EBBB</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver5.png" alt="mobbatterysaver5" />
+        </td>
+        <td>MobBatterySaver5</td>
+      </tr>
+      <tr>
+        <td>E869</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver6.png" alt="batterysaver6" />
+        </td>
+        <td>BatterySaver6</td>
+        <td>EBBC</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver6.png" alt="mobbatterysaver6" />
+        </td>
+        <td>MobBatterySaver6</td>
+      </tr>
+      <tr>
+        <td>E86A</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver7.png" alt="batterysaver7" />
+        </td>
+        <td>BatterySaver7</td>
+        <td>EBBD</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver7.png" alt="mobbatterysaver7" />
+        </td>
+        <td>MobBatterySaver7</td>
+      </tr>
+      <tr>
+        <td>E86B</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver8.png" alt="batterysaver8" />
+        </td>
+        <td>BatterySaver8</td>
+        <td>EBBE</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver8.png" alt="mobbatterysaver8" />
+        </td>
+        <td>MobBatterySaver8</td>
+      </tr>
+      <tr>
+        <td>EA94</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver9.png" alt="batterysaver9" />
+        </td>
+        <td>BatterySaver9</td>
+        <td>EBBF</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver9.png" alt="mobbatterysaver9" />
+        </td>
+        <td>MobBatterySaver9</td>
+      </tr>
+      <tr>
+        <td>EA95</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/batterysaver10.png" alt="batterysaver10" />
+        </td>
+        <td>BatterySaver10</td>
+        <td>EBC0</td>
+        <td>
+          <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/mobbatterysaver10.png" alt="mobbatterysaver10" />
+        </td>
+        <td>MobBatterySaver10</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</root>
