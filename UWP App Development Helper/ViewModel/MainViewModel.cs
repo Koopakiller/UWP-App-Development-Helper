@@ -6,16 +6,19 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        private HamburgerMenuItemViewModel _selectedHamburgerMenuItem;
+
         public MainViewModel()
         {
-            this.HamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
+            this.SelectedHamburgerMenuItem = new HamburgerMenuItemViewModel()
             {
-                new HamburgerMenuItemViewModel()
-                {
-                    Header = "Home",
-                    Glyph = "\uE10F",
-                    ViewModel = new HomeViewModel(),
-                },
+                Header = "Home",
+                Glyph = "\uE10F",
+                ViewModel = new HomeViewModel(),
+            };
+            this.UpperHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
+            {
+                this.SelectedHamburgerMenuItem,
                 new HamburgerMenuItemViewModel()
                 {
                     Header = "Custom Colors",
@@ -28,6 +31,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                     Glyph = "\uE128",
                     ViewModel = new FontIconViewModel(),
                 },
+            };
+            this.LowerHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
+            {
                 new HamburgerMenuItemViewModel()
                 {
                     Header = "About",
@@ -37,6 +43,17 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             };
         }
 
-        public IList<HamburgerMenuItemViewModel> HamburgerMenuItems { get; }
+        public IList<HamburgerMenuItemViewModel> UpperHamburgerMenuItems { get; }
+        public IList<HamburgerMenuItemViewModel> LowerHamburgerMenuItems { get; }
+
+        public HamburgerMenuItemViewModel SelectedHamburgerMenuItem
+        {
+            get { return this._selectedHamburgerMenuItem; }
+            set
+            {
+                this._selectedHamburgerMenuItem = value; 
+                this.RaisePropertyChanged();
+            }
+        }
     }
 }

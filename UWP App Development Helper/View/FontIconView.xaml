@@ -25,7 +25,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBox FontSize="24" PlaceholderText="Search Icons" Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+        <TextBox FontSize="24" PlaceholderText="Search Icons (split multiple terms with a space)" Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="15 5 15 5">
             <TextBlock Margin="0 4 10 0" Text="Search in..."/>
