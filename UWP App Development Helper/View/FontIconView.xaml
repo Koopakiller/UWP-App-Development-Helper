@@ -12,12 +12,20 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <TextBox FontSize="24" PlaceholderText="Search Icons" Text="{Binding SearchTerm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
 
-        <GridView Margin="0" Grid.Row="1" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Search in..."/>
+            <CheckBox IsChecked="{Binding SearchInDescription, Mode=TwoWay}" Content="Description"/>
+            <CheckBox IsChecked="{Binding SearchInEnumValue, Mode=TwoWay}" Content="Enum-Value"/>
+            <CheckBox IsChecked="{Binding SearchInTags, Mode=TwoWay}" Content="Tags"/>
+        </StackPanel>
+        
+        <GridView Margin="0" Grid.Row="2" ItemsSource="{Binding FilteredMdl2FontIcons}" SelectionMode="None" Padding="5" HorizontalAlignment="Center">
             <GridView.ItemContainerStyle>
                 <Style TargetType="GridViewItem">
                     <Setter Property="IsHoldingEnabled" Value="False"/>

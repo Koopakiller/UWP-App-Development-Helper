@@ -1,5 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using GalaSoft.MvvmLight;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
@@ -8,11 +15,58 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
     {
         private string _searchTerm;
         private IReadOnlyCollection<FontIcon> _filteredMdl2FontIcons;
+        private bool _searchInTags = true;
+        private bool _searchInDescription = true;
+        private bool _searchInEnumValue = true;
 
         public FontIconViewModel()
         {
-            this.Mdl2 = Model.Mdl2.GetFontIcons();
+            this.LoadMdl2().Wait();
+
             this.UpdateFilteredView();
+        }
+
+        private async Task LoadMdl2()
+        {
+            try
+            {
+                var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
+
+                //using (var stream = await xmlFile.OpenStreamForReadAsync())
+                //{
+                var xmlText = await FileIO.ReadTextAsync(xmlFile, UnicodeEncoding.Utf8);
+
+                var doc = XDocument.Parse(xmlText);
+
+                this.Mdl2 = new FontIconCollection(
+                    doc.Root.Elements("FontIcon")
+                        .Select(x => new FontIcon(x.Elements("Code")
+                            .Select(y => (char)Convert.ToInt32(y.Value, 16))
+                            .ToArray(),
+                            x.Elements("Tags")
+                                .Select(y => new TagCollection(y.Elements("Tag")
+                                    .Select(z => z.Value)
+                                    .ToArray())
+                                {
+                                    LanguageCode = int.Parse(y.Attribute("Language").Value)
+                                })
+                                .ToList(),
+                            x.Elements("Description")
+                                .Select(y => new Description(int.Parse(y.Attribute("Language").Value), y.Value))
+                                .ToList())
+                        {
+                            EnumValue = x.Element("EnumValue")?.Value,
+                        })
+                        .ToList())
+                {
+                    FontName = "Segoe MDL2 Assets",
+                };
+                //}
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public string SearchTerm
@@ -21,6 +75,39 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             set
             {
                 this._searchTerm = value;
+                this.RaisePropertyChanged();
+                this.UpdateFilteredView();
+            }
+        }
+
+        public bool SearchInTags
+        {
+            get { return this._searchInTags; }
+            set
+            {
+                this._searchInTags = value;
+                this.RaisePropertyChanged();
+                this.UpdateFilteredView();
+            }
+        }
+
+        public bool SearchInDescription
+        {
+            get { return this._searchInDescription; }
+            set
+            {
+                this._searchInDescription = value;
+                this.RaisePropertyChanged();
+                this.UpdateFilteredView();
+            }
+        }
+
+        public bool SearchInEnumValue
+        {
+            get { return this._searchInEnumValue; }
+            set
+            {
+                this._searchInEnumValue = value;
                 this.RaisePropertyChanged();
                 this.UpdateFilteredView();
             }
@@ -48,12 +135,18 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
             else
             {
+                var parts = this.SearchTerm.Split(' ');
                 this.FilteredMdl2FontIcons =
-                    this.Mdl2.FontIcons.Where(x =>
-                            x.Tags.Any(y =>
-                                y.LanguageSpecific.First(z =>
-                                    z.LanguageCode == code).Text.Contains(this.SearchTerm)))
-                        .ToList();
+                    this.Mdl2.FontIcons.Select(x =>
+                        Tuple.Create(x,
+                            (this.SearchInTags ? x.Tags
+                                                  .FirstOrDefault(y => y.LanguageCode == code)
+                                                  .LanguageSpecific
+                                                  .Sum(y => parts.Count(z => y.IndexOf(z, StringComparison.OrdinalIgnoreCase) != -1))
+                                               : 0) +
+                            (this.SearchInDescription ? parts.Count(z => (x.Descriptions.FirstOrDefault(y => y.LanguageCode == code)?.Text?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1) : 0) +
+                            (this.SearchInEnumValue ? parts.Count(z => (x.EnumValue?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1) : 0)
+                            )).Where(x => x.Item2 > 0).OrderByDescending(x => x.Item2).Select(x => x.Item1).ToList();
             }
         }
 
@@ -61,9 +154,14 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
     public class FontIconCollection
     {
+        public FontIconCollection(IList<FontIcon> fontIcons)
+        {
+            this.FontIcons = fontIcons;
+        }
+
         public string FontName { get; set; }
 
-        public IList<FontIcon> FontIcons { get; } = new List<FontIcon>();
+        public IList<FontIcon> FontIcons { get; }
     }
 
     public class FontIcon
@@ -72,19 +170,36 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             this.Chars = new List<char>(icons);
         }
+        public FontIcon(char[] icons, IList<TagCollection> tags, IList<Description> descriptions) : this(icons)
+        {
+            this.Tags = tags;
+            this.Descriptions = descriptions;
+        }
 
         public IList<char> Chars { get; }
 
-        public IList<Tag> Tags { get; } = new List<Tag>();
-    }
-    public class Tag
-    {
-        public IList<LanguageSpecificTag> LanguageSpecific { get; } = new List<LanguageSpecificTag>();
-    }
+        public IList<TagCollection> Tags { get; } = new List<TagCollection>();
+        public IList<Description> Descriptions { get; } = new List<Description>();
 
-    public class LanguageSpecificTag
+        public string EnumValue { get; set; }
+    }
+    public class TagCollection
     {
+        public TagCollection(params string[] tags)
+        {
+            this.LanguageSpecific = new List<string>(tags);
+        }
         public int LanguageCode { get; set; }
-        public string Text { get; set; }
+        public IList<string> LanguageSpecific { get; }
+    }
+    public class Description
+    {
+        public Description(int langCode, string text)
+        {
+            this.LanguageCode = langCode;
+            this.Text = text;
+        }
+        public int LanguageCode { get; set; }
+        public string Text { get; }
     }
 }
