@@ -100,13 +100,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converter\NullToHiddenConverter.cs" />
     <Compile Include="Extensions\Package.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AutoTypeTemplateSelector.cs" />
-    <Compile Include="ViewModel\DescriptionViewModel.cs" />
     <Compile Include="ViewModel\FontIconCollectionViewModel.cs" />
     <Compile Include="ViewModel\FontIconViewModel.cs" />
     <Compile Include="ViewModel\AboutViewModel.cs" />
@@ -115,7 +115,6 @@
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\SingleFontIconViewModel.cs" />
-    <Compile Include="ViewModel\TagCollectionViewModel.cs" />
     <Compile Include="View\ViewBase.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -48,18 +48,31 @@
                 </GridView.ItemContainerStyle>
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Width="100" Height="100" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" Padding="5">
-                            <FontIcon FontSize="64" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                  Glyph="{Binding Chars[0]}"
-                                  Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+                        <Grid Width="250" Height="80" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <FontIcon FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3 5 0 5"
+                                      Glyph="{Binding Chars[0]}"
+                                      Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+
+                            <StackPanel Grid.Column="1" Margin="5">
+                                <TextBlock FontWeight="Bold"
+                                           Text="{Binding EnumValue}" 
+                                           Visibility="{Binding EnumValue, Converter={StaticResource NullToHiddenConverter}}"/>
+                                <TextBlock TextWrapping="WrapWholeWords"
+                                           Text="{Binding Description}"
+                                           Visibility="{Binding Description, Converter={StaticResource NullToHiddenConverter}}"/>
+                            </StackPanel> 
+                            
                         </Grid>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
 
         </Grid>
-
-
 
     </Grid>
 </view:ViewBase>

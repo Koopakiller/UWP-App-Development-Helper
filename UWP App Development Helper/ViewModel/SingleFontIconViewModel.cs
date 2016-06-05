@@ -9,16 +9,16 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             this.Chars = new List<char>(icons);
         }
-        public SingleFontIconViewModel(char[] icons, IList<TagCollectionViewModel> tags, IList<DescriptionViewModel> descriptions) : this(icons)
+        public SingleFontIconViewModel(char[] icons, IList<string> tags, string description) : this(icons)
         {
             this.Tags = tags;
-            this.Descriptions = descriptions;
+            this.Description = description;
         }
 
         public IList<char> Chars { get; }
 
-        public IList<TagCollectionViewModel> Tags { get; } = new List<TagCollectionViewModel>();
-        public IList<DescriptionViewModel> Descriptions { get; } = new List<DescriptionViewModel>();
+        public IList<string> Tags { get; } = new List<string>();
+        public string Description { get; }
 
         public string EnumValue { get; set; }
     }

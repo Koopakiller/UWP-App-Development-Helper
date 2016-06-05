@@ -34,6 +34,7 @@
             <ui:AutoTypeTemplateSelector x:Key="AutoTypeTemplateSelector"/>
             
             <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <converter:NullToHiddenConverter x:Key="NullToHiddenConverter"/>
 
         </ResourceDictionary>
         

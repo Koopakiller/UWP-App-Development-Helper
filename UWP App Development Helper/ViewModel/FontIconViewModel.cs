@@ -47,6 +47,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         private async Task LoadFontIconsAsync()
         {
+            const int code = 1033;
             var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
 
             var xmlText = await FileIO.ReadTextAsync(xmlFile, UnicodeEncoding.Utf8);
@@ -55,20 +56,18 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
             this.Mdl2 = new FontIconCollectionViewModel(
                 doc.Root.Elements("FontIcon")
-                    .Select(x => new SingleFontIconViewModel(x.Elements("Code")
-                        .Select(y => (char)Convert.ToInt32(y.Value, 16))
-                        .ToArray(),
+                    .Select(x => new SingleFontIconViewModel(
+                        x.Elements("Code")
+                         .Select(y => (char)Convert.ToInt32(y.Value, 16))
+                         .ToArray(),
                         x.Elements("Tags")
-                            .Select(y => new TagCollectionViewModel(y.Elements("Tag")
-                                .Select(z => z.Value)
-                                .ToArray())
-                            {
-                                LanguageCode = int.Parse(y.Attribute("Language").Value)
-                            })
-                            .ToList(),
-                        x.Elements("Description")
-                            .Select(y => new DescriptionViewModel(int.Parse(y.Attribute("Language").Value), y.Value))
-                            .ToList())
+                            ?.FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)
+                            ?.Elements("Tag")
+                            ?.Select(y => y.Value)
+                            ?.ToList(),
+                        x.Elements("Description")?
+                            .FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)?
+                            .Value)
                     {
                         EnumValue = x.Element("EnumValue")?.Value,
                     })
@@ -155,7 +154,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
             await DispatcherHelper.RunAsync(() => this.IsLoading = true);
             await Task.Delay(250);
-            const int code = 1033;
 
             IReadOnlyCollection<SingleFontIconViewModel> result;
             if (string.IsNullOrEmpty(this.SearchTerm))
@@ -169,11 +167,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                     this.Mdl2.FontIcons
                              .Select(x => Tuple.Create(x,
                                                 (this.SearchInTags ? x.Tags
-                                                                      .FirstOrDefault(y => y.LanguageCode == code)
-                                                                      .LanguageSpecific
                                                                       .Sum(y => parts.Count(z => y.IndexOf(z, StringComparison.OrdinalIgnoreCase) != -1))
                                                                    : 0) +
-                                                (this.SearchInDescription ? parts.Count(z => (x.Descriptions.FirstOrDefault(y => y.LanguageCode == code)?.Text?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1)
+                                                (this.SearchInDescription ? parts.Count(z => (x.Description?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1)
                                                                           : 0) +
                                                 (this.SearchInEnumValue ? parts.Count(z => (x.EnumValue?.IndexOf(z, StringComparison.OrdinalIgnoreCase) ?? -1) != -1)
                                                                         : 0)))
