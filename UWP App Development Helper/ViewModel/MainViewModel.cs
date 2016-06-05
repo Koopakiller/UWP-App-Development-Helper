@@ -6,14 +6,12 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        public static MainViewModel Instance { get;private set; }
-
         private ViewModelBase _selectedContentViewModel;
 
         public MainViewModel()
         {
             Instance = this;
-            this.SelectedContentViewModel = new HomeViewModel();
+            this.SelectedContentViewModel = HomeViewModel;
             this.UpperHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
             {
                 new HamburgerMenuItemViewModel()
@@ -26,13 +24,13 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 {
                     Header = "Custom Colors",
                     Glyph = "\uE2B1",
-                    ViewModel = new CustomColorsViewModel(),
+                    ViewModel = CustomColorsViewModel,
                 },
                 new HamburgerMenuItemViewModel()
                 {
                     Header = "Font Icons",
                     Glyph = "\uE128",
-                    ViewModel = new FontIconViewModel(),
+                    ViewModel = FontIconViewModel,
                 },
             };
             this.LowerHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
@@ -41,7 +39,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 {
                     Header = "About",
                     Glyph = "\uE946",
-                    ViewModel = new AboutViewModel(),
+                    ViewModel = AboutViewModel,
                 },
             };
         }
@@ -63,5 +61,12 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             this.SelectedContentViewModel = vm;
         }
+
+
+        public static MainViewModel Instance { get; private set; }
+        public static HomeViewModel HomeViewModel { get; } = new HomeViewModel();
+        public static CustomColorsViewModel CustomColorsViewModel { get; } = new CustomColorsViewModel();
+        public static FontIconViewModel FontIconViewModel { get; } = new FontIconViewModel();
+        public static AboutViewModel AboutViewModel { get; } = new AboutViewModel();
     }
 }

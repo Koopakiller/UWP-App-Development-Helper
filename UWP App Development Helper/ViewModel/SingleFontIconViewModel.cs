@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Input;
 using Windows.ApplicationModel.DataTransfer;
 using GalaSoft.MvvmLight;
@@ -13,6 +14,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public SingleFontIconViewModel()
         {
             this.CopyCommand = new RelayCommand<string>(this.ExecuteCopy);
+            this.NavigateBackCommand = new RelayCommand(NavigateBack);
             if (this.IsInDesignMode)
             {
                 this.Chars.Add('\ue00a');
@@ -31,9 +33,11 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
+
         public SingleFontIconViewModel(params char[] icons) : this()
         {
             this.Chars = new List<char>(icons);
+            this.SelectedChar = this.Chars.FirstOrDefault();
         }
         public SingleFontIconViewModel(char[] icons, IList<string> tags, string description) : this(icons)
         {
@@ -50,6 +54,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public string EnumValue { get; set; }
 
         public ICommand CopyCommand { get; }
+        public ICommand NavigateBackCommand { get; }
 
         public char SelectedChar { get; set; }
 
@@ -68,10 +73,10 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                     s = "ChrW(&H" + code + ")";
                     break;
                 case "FontIconWithFontFamily":
-                    s = "<FontIcon FontFamily=\"Segoe MDL2 Assets\" Glyph=\"&#" + code + ";\" />";
+                    s = "<FontIcon FontFamily=\"Segoe MDL2 Assets\" Glyph=\"&#x" + code + ";\" />";
                     break;
                 case "FontIcon":
-                    s = "<FontIcon Glyph=\"&#" + code + ";\" />";
+                    s = "<FontIcon Glyph=\"&#x" + code + ";\" />";
                     break;
                 default:
                     throw new ArgumentException();
@@ -81,6 +86,11 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             dataPackage.SetText(s);
             dataPackage.RequestedOperation = DataPackageOperation.Copy;
             Clipboard.SetContent(dataPackage);
+        }
+
+        private static void NavigateBack()
+        {
+            MainViewModel.Instance.Navigate(MainViewModel.FontIconViewModel);
         }
     }
 }

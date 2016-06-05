@@ -37,7 +37,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                //x this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
 
