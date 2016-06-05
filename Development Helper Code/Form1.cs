@@ -214,27 +214,33 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.DevelopmentHelperCode
                   }
               }).SelectMany(x => x).ToDictionary(x =>
               {
-                  Debug.WriteLine(x.Item1); return x.Item1;
+                  Debug.WriteLine(x.Item1);
+                  return x.Item1.Trim(' ', '\n', '\r', '\t');
               }, x => Tuple.Create(x.Item2, x.Item3));
 
-            foreach (var fi in source.Root.Elements("FontIcon"))
+            if (source.Root == null) return;
             {
-                var codes = fi.Elements("Code").Select(x => x.Value).ToList();
-                var d = msdn.FirstOrDefault(x => codes.Any(y => string.Equals(x.Key, y, StringComparison.CurrentCultureIgnoreCase)));
-                if (!string.IsNullOrWhiteSpace(d.Key))
+                foreach (var fi in source.Root.Elements("FontIcon"))
                 {
-                    var enu = new XElement("EnumValue", d.Value.Item1);
-                    fi.Add(enu);
-
-                    if (!string.IsNullOrWhiteSpace(d.Value.Item2))
+                    var codes = fi.Elements("Code").Select(x => x.Value).ToList();
+                    var d =
+                        msdn.FirstOrDefault(
+                            x => codes.Any(y => string.Equals(x.Key, y, StringComparison.CurrentCultureIgnoreCase)));
+                    if (!string.IsNullOrWhiteSpace(d.Key))
                     {
-                        var desc = new XElement("Description", new XAttribute("Language", "1033"), d.Value.Item2);
-                        fi.Add(desc);
+                        var enu = new XElement("EnumValue", d.Value.Item1);
+                        fi.Add(enu);
+
+                        if (!string.IsNullOrWhiteSpace(d.Value.Item2))
+                        {
+                            var desc = new XElement("Description", new XAttribute("Language", "1033"), d.Value.Item2);
+                            fi.Add(desc);
+                        }
                     }
                 }
-            }
 
-            source.Save("chars3.xml");
+                source.Save("chars3.xml");
+            }
         }
 
         private void buttonLowerCaseTags_Click(object sender, EventArgs e)

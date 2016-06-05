@@ -83,6 +83,12 @@
       <Tag>heart</Tag>
       <Tag>outline</Tag>
     </Tags>
+    <EnumValue>
+          HeartLegacy
+        </EnumValue>
+    <Description Language="1033">
+          Outlined heart
+        </Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -94,6 +100,12 @@
       <Tag>broken</Tag>
       <Tag>fill</Tag>
     </Tags>
+    <EnumValue>
+          HeartBrokenLegacy
+        </EnumValue>
+    <Description Language="1033">
+          Broken heart
+        </Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -131,6 +143,12 @@
       <Tag>heart</Tag>
       <Tag>fill</Tag>
     </Tags>
+    <EnumValue>
+          HeartFillLegacy
+        </EnumValue>
+    <Description Language="1033">
+          Solid heart
+        </Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -564,6 +582,7 @@
       <Tag>camera</Tag>
       <Tag>outline</Tag>
     </Tags>
+    <EnumValue>VideoLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -932,7 +951,8 @@
       <Tag>outline</Tag>
       <Tag>message</Tag>
     </Tags>
-    <EnumValue>Comment</EnumValue>
+    <EnumValue>CommentLegacy</EnumValue>
+    <Description Language="1033">Comment</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -946,7 +966,8 @@
       <Tag>top</Tag>
       <Tag>fill</Tag>
     </Tags>
-    <EnumValue>MailFill</EnumValue>
+    <EnumValue>MailMessageLegacy</EnumValue>
+    <Description Language="1033">Mail legacy</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -2040,7 +2061,7 @@
       <Tag>fill</Tag>
       <Tag>cancel</Tag>
     </Tags>
-    <EnumValue>UnFavorite</EnumValue>
+    <EnumValue>UnfavoriteLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -2139,7 +2160,7 @@
       <Tag>up-down-vote</Tag>
       <Tag>outline</Tag>
     </Tags>
-    <EnumValue>LikeDislike</EnumValue>
+    <EnumValue>LikeDislikeLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -2150,7 +2171,7 @@
       <Tag>down-vote</Tag>
       <Tag>outline</Tag>
     </Tags>
-    <EnumValue>Dislike</EnumValue>
+    <EnumValue>DislikeLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -2163,7 +2184,7 @@
       <Tag>up-vote</Tag>
       <Tag>outline</Tag>
     </Tags>
-    <EnumValue>Like</EnumValue>
+    <EnumValue>LikeLegacy</EnumValue>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -2614,7 +2635,8 @@
       <Tag>smartphone</Tag>
       <Tag>device</Tag>
     </Tags>
-    <EnumValue>Cellphone</EnumValue>
+    <EnumValue>MobileContactLegacy</EnumValue>
+    <Description Language="1033">Mobile contact</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -3182,6 +3204,8 @@
       <Tag>half-circle</Tag>
       <Tag>arrow-back</Tag>
     </Tags>
+    <EnumValue>ReplyLegacy</EnumValue>
+    <Description Language="1033">Reply</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -3189,6 +3213,8 @@
     <Tags Language="1033">
       <Tag>cancel</Tag>
     </Tags>
+    <EnumValue>BlockedLegacy</EnumValue>
+    <Description Language="1033">Blocked contact</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -3197,6 +3223,8 @@
       <Tag>message</Tag>
       <Tag>dot</Tag>
     </Tags>
+    <EnumValue>TypingIndicatorLegacy</EnumValue>
+    <Description Language="1033">Typing indicator</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -3207,6 +3235,8 @@
       <Tag>camera</Tag>
       <Tag>fill</Tag>
     </Tags>
+    <EnumValue>PresenceChickletVideoLegacy</EnumValue>
+    <Description Language="1033">Video presence chicklet</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -4008,6 +4038,8 @@
       <Tag>half-star</Tag>
       <Tag>full</Tag>
     </Tags>
+    <EnumValue>HalfStarRight</EnumValue>
+    <Description Language="1033">Half star, right side</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->

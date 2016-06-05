@@ -1097,7 +1097,8 @@
         <td>FavoriteList</td>
         <td></td>
       </tr>
-      <tr>
+      <!--Exists a second time with same enum name and description (only E734)-->
+      <!--<tr>
         <td>E734</td>
         <td>
           <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/favoritestar.png" alt="Favoritestar" />
@@ -1112,7 +1113,7 @@
         </td>
         <td>FavoriteStarFill</td>
         <td></td>
-      </tr>
+      </tr>-->
       <tr>
         <td>E71C</td>
         <td>
@@ -2049,14 +2050,14 @@
         <td>Undo</td>
         <td></td>
       </tr>
-      <tr>
+      <!--<tr>
         <td>E8D9</td>
         <td>
           <img src="https://i-msdn.sec.s-msft.com/en-us/windows/uwp/controls-and-patterns/images/unfavorite.png" alt="Unfavorite" />
         </td>
         <td>UnFavorite</td>
         <td></td>
-      </tr>
+      </tr>-->
       <tr>
         <td>E77A</td>
         <td>
