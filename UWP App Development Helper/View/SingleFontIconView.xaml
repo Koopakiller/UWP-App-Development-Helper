@@ -1,0 +1,71 @@
+﻿<view:ViewBase
+    x:Class="Koopakiller.Apps.UwpAppDevelopmentHelper.View.SingleFontIconView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:Koopakiller.Apps.UwpAppDevelopmentHelper.View"
+    xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:SingleFontIconViewModel}">
+
+    <Grid>
+        <StackPanel>
+            
+            <TextBlock Text="Possible Unicodes"/>
+            <ComboBox ItemsSource="{Binding Chars}" Name="PossibleUnicodes" SelectedItem="{Binding SelectedChar, Mode=TwoWay}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource CharToHeyConverter}}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            
+            <TextBlock Text="Unicode &amp; Usage"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="XAML / XML"/>
+                <Button Grid.Row="0" Grid.Column="1" Content="Copy" Command="{Binding CopyCommand}" CommandParameter="XAML"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" RelativePanel.RightOf="XmlName" >
+                    <Run Text="&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";"/>
+                </TextBlock>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="C# / F# / C++"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="Copy" Command="{Binding CopyCommand}" CommandParameter="C#"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" >
+                    <Run Text="\u"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/>
+                </TextBlock>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Visual Basic"/>
+                <Button Grid.Row="2" Grid.Column="1" Content="Copy" Command="{Binding CopyCommand}" CommandParameter="VB"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" >
+                    <Run Text="ChrW(&amp;H"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=")"/>
+                </TextBlock>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="FontIcon"/>
+                <Button Grid.Row="3" Grid.Column="1" Content="Copy" Command="{Binding CopyCommand}" CommandParameter="FontIconWithFontFamily"/>
+                <TextBlock Grid.Row="3" Grid.Column="2" >
+                    <Run Text="&lt;FontIcon FontFamily=&quot;Segoe MDL2 Assets&quot; Glyph=&quot;&amp;#"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";&quot; /&gt;"/>
+                </TextBlock>
+                <Button Grid.Row="4" Grid.Column="1" Content="Copy" Command="{Binding CopyCommand}" CommandParameter="FontIcon"/>
+                <TextBlock Grid.Row="4" Grid.Column="2" >
+                    <Run Text="&lt;FontIcon Glyph=&quot;&amp;#"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";&quot; /&gt;"/>
+                </TextBlock>
+                
+            </Grid>
+            
+        </StackPanel>
+
+    </Grid>
+</view:ViewBase>

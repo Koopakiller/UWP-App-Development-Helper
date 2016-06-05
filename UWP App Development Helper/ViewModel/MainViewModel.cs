@@ -6,19 +6,22 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private HamburgerMenuItemViewModel _selectedHamburgerMenuItem;
+        public static MainViewModel Instance { get;private set; }
+
+        private ViewModelBase _selectedContentViewModel;
 
         public MainViewModel()
         {
-            this.SelectedHamburgerMenuItem = new HamburgerMenuItemViewModel()
-            {
-                Header = "Home",
-                Glyph = "\uE10F",
-                ViewModel = new HomeViewModel(),
-            };
+            Instance = this;
+            this.SelectedContentViewModel = new HomeViewModel();
             this.UpperHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
             {
-                this.SelectedHamburgerMenuItem,
+                new HamburgerMenuItemViewModel()
+                {
+                    Header = "Home",
+                    Glyph = "\uE10F",
+                    ViewModel = this.SelectedContentViewModel,
+                },
                 new HamburgerMenuItemViewModel()
                 {
                     Header = "Custom Colors",
@@ -46,14 +49,19 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public IList<HamburgerMenuItemViewModel> UpperHamburgerMenuItems { get; }
         public IList<HamburgerMenuItemViewModel> LowerHamburgerMenuItems { get; }
 
-        public HamburgerMenuItemViewModel SelectedHamburgerMenuItem
+        public ViewModelBase SelectedContentViewModel
         {
-            get { return this._selectedHamburgerMenuItem; }
+            get { return this._selectedContentViewModel; }
             set
             {
-                this._selectedHamburgerMenuItem = value; 
+                this._selectedContentViewModel = value;
                 this.RaisePropertyChanged();
             }
+        }
+
+        public void Navigate(ViewModelBase vm)
+        {
+            this.SelectedContentViewModel = vm;
         }
     }
 }

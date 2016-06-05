@@ -138,16 +138,16 @@
                             <FontIcon Glyph="&#xE700;" Width="24" Margin="2"/>
                         </ToggleButton>
                         <ListBox Grid.Row="1" 
-                                 ItemsSource="{Binding UpperHamburgerMenuItems}" SelectedValue="{Binding SelectedHamburgerMenuItem, Mode=TwoWay}"
+                                 ItemsSource="{Binding UpperHamburgerMenuItems}" SelectedValue="{Binding SelectedContentViewModel, Mode=TwoWay}" SelectedValuePath="ViewModel"
                                  ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}"/>
                         <ListBox Grid.Row="2" VerticalAlignment="Bottom"
-                                 ItemsSource="{Binding LowerHamburgerMenuItems}" SelectedValue="{Binding SelectedHamburgerMenuItem, Mode=TwoWay}"
+                                 ItemsSource="{Binding LowerHamburgerMenuItems}" SelectedValue="{Binding SelectedContentViewModel, Mode=TwoWay}" SelectedValuePath="ViewModel"
                                  ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}"/>
                     </Grid>
                 </ScrollViewer>
             </SplitView.Pane>
             <SplitView.Content>
-                <ContentControl Content="{Binding SelectedHamburgerMenuItem.ViewModel}"
+                <ContentControl Content="{Binding SelectedContentViewModel}"
                                 ContentTemplateSelector="{StaticResource AutoTypeTemplateSelector}"
                                 HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
             </SplitView.Content>

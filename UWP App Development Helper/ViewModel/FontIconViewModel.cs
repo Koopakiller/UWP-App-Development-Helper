@@ -7,6 +7,7 @@ using System.Windows.Input;
 using System.Xml.Linq;
 using Windows.Storage;
 using Windows.Storage.Streams;
+using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Threading;
@@ -33,9 +34,11 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public FontIconViewModel()
         {
+            this.NavigateToFontIconDetailsCommand = new RelayCommand<ItemClickEventArgs>(this.NavigateToFontIconDetails);
             this.LoadFontIconsCommand = new RelayCommand(async () => await this.LoadFontIconsAsync());
             this.FilterFontIconListCommand = new RelayCommand(async () => await this.FilterFontIconListAsync(new CancellationTokenSource()));
         }
+
 
         #endregion
 
@@ -45,39 +48,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public ICommand FilterFontIconListCommand { get; }
 
-        private async Task LoadFontIconsAsync()
-        {
-            const int code = 1033;
-            var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
-
-            var xmlText = await FileIO.ReadTextAsync(xmlFile, UnicodeEncoding.Utf8);
-
-            var doc = XDocument.Parse(xmlText);
-
-            this.Mdl2 = new FontIconCollectionViewModel(
-                doc.Root.Elements("FontIcon")
-                    .Select(x => new SingleFontIconViewModel(
-                        x.Elements("Code")
-                         .Select(y => (char)Convert.ToInt32(y.Value, 16))
-                         .ToArray(),
-                        x.Elements("Tags")
-                            ?.FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)
-                            ?.Elements("Tag")
-                            ?.Select(y => y.Value)
-                            ?.ToList(),
-                        x.Elements("Description")?
-                            .FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)?
-                            .Value)
-                    {
-                        EnumValue = x.Element("EnumValue")?.Value,
-                    })
-                    .ToList())
-            {
-                FontName = "Segoe MDL2 Assets",
-            };
-
-            await this.FilterFontIconListAsync(new CancellationTokenSource());
-        }
+        public ICommand  NavigateToFontIconDetailsCommand { get; }
 
         public string SearchTerm
         {
@@ -147,6 +118,40 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         #endregion
 
+        private async Task LoadFontIconsAsync()
+        {
+            const int code = 1033;
+            var xmlFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/mdl2.xml"));
+
+            var xmlText = await FileIO.ReadTextAsync(xmlFile, UnicodeEncoding.Utf8);
+
+            var doc = XDocument.Parse(xmlText);
+
+            this.Mdl2 = new FontIconCollectionViewModel(
+                doc.Root.Elements("FontIcon")
+                    .Select(x => new SingleFontIconViewModel(
+                        x.Elements("Code")
+                         .Select(y => (char)Convert.ToInt32(y.Value, 16))
+                         .ToArray(),
+                        x.Elements("Tags")
+                            ?.FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)
+                            ?.Elements("Tag")
+                            ?.Select(y => y.Value)
+                            ?.ToList(),
+                        x.Elements("Description")?
+                            .FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)?
+                            .Value)
+                    {
+                        EnumValue = x.Element("EnumValue")?.Value,
+                    })
+                    .ToList())
+            {
+                FontName = "Segoe MDL2 Assets",
+            };
+
+            await this.FilterFontIconListAsync(new CancellationTokenSource());
+        }
+
         private async Task FilterFontIconListAsync(CancellationTokenSource cts)
         {
             this._lastFilterFontIconListCancellationTokenSource.Cancel();
@@ -186,5 +191,12 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 await DispatcherHelper.RunAsync(() => this.IsLoading = false);
             }
         }
+
+        private void NavigateToFontIconDetails(ItemClickEventArgs e)
+        {
+            var fi = (SingleFontIconViewModel) e.ClickedItem;
+            MainViewModel.Instance .Navigate( fi);
+        }
+
     }
 }
