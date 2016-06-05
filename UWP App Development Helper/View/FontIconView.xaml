@@ -8,7 +8,6 @@
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
-    xmlns:cmd="http://www.galasoft.ch/mvvmlight"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:FontIconViewModel}">
 
     <interactivity:Interaction.Behaviors>
@@ -57,11 +56,11 @@
                     <DataTemplate>
                         <Grid Width="250" Height="80" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" >
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             
-                            <FontIcon FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="3 5 0 5"
+                            <FontIcon FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 5 5 5"
                                       Glyph="{Binding Chars[0]}"
                                       Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
 
