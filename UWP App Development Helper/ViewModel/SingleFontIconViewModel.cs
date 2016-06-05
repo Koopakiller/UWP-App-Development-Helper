@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using Windows.ApplicationModel.DataTransfer;
@@ -13,8 +14,15 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
     {
         public SingleFontIconViewModel()
         {
+            this.Tags = new ObservableCollection<string>();
+            ((ObservableCollection<string>)this.Tags).CollectionChanged += (s, e) =>
+            {
+                // ReSharper disable once ExplicitCallerInfoArgument
+                this.RaisePropertyChanged(nameof(this.JoinedTags));
+            };
             this.CopyCommand = new RelayCommand<string>(this.ExecuteCopy);
             this.NavigateBackCommand = new RelayCommand(NavigateBack);
+
             if (this.IsInDesignMode)
             {
                 this.Chars.Add('\ue00a');
@@ -47,7 +55,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public IList<char> Chars { get; }
 
-        public IList<string> Tags { get; } = new List<string>();
+        public IList<string> Tags { get; }
+
+        public string JoinedTags => string.Join(", ", this.Tags);
 
         public string Description { get; }
 
@@ -78,6 +88,15 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 case "FontIcon":
                     s = "<FontIcon Glyph=\"&#x" + code + ";\" />";
                     break;
+                case "EnumValue":
+                    s = this.EnumValue;
+                    break;
+                case "Description":
+                    s = this.Description;
+                    break;
+                case "JoinedTags":
+                    s = this.JoinedTags;
+                    break;
                 default:
                     throw new ArgumentException();
             }
@@ -92,5 +111,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             MainViewModel.Instance.Navigate(MainViewModel.FontIconViewModel);
         }
+
+
     }
 }

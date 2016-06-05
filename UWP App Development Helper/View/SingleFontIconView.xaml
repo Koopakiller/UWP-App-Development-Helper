@@ -8,26 +8,128 @@
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:SingleFontIconViewModel}">
 
-    <Grid>
+    <view:ViewBase.Resources>
+        <Style x:Key="ContentOnlyButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundTransparentBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="8,4,8,4"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="UseSystemFocusVisuals" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>-->
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseHighBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightTransparentBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>-->
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseHighBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledBaseMediumLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="ContentPresenter">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>-->
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw"
+                                              BorderBrush="{TemplateBinding BorderBrush}"
+                                              BorderThickness="{TemplateBinding BorderThickness}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                              ContentTransitions="{TemplateBinding ContentTransitions}"
+                                              Content="{TemplateBinding Content}" 
+                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Padding="{TemplateBinding Padding}"
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="CopyButton" BasedOn="{StaticResource ContentOnlyButton}">
+            <Setter Property="Content" Value="&#xe16f;"/>
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+            <Setter Property="Margin" Value="5 -3 5 3"/>
+            <Setter Property="Padding" Value="4 3 4 3"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="SectionHeaderStyle">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="CodeStyle">
+            <Setter Property="FontFamily" Value="Consolas"/>
+        </Style>
+        
+    </view:ViewBase.Resources>
+
+    <Grid Padding="10">
         <StackPanel>
-            <Button Content="&#xE0A6;" FontFamily="Segoe MDL2 Assets" FontSize="32" Command="{Binding NavigateBackCommand}"/>
-            <TextBlock Text="Possible Unicodes"/>
-            <ComboBox ItemsSource="{Binding Chars}" Name="PossibleUnicodes" SelectedItem="{Binding SelectedChar, Mode=TwoWay}">
-                <ComboBox.ItemTemplate>
+            <Button Command="{Binding NavigateBackCommand}" Style="{StaticResource ContentOnlyButton}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Text="&#xE0A6;" FontFamily="Segoe MDL2 Assets" FontSize="28"/>
+                    <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Text="Back to overview"/>
+                </StackPanel>
+            </Button>
+
+            <TextBlock Text="Available Unicodes" Style="{StaticResource SectionHeaderStyle}"/>
+            <GridView ItemsSource="{Binding Chars}" Name="PossibleUnicodes" SelectedItem="{Binding SelectedChar, Mode=TwoWay}">
+                <GridView.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Converter={StaticResource CharToHeyConverter}}"/>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <FontIcon Grid.Row="0" HorizontalAlignment="Center" Glyph="{Binding }" FontSize="64"/>
+                            <TextBlock FontSize="18" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Converter={StaticResource CharToHeyConverter}}"/>
+                        </Grid>
                     </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
-            
-            <TextBlock Text="Unicode &amp; Usage"/>
+                </GridView.ItemTemplate>
+            </GridView>
+
+            <TextBlock Text="Source Code" Style="{StaticResource SectionHeaderStyle}"/>
             <Grid>
-                <Grid.Resources>
-                    <Style TargetType="Button" x:Key="CopyButton">
-                        <Setter Property="Content" Value="&#xe16f;"/>
-                        <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
-                    </Style>
-                </Grid.Resources>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -43,34 +145,65 @@
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="XAML / XML"/>
                 <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="XAML"/>
-                <TextBlock Grid.Row="0" Grid.Column="2" RelativePanel.RightOf="XmlName" >
+                <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource CodeStyle}">
                     <Run Text="&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";"/>
                 </TextBlock>
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="C# / F# / C++"/>
                 <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="C#"/>
-                <TextBlock Grid.Row="1" Grid.Column="2" >
+                <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource CodeStyle}">
                     <Run Text="\u"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/>
                 </TextBlock>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Visual Basic"/>
                 <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="VB"/>
-                <TextBlock Grid.Row="2" Grid.Column="2" >
+                <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource CodeStyle}" >
                     <Run Text="ChrW(&amp;H"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=")"/>
                 </TextBlock>
 
                 <TextBlock Grid.Row="3" Grid.Column="0" Text="FontIcon"/>
                 <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="FontIconWithFontFamily"/>
-                <TextBlock Grid.Row="3" Grid.Column="2" >
+                <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource CodeStyle}" >
                     <Run Text="&lt;FontIcon FontFamily=&quot;Segoe MDL2 Assets&quot; Glyph=&quot;&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";&quot; /&gt;"/>
                 </TextBlock>
                 <Button Grid.Row="4" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="FontIcon"/>
-                <TextBlock Grid.Row="4" Grid.Column="2" >
+                <TextBlock Grid.Row="4" Grid.Column="2" Style="{StaticResource CodeStyle}" >
                     <Run Text="&lt;FontIcon Glyph=&quot;&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";&quot; /&gt;"/>
                 </TextBlock>
-                
+
+            </Grid>
+
+            <TextBlock Text="Details" Style="{StaticResource SectionHeaderStyle}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Enum-Value"/>
+                <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="EnumValue"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding EnumValue}"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Description (from MSDN)"/>
+                <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="Description"/>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Description}"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Tags"/>
+                <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="JoinedTags"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding JoinedTags}"/>
+
             </Grid>
             
+            
+
         </StackPanel>
 
     </Grid>
