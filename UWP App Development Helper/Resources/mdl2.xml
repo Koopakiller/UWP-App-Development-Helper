@@ -84,9 +84,7 @@
       <Tag>outline</Tag>
     </Tags>
     <EnumValue>HeartLegacy</EnumValue>
-    <Description Language="1033">
-          Outlined heart
-        </Description>
+    <Description Language="1033">Outlined heart</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -99,9 +97,7 @@
       <Tag>fill</Tag>
     </Tags>
     <EnumValue>HeartBrokenLegacy</EnumValue>
-    <Description Language="1033">
-          Broken heart
-        </Description>
+    <Description Language="1033">Broken heart</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
@@ -140,9 +136,7 @@
       <Tag>fill</Tag>
     </Tags>
     <EnumValue>HeartFillLegacy</EnumValue>
-    <Description Language="1033">
-          Solid heart
-        </Description>
+    <Description Language="1033">Solid heart</Description>
   </FontIcon>
   <FontIcon>
     <!--  -->
