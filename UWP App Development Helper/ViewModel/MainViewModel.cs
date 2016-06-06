@@ -22,9 +22,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 },
                 new HamburgerMenuItemViewModel()
                 {
-                    Header = "Custom Colors",
+                    Header = "Colors",
                     Glyph = "\uE2B1",
-                    ViewModel = CustomColorsViewModel,
+                    ViewModel = ColorsViewModel,
                 },
                 new HamburgerMenuItemViewModel()
                 {
@@ -65,7 +65,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public static MainViewModel Instance { get; private set; }
         public static HomeViewModel HomeViewModel { get; } = new HomeViewModel();
-        public static CustomColorsViewModel CustomColorsViewModel { get; } = new CustomColorsViewModel();
+        public static ColorsViewModel ColorsViewModel { get; } = new ColorsViewModel();
         public static FontIconViewModel FontIconViewModel { get; } = new FontIconViewModel();
         public static AboutViewModel AboutViewModel { get; } = new AboutViewModel();
     }

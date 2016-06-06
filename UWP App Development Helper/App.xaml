@@ -30,6 +30,11 @@
             <Style TargetType="Grid">
                 <Setter Property="Background" Value="{ThemeResource NeutralLight}"/>
             </Style>
+            <Style TargetType="TextBlock" x:Key="SectionHeaderStyle">
+                <Setter Property="FontWeight" Value="Light"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="Margin" Value="0 15 0 8"/>
+            </Style>
 
             <ui:AutoTypeTemplateSelector x:Key="AutoTypeTemplateSelector"/>
             

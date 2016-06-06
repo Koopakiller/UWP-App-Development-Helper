@@ -96,10 +96,6 @@
             <Setter Property="Padding" Value="4 3 4 3"/>
         </Style>
 
-        <Style TargetType="TextBlock" x:Key="SectionHeaderStyle">
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="0 10 0 5"/>
-        </Style>
         <Style TargetType="TextBlock" x:Key="CodeStyle">
             <Setter Property="FontFamily" Value="Consolas"/>
         </Style>
