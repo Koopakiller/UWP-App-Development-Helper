@@ -13,6 +13,10 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 {
                     Header ="Accent Colors",
                 },
+                new ThemeResourceColorViewModel()
+                {
+                    Header="ThemeResource Colors",
+                }
             };
         }
 

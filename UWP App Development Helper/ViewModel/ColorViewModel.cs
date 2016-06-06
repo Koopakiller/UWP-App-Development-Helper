@@ -1,4 +1,6 @@
+using System;
 using Windows.UI;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using GalaSoft.MvvmLight;
 
@@ -22,8 +24,41 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-        public SolidColorBrush Brush { get; }
+        public ColorViewModel(string resourceKey)
+        {
+            object res = null;
+            try
+            {
+                res = Application.Current.Resources[resourceKey];
+            }
+            catch
+            {
+                //No resource found or an error occured
+                return;
+            }
+            if (res is Color)
+            {
+                this.Color = (Color)res;
+                this.Brush = new SolidColorBrush(this.Color);
+            }
+            else if (res is Brush)
+            {
+                this.Brush = (Brush)res;
+                var solidColorBrush = res as SolidColorBrush;
+                if (solidColorBrush != null)
+                {
+                    this.Color = solidColorBrush.Color;
+                }
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            this.DisplayName = resourceKey;
+        }
+
+        public Brush Brush { get; }
         public Color Color { get; }
-        public string DisplayName { get; }
+        public string DisplayName { get; set; }
     }
 }

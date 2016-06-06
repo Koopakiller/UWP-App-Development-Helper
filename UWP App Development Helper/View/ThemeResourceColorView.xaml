@@ -1,0 +1,27 @@
+﻿<view:ViewBase
+    x:Class="Koopakiller.Apps.UwpAppDevelopmentHelper.View.ThemeResourceColorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:Koopakiller.Apps.UwpAppDevelopmentHelper.View"
+    xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:ThemeResourceColorViewModel}">
+
+    <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Auto">
+        <StackPanel >
+            <StackPanel.Resources>
+                <DataTemplate x:Key="ColorField">
+                    <Border d:DataContext="{d:DesignInstance viewModel:ColorViewModel}" 
+                        Background="{Binding Brush}" Width="210" Height="60">
+                        <TextBlock Text="{Binding DisplayName}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                </DataTemplate>
+            </StackPanel.Resources>
+
+            <GridView ItemsSource="{Binding ThemeResources}" 
+                      ItemTemplate="{StaticResource ColorField}"/>
+
+        </StackPanel>
+    </ScrollViewer>
+</view:ViewBase>
