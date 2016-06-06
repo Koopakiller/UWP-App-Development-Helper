@@ -100,7 +100,7 @@
         <Style TargetType="TextBlock" x:Key="CodeStyle">
             <Setter Property="FontFamily" Value="Consolas"/>
         </Style>
-        
+
     </view:ViewBase.Resources>
 
     <Grid Padding="10">
@@ -122,7 +122,7 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <FontIcon Grid.Row="0" HorizontalAlignment="Center" Glyph="{Binding }" FontSize="64"/>
-                            <TextBlock FontSize="18" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Converter={StaticResource CharToHeyConverter}}"/>
+                            <TextBlock FontSize="18" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Converter={StaticResource CharToHexConverter}}"/>
                         </Grid>
                     </DataTemplate>
                 </GridView.ItemTemplate>
@@ -146,29 +146,29 @@
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="XAML / XML"/>
                 <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="XAML"/>
                 <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource CodeStyle}">
-                    <Run Text="&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";"/>
+                    <Run Text="&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHexConverter}}"/><Run Text=";"/>
                 </TextBlock>
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="C# / F# / C++"/>
                 <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="C#"/>
                 <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource CodeStyle}">
-                    <Run Text="\u"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/>
+                    <Run Text="\u"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHexConverter}}"/>
                 </TextBlock>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Visual Basic"/>
                 <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="VB"/>
                 <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource CodeStyle}" >
-                    <Run Text="ChrW(&amp;H"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=")"/>
+                    <Run Text="ChrW(&amp;H"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHexConverter}}"/><Run Text=")"/>
                 </TextBlock>
 
                 <TextBlock Grid.Row="3" Grid.Column="0" Text="FontIcon"/>
                 <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="FontIconWithFontFamily"/>
                 <TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource CodeStyle}" >
-                    <Run Text="&lt;FontIcon FontFamily=&quot;Segoe MDL2 Assets&quot; Glyph=&quot;&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";&quot; /&gt;"/>
+                    <Run Text="&lt;FontIcon FontFamily=&quot;Segoe MDL2 Assets&quot; Glyph=&quot;&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHexConverter}}"/><Run Text=";&quot; /&gt;"/>
                 </TextBlock>
                 <Button Grid.Row="4" Grid.Column="1" Style="{StaticResource CopyButton}" Command="{Binding CopyCommand}" CommandParameter="FontIcon"/>
                 <TextBlock Grid.Row="4" Grid.Column="2" Style="{StaticResource CodeStyle}" >
-                    <Run Text="&lt;FontIcon Glyph=&quot;&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHeyConverter}}"/><Run Text=";&quot; /&gt;"/>
+                    <Run Text="&lt;FontIcon Glyph=&quot;&amp;#x"/><Run Text="{Binding SelectedValue, ElementName=PossibleUnicodes, Converter={StaticResource CharToHexConverter}}"/><Run Text=";&quot; /&gt;"/>
                 </TextBlock>
 
             </Grid>
@@ -201,8 +201,29 @@
                 <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding JoinedTags}"/>
 
             </Grid>
-            
-            
+
+            <TextBlock Text="Use as an image file" Style="{StaticResource SectionHeaderStyle}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Fontsize in pt: " VerticalAlignment="Center"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FontSize, ElementName=FontIconImagePreview, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button Grid.Column="2" Grid.Row="0" Content="Save as..." Command="{Binding SaveFontIconImageCommand}" CommandParameter="{Binding ElementName=FontIconImagePreview}"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Preview: "/>
+                    <FontIcon x:Name="FontIconImagePreview" FontSize="24"
+                        VerticalAlignment="Top" HorizontalAlignment="Left"
+                        Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                              Glyph="{Binding SelectedValue, ElementName=PossibleUnicodes}"/>
+            </Grid>
 
         </StackPanel>
 

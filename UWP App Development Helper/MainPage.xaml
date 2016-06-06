@@ -16,7 +16,7 @@
                     <Grid Background="Transparent">
                         <Grid.Resources>
                             <DataTemplate x:Key="HamburgerMenuItemDataTemplate">
-                                <Grid>
+                                <Grid d:DataContext="{d:DesignInstance viewModel:HamburgerMenuItemViewModel}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="24"/>
                                         <ColumnDefinition Width="*"/>

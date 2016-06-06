@@ -35,7 +35,7 @@
             
             <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             <converter:NullToHiddenConverter x:Key="NullToHiddenConverter"/>
-            <converter:CharToHeyConverter x:Key="CharToHeyConverter"/>
+            <converter:CharToHexConverter x:Key="CharToHexConverter"/>
 
         </ResourceDictionary>
         

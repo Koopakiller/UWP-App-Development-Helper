@@ -100,7 +100,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Converter\CharToHeyConverter.cs" />
+    <Compile Include="Converter\CharToHexConverter.cs" />
     <Compile Include="Converter\NullToHiddenConverter.cs" />
     <Compile Include="Extensions\Package.cs" />
     <Compile Include="MainPage.xaml.cs">

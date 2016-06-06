@@ -1,6 +1,6 @@
 ﻿namespace Koopakiller.Apps.UwpAppDevelopmentHelper
 {
-    public sealed partial class MainPage 
+    public sealed partial class MainPage
     {
         public MainPage()
         {

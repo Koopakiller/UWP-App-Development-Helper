@@ -8,7 +8,8 @@
     "MvvmLight": "5.3.0",
     "MvvmLightLibs": "5.3.0",
     "PostSharp": "4.2.27",
-    "PostSharp.Patterns.Model": "4.2.27"
+    "PostSharp.Patterns.Model": "4.2.27",
+    "Win2D.uwp": "1.18.0"
   },
   "frameworks": {
     "uap10.0": {}

@@ -4,9 +4,9 @@ using Windows.UI.Xaml.Data;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Converter
 {
-    public class CharToHeyConverter : IValueConverter
+    public class CharToHexConverter : IValueConverter
     {
-        public object Convert(object value) => this.Convert(value, null, null, null);
+        public object Convert(object value) => this.Convert(value, null, null, "");
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {

@@ -2,16 +2,24 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.Graphics.Imaging;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using Koopakiller.Apps.UwpAppDevelopmentHelper.Converter;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     public class SingleFontIconViewModel : ViewModelBase
     {
+        #region .ctor
+
         public SingleFontIconViewModel()
         {
             this.Tags = new ObservableCollection<string>();
@@ -22,6 +30,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             };
             this.CopyCommand = new RelayCommand<string>(this.ExecuteCopy);
             this.NavigateBackCommand = new RelayCommand(NavigateBack);
+            this.SaveFontIconImageCommand = new RelayCommand<FontIcon>(async fi => await this.SaveFontImageIconAsync(fi));
 
             if (this.IsInDesignMode)
             {
@@ -41,17 +50,21 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-
         public SingleFontIconViewModel(params char[] icons) : this()
         {
             this.Chars = new List<char>(icons);
             this.SelectedChar = this.Chars.FirstOrDefault();
         }
+
         public SingleFontIconViewModel(char[] icons, IList<string> tags, string description) : this(icons)
         {
             this.Tags = tags;
             this.Description = description;
         }
+
+        #endregion
+
+        #region Properties
 
         public IList<char> Chars { get; }
 
@@ -64,13 +77,18 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public string EnumValue { get; set; }
 
         public ICommand CopyCommand { get; }
+
         public ICommand NavigateBackCommand { get; }
+
+        public ICommand SaveFontIconImageCommand { get; }
 
         public char SelectedChar { get; set; }
 
+        #endregion
+
         private void ExecuteCopy(string s)
         {
-            var code = (string)new CharToHeyConverter().Convert(this.SelectedChar);
+            var code = Convert.ToString(this.SelectedChar, 16);
             switch (s)
             {
                 case "XAML": // XAML / XML
@@ -112,6 +130,85 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             MainViewModel.Instance.Navigate(MainViewModel.FontIconViewModel);
         }
 
+        private async Task SaveFontImageIconAsync(FontIcon fi)
+        {
+            var file = await this.PickImageFileAsync();
+            if (file == null)
+            {
+                return; 
+            }
+            var rtb = new RenderTargetBitmap();
+            await rtb.RenderAsync(fi, (int)fi.ActualWidth, (int)fi.ActualHeight);
+            await this.SaveSoftwareBitmapToFile(rtb, file);
+        }
 
+        private async Task<StorageFile> PickImageFileAsync()
+        {
+            var fsp = new FileSavePicker
+            {
+                SuggestedStartLocation = PickerLocationId.PicturesLibrary,
+                SuggestedFileName = "MDL2 Asset " + CharToHex(this.SelectedChar),
+            };
+            fsp.FileTypeChoices.Add("Portable Network Graphic - PNG Image", new List<string>() { ".png" });
+            fsp.FileTypeChoices.Add("JPEG Image", new List<string>() { ".jpg", ".jpeg" });
+            fsp.FileTypeChoices.Add("TIFF Image", new List<string>() { ".tif", ".tiff" });
+            fsp.FileTypeChoices.Add("BMP Image", new List<string>() { ".bmp" });
+            fsp.FileTypeChoices.Add("GIF Image", new List<string>() { ".gif" });
+            return await fsp.PickSaveFileAsync();
+        }
+
+        private async Task SaveSoftwareBitmapToFile(RenderTargetBitmap rtb, IStorageFile outputFile)
+        {
+            using (var stream = await outputFile.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                Guid encoderId;
+                switch (outputFile.FileType.ToLower())
+                {
+                    case ".png":
+                        encoderId = BitmapEncoder.PngEncoderId;
+                        break;
+                    case ".jpg":
+                    case ".jpeg":
+                        encoderId = BitmapEncoder.JpegEncoderId;
+                        break;
+                    case ".gif":
+                        encoderId = BitmapEncoder.GifEncoderId;
+                        break;
+                    case ".tif":
+                    case ".tiff":
+                        encoderId = BitmapEncoder.TiffEncoderId;
+                        break;
+                    case ".bmp":
+                        encoderId = BitmapEncoder.BmpEncoderId;
+                        break;
+                    default:
+                        encoderId = BitmapEncoder.PngEncoderId;
+                        break;
+                }
+                var encoder = await BitmapEncoder.CreateAsync(encoderId, stream);
+                var bytes = (await rtb.GetPixelsAsync()).ToArray();
+                encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Straight, (uint)rtb.PixelWidth, (uint)rtb.PixelHeight, 96, 96, bytes);
+                encoder.IsThumbnailGenerated = true;
+
+                try
+                {
+                    await encoder.FlushAsync();
+                }
+                catch (Exception err) when (err.HResult == unchecked((int)0x88982F81))
+                {
+                    encoder.IsThumbnailGenerated = false;
+                }
+
+                if (encoder.IsThumbnailGenerated == false)
+                {
+                    await encoder.FlushAsync();
+                }
+            }
+        }
+
+        private static string CharToHex(char chr)
+        {
+            return Convert.ToString(chr, 16);
+        }
     }
 }
