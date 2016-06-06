@@ -27,11 +27,14 @@
                         </Grid.ColumnDefinitions>
                         <Border Grid.Column="0" Background="{Binding Brush}" Width="30" Height="30" BorderBrush="Black" BorderThickness="2"/>
                         <TextBlock Grid.Column="1" Text="{Binding DisplayName}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="7 0 0 0" TextTrimming="CharacterEllipsis" />
+        
                     </Grid>
                 </DataTemplate>
             </StackPanel.Resources>
 
-            <GridView ItemsSource="{Binding ThemeResources}" 
+            <ProgressBar IsIndeterminate="True" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            
+            <GridView ItemsSource="{Binding ThemeResources}" SelectionMode="None"
                       ItemTemplate="{StaticResource ColorField}"/>
 
         </StackPanel>
