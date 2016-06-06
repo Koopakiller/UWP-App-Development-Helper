@@ -8,6 +8,7 @@
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:controls="using:Koopakiller.Apps.UwpAppDevelopmentHelper.Controls"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:ThemeResourceColorViewModel}">
 
     <interactivity:Interaction.Behaviors>
@@ -25,15 +26,18 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="0" Background="{Binding Brush}" Width="30" Height="30" BorderBrush="Black" BorderThickness="2"/>
+                        <Grid Grid.Column="0" Width="30" Height="30">
+                            <controls:Plaid FirstColor="White" SecondColor="Gray" HorizontalMode="Pixel" VerticalMode="Pixel" Horizontal="15" Vertical="15"/>
+                            <Border Background="{Binding Brush}" BorderBrush="Black" BorderThickness="2"/>
+                        </Grid>
                         <TextBlock Grid.Column="1" Text="{Binding DisplayName}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="7 0 0 0" TextTrimming="CharacterEllipsis" />
-        
+
                     </Grid>
                 </DataTemplate>
             </StackPanel.Resources>
 
             <ProgressBar IsIndeterminate="True" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-            
+
             <GridView ItemsSource="{Binding ThemeResources}" SelectionMode="None"
                       ItemTemplate="{StaticResource ColorField}"/>
 
