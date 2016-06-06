@@ -26,7 +26,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public ColorViewModel(string resourceKey)
         {
-            object res = null;
+            object res ;
             try
             {
                 res = Application.Current.Resources[resourceKey];
