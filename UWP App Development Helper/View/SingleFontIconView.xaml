@@ -34,6 +34,9 @@
                                     </VisualState>
                                     <VisualState x:Name="PointerOver">
                                         <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="RootGrid">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
                                             <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="ContentPresenter">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightBaseMediumLowBrush}"/>
                                             </ObjectAnimationUsingKeyFrames>-->
@@ -95,7 +98,7 @@
 
         <Style TargetType="TextBlock" x:Key="SectionHeaderStyle">
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Margin" Value="0 10 0 0"/>
+            <Setter Property="Margin" Value="0 10 0 5"/>
         </Style>
         <Style TargetType="TextBlock" x:Key="CodeStyle">
             <Setter Property="FontFamily" Value="Consolas"/>
@@ -202,7 +205,7 @@
 
             </Grid>
 
-            <TextBlock Text="Use as an image file" Style="{StaticResource SectionHeaderStyle}"/>
+            <TextBlock Text="Save Asset to image file" Style="{StaticResource SectionHeaderStyle}"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -210,19 +213,20 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Fontsize in pt: " VerticalAlignment="Center"/>
-                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FontSize, ElementName=FontIconImagePreview, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <Button Grid.Column="2" Grid.Row="0" Content="Save as..." Command="{Binding SaveFontIconImageCommand}" CommandParameter="{Binding ElementName=FontIconImagePreview}"/>
-
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Fontsize in pt: " VerticalAlignment="Center" Margin="0 0 8 0"/>
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <AutoSuggestBox Width="100" ItemsSource="{Binding CommonFontSizes}"
+                                    Text="{Binding FontSize, ElementName=FontIconImagePreview, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Save as..." Command="{Binding SaveFontIconImageCommand}" CommandParameter="{Binding ElementName=FontIconImagePreview}"/>
+                </StackPanel>
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Preview: "/>
-                    <FontIcon x:Name="FontIconImagePreview" FontSize="24"
-                        VerticalAlignment="Top" HorizontalAlignment="Left"
-                        Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-                              Glyph="{Binding SelectedValue, ElementName=PossibleUnicodes}"/>
+                <FontIcon x:Name="FontIconImagePreview" FontSize="24"
+                          VerticalAlignment="Top" HorizontalAlignment="Left"
+                          Grid.Row="1" Grid.Column="1"
+                          Glyph="{Binding SelectedValue, ElementName=PossibleUnicodes}"/>
             </Grid>
 
         </StackPanel>

@@ -84,6 +84,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public char SelectedChar { get; set; }
 
+        public IReadOnlyCollection<double> CommonFontSizes { get; } =
+            new double[] { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72, 96, 144, 192, 288, 384, 576 };
+
         #endregion
 
         private void ExecuteCopy(string s)
@@ -135,7 +138,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             var file = await this.PickImageFileAsync();
             if (file == null)
             {
-                return; 
+                return;
             }
             var rtb = new RenderTargetBitmap();
             await rtb.RenderAsync(fi, (int)fi.ActualWidth, (int)fi.ActualHeight);
