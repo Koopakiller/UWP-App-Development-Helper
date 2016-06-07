@@ -54,16 +54,18 @@
                 </GridView.ItemContainerStyle>
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Width="250" Height="80" Background="{ThemeResource SystemControlBackgroundAltHighBrush}" >
+                        <Grid Width="250" Height="76" Background="{ThemeResource SystemControlHighlightAltAltHighBrush}" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            
-                            <FontIcon FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 5 5 5"
-                                      Glyph="{Binding Chars[0]}"
-                                      Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}"/>
 
+                            <Border Background="{ThemeResource SystemControlHighlightAccentBrush}" Padding="10">
+                                <FontIcon FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                      Glyph="{Binding Chars[0]}"
+                                      Foreground="{ThemeResource SystemControlHighlightAltAltHighBrush}"/>
+                            </Border>
+                            
                             <StackPanel Grid.Column="1" Margin="5">
                                 <TextBlock FontWeight="Bold"
                                            Text="{Binding EnumValue}" 
@@ -71,8 +73,8 @@
                                 <TextBlock TextWrapping="WrapWholeWords"
                                            Text="{Binding Description}"
                                            Visibility="{Binding Description, Converter={StaticResource NullToHiddenConverter}}"/>
-                            </StackPanel> 
-                            
+                            </StackPanel>
+
                         </Grid>
                     </DataTemplate>
                 </GridView.ItemTemplate>
