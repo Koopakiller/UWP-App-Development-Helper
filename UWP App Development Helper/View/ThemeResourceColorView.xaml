@@ -12,7 +12,7 @@
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:ThemeResourceColorViewModel}">
 
     <interactivity:Interaction.Behaviors>
-        <core:EventTriggerBehavior EventName="Loading">
+        <core:EventTriggerBehavior EventName="Loaded">
             <core:InvokeCommandAction Command="{Binding LoadThemeResourcesCommand}"  />
         </core:EventTriggerBehavior>
     </interactivity:Interaction.Behaviors>
