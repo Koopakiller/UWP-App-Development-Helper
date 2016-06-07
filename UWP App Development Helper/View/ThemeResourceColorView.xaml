@@ -39,7 +39,14 @@
             <ProgressBar IsIndeterminate="True" Margin="5" Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 
             <GridView ItemsSource="{Binding ThemeResources}" SelectionMode="None"
-                      ItemTemplate="{StaticResource ColorField}"/>
+                      ItemTemplate="{StaticResource ColorField}">
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin" Value="0"/>
+                        <Setter Property="Padding" Value="10"/>
+                    </Style>
+                </GridView.ItemContainerStyle>
+            </GridView>
 
         </StackPanel>
     </ScrollViewer>
