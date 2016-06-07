@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Storage;
@@ -17,10 +18,18 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             this.LoadThemeResourcesCommand = new RelayCommand(async () => await this.LoadThemeResourcesAsync());
         }
 
-        private bool _areThemeResourcesLoaded;
         private bool _isLoading;
+        private IReadOnlyCollection<ColorViewModel> _themeResources ;
 
-        public ObservableCollection<ColorViewModel> ThemeResources { get; } = new ObservableCollection<ColorViewModel>();
+        public IReadOnlyCollection<ColorViewModel> ThemeResources
+        {
+            get { return this._themeResources; }
+            set
+            {
+                this._themeResources = value;
+                this.RaisePropertyChanged();
+            }
+        }
 
         public ICommand LoadThemeResourcesCommand { get; }
 
@@ -36,21 +45,15 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         private async Task LoadThemeResourcesAsync()
         {
-            if (this._areThemeResourcesLoaded)
+            if (this.ThemeResources!=null)
             {
                 return;
             }
 
             this.IsLoading = true;
-
-            this.ThemeResources.Clear();
+            
             var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Resources/ThemeResources.txt"));
-            var lines = await FileIO.ReadLinesAsync(file, UnicodeEncoding.Utf8);
-            foreach (var line in lines)
-            {
-                this.ThemeResources.Add(new ColorViewModel(line));
-            }
-            this._areThemeResourcesLoaded = true;
+            this.ThemeResources = (await FileIO.ReadLinesAsync(file, UnicodeEncoding.Utf8)).Select(line => new ColorViewModel(line)).ToList();
 
             this.IsLoading = false;
         }
