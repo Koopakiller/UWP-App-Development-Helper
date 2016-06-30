@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Storage;
 using Windows.Storage.Streams;
-using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight.Command;
 using PostSharp.Patterns.Model;
 
@@ -16,6 +15,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
     {
         public ThemeResourceColorViewModel()
         {
+            this.Header = "ThemeResource Colors";
             this.LoadThemeResourcesCommand = new RelayCommand(async () => await this.LoadThemeResourcesAsync());
         }
 

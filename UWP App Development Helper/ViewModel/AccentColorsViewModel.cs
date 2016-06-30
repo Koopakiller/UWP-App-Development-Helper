@@ -6,6 +6,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
     {
         public AccentColorsViewModel()
         {
+            this.Header = "Accent Colors";
+
             //Source: https://msdn.microsoft.com/en-us/windows/uwp/style/color
             this.DefaultAccentColors = new ObservableCollection<ColorViewModel>()
             {

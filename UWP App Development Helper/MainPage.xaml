@@ -16,7 +16,7 @@
                     <Grid Background="Transparent">
                         <Grid.Resources>
                             <DataTemplate x:Key="HamburgerMenuItemDataTemplate">
-                                <Grid d:DataContext="{d:DesignInstance viewModel:HamburgerMenuItemViewModel}">
+                                <Grid d:DataContext="{d:DesignInstance viewModel:ViewModelLinkViewModel}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="24"/>
                                         <ColumnDefinition Width="*"/>
@@ -25,7 +25,7 @@
                                     <TextBlock Grid.Column="1" Text="{Binding Header}" Margin="10 1 0 1"/>
                                 </Grid>
                             </DataTemplate>
-                            <Style TargetType="ListBoxItem" x:Key="HamburgerMenuItemContainerStyle">
+                            <Style TargetType="ListViewItem" x:Key="HamburgerMenuItemContainerStyle">
                                 <Setter Property="Background" Value="Transparent"/>
                                 <Setter Property="TabNavigation" Value="Local"/>
                                 <Setter Property="Padding" Value="12,11,12,13"/>
@@ -33,7 +33,7 @@
                                 <Setter Property="UseSystemFocusVisuals" Value="True"/>
                                 <Setter Property="Template">
                                     <Setter.Value>
-                                        <ControlTemplate TargetType="ListBoxItem">
+                                        <ControlTemplate TargetType="ListViewItem">
                                             <Grid x:Name="LayoutRoot" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                                                 <Grid.Resources>
                                                     <Style x:Key="BaseContentPresenterStyle" TargetType="ContentPresenter">
@@ -134,15 +134,19 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
+                        
                         <ToggleButton Grid.Row="0" Name="HamburgerMenuButton" Background="Transparent" IsChecked="false" BorderThickness="0">
                             <FontIcon Glyph="&#xE700;" Width="24" Margin="2"/>
                         </ToggleButton>
-                        <ListBox Grid.Row="1" 
-                                 ItemsSource="{Binding UpperHamburgerMenuItems}" SelectedValue="{Binding SelectedContentViewModel, Mode=TwoWay}" SelectedValuePath="ViewModel"
+                        
+                        <ListView Grid.Row="1"
+                                  ItemsSource="{Binding UpperHamburgerMenuItems}" SelectedItem="{Binding SelectedHamburgerItem, Mode=TwoWay}"
+                                  ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}" />
+                        
+                        <ListView Grid.Row="2" VerticalAlignment="Bottom"
+                                 ItemsSource="{Binding LowerHamburgerMenuItems}"  SelectedItem="{Binding SelectedHamburgerItem, Mode=TwoWay}"
                                  ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}"/>
-                        <ListBox Grid.Row="2" VerticalAlignment="Bottom"
-                                 ItemsSource="{Binding LowerHamburgerMenuItems}" SelectedValue="{Binding SelectedContentViewModel, Mode=TwoWay}" SelectedValuePath="ViewModel"
-                                 ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}"/>
+                        
                     </Grid>
                 </ScrollViewer>
             </SplitView.Pane>

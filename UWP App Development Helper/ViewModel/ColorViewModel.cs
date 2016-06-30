@@ -2,11 +2,10 @@ using System;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
-using GalaSoft.MvvmLight;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
-    public class ColorViewModel : ViewModelBase
+    public class ColorViewModel : ViewModelBase 
     {
         public ColorViewModel()
         {

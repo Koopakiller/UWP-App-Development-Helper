@@ -3,8 +3,9 @@ using PostSharp.Patterns.Model;
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     [NotifyPropertyChanged]
-    public class HeaderViewModelBase : ViewModelBase 
+    public class ViewModelBase : GalaSoft.MvvmLight.ViewModelBase
     {
-        public string Header { get; set; }
+        public ViewModelBase Caller { get; set; }
+
     }
 }

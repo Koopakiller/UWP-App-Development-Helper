@@ -8,9 +8,9 @@ using System.Xml.Linq;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
-using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Threading;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
 using PostSharp.Patterns.Model;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
@@ -48,7 +48,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public ICommand FilterFontIconListCommand { get; }
 
-        public ICommand  NavigateToFontIconDetailsCommand { get; }
+        public ICommand NavigateToFontIconDetailsCommand { get; }
 
         public string SearchTerm
         {
@@ -194,8 +194,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         private void NavigateToFontIconDetails(ItemClickEventArgs e)
         {
-            var fi = (SingleFontIconViewModel) e.ClickedItem;
-            MainViewModel.Instance .Navigate( fi);
+            var fi = (SingleFontIconViewModel)e.ClickedItem;
+            fi.Caller = this;
+            NavigationHelper.NavigateToExisting(fi);
         }
 
     }

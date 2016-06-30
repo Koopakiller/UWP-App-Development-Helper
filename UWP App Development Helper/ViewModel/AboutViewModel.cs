@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Reflection;
 using Windows.ApplicationModel;
-using GalaSoft.MvvmLight;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Extensions;
 using ProcessorArchitecture = Windows.System.ProcessorArchitecture;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
-    public class AboutViewModel : ViewModelBase
+    public class AboutViewModel : ViewModelBase 
     {
         public AboutViewModel()
         {

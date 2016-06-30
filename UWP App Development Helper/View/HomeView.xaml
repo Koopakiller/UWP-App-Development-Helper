@@ -5,10 +5,49 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="using:Koopakiller.Apps.UwpAppDevelopmentHelper.View"
-    mc:Ignorable="d">
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:HomeViewModel}">
 
     <Grid >
         
+        <GridView Margin="0" ItemsSource="{Binding Items}" SelectionMode="None" Padding="5" IsItemClickEnabled="True">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="ItemClick">
+                    <core:InvokeCommandAction Command="{Binding NavigateCommand}" />
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
+            <GridView.ItemContainerStyle>
+                <Style TargetType="GridViewItem">
+                    <Setter Property="IsHoldingEnabled" Value="False"/>
+                    <Setter Property="Margin" Value="5"/>
+                </Style>
+            </GridView.ItemContainerStyle>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="310" Height="310" Background="{ThemeResource SystemControlHighlightAltAltHighBrush}" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Background="{ThemeResource SystemControlHighlightAccentBrush}" Padding="10">
+                            <FontIcon FontSize="244" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                      Glyph="{Binding Glyph}"
+                                      Foreground="{ThemeResource SystemControlHighlightAltAltHighBrush}"/>
+                        </Border>
+
+                        <StackPanel Grid.Row="1" Margin="5">
+                            <TextBlock TextWrapping="WrapWholeWords"
+                                           Text="{Binding Header}"/>
+                        </StackPanel>
+
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
     </Grid>
 </view:ViewBase>
 

@@ -11,8 +11,8 @@ using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
-using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
@@ -29,7 +29,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 this.RaisePropertyChanged(nameof(this.JoinedTags));
             };
             this.CopyCommand = new RelayCommand<string>(this.ExecuteCopy);
-            this.NavigateBackCommand = new RelayCommand(NavigateBack);
+            this.NavigateBackCommand = new RelayCommand(this.NavigateBack);
             this.SaveFontIconImageCommand = new RelayCommand<FontIcon>(async fi => await this.SaveFontImageIconAsync(fi));
 
             if (this.IsInDesignMode)
@@ -128,9 +128,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             Clipboard.SetContent(dataPackage);
         }
 
-        private static void NavigateBack()
+        private void NavigateBack()
         {
-            MainViewModel.Instance.Navigate(MainViewModel.FontIconViewModel);
+            NavigationHelper.NavigateToExisting(this.Caller);
         }
 
         private async Task SaveFontImageIconAsync(FontIcon fi)

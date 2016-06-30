@@ -10,7 +10,7 @@
 
     <Grid >
 
-        <Pivot ItemsSource="{Binding SubSections}">
+        <Pivot ItemsSource="{Binding SubSections}" SelectedItem="{Binding SelectedSubSection, Mode=TwoWay}">
             <Pivot.HeaderTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Header}" d:DataContext="{d:DesignInstance viewModel:HeaderViewModelBase}" />

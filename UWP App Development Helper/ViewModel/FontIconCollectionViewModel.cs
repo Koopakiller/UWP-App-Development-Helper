@@ -3,7 +3,7 @@ using GalaSoft.MvvmLight;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
-    public class FontIconCollectionViewModel:ViewModelBase
+    public class FontIconCollectionViewModel: GalaSoft.MvvmLight.ViewModelBase
     {
         public FontIconCollectionViewModel(IList<SingleFontIconViewModel> fontIcons)
         {

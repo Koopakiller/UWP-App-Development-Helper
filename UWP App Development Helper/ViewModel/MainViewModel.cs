@@ -1,51 +1,71 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight;
+using System.Linq;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
         private ViewModelBase _selectedContentViewModel;
+        private ViewModelLinkViewModel _selectedHamburgerItem;
 
         public MainViewModel()
         {
-            Instance = this;
-            this.SelectedContentViewModel = HomeViewModel;
-            this.UpperHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
+            NavigationHelper.MainViewModel = this;
+            this.UpperHamburgerMenuItems = new ObservableCollection<ViewModelLinkViewModel>()
             {
-                new HamburgerMenuItemViewModel()
+                new ViewModelLinkViewModel()
                 {
                     Header = "Home",
                     Glyph = "\uE10F",
-                    ViewModel = this.SelectedContentViewModel,
+                    ViewModelGenerator = () => new HomeViewModel(),
+                    ViewModelType = typeof(HomeViewModel),
                 },
-                new HamburgerMenuItemViewModel()
+                new ViewModelLinkViewModel()
                 {
                     Header = "Colors",
                     Glyph = "\uE2B1",
-                    ViewModel = ColorsViewModel,
+                    ViewModelGenerator = () => new ColorsViewModel(),
+                    ViewModelType = typeof(ColorsViewModel),
                 },
-                new HamburgerMenuItemViewModel()
+                new ViewModelLinkViewModel()
                 {
                     Header = "Font Icons",
                     Glyph = "\uE128",
-                    ViewModel = FontIconViewModel,
+                    ViewModelGenerator = () => new FontIconViewModel(),
+                    ViewModelType = typeof(FontIconViewModel),
                 },
             };
-            this.LowerHamburgerMenuItems = new ObservableCollection<HamburgerMenuItemViewModel>()
+            this.LowerHamburgerMenuItems = new ObservableCollection<ViewModelLinkViewModel>()
             {
-                new HamburgerMenuItemViewModel()
+                new ViewModelLinkViewModel()
                 {
                     Header = "About",
                     Glyph = "\uE946",
-                    ViewModel = AboutViewModel,
+                    ViewModelGenerator = ()=>new AboutViewModel(),
+                    ViewModelType = typeof(AboutViewModel),
                 },
             };
+            this.SelectedHamburgerItem = this.UpperHamburgerMenuItems.FirstOrDefault();
         }
 
-        public IList<HamburgerMenuItemViewModel> UpperHamburgerMenuItems { get; }
-        public IList<HamburgerMenuItemViewModel> LowerHamburgerMenuItems { get; }
+        public IList<ViewModelLinkViewModel> UpperHamburgerMenuItems { get; }
+        public IList<ViewModelLinkViewModel> LowerHamburgerMenuItems { get; }
+        
+        public ViewModelLinkViewModel SelectedHamburgerItem
+        {
+            get { return this._selectedHamburgerItem; }
+            set
+            {
+                this._selectedHamburgerItem = value;
+                if (value != null)
+                {
+                    this.SelectedContentViewModel = value.ViewModelGenerator();
+                }
+                this.RaisePropertyChanged();
+            }
+        }
 
         public ViewModelBase SelectedContentViewModel
         {
@@ -53,20 +73,19 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             set
             {
                 this._selectedContentViewModel = value;
+                if (value != null)
+                {
+                    var item= this.UpperHamburgerMenuItems.Concat(this.LowerHamburgerMenuItems).FirstOrDefault(x => x.ViewModelType == value.GetType());
+                    if (this.SelectedHamburgerItem != item)
+                    {
+                        this._selectedHamburgerItem = item;
+                        // ReSharper disable once ExplicitCallerInfoArgument
+                        this.RaisePropertyChanged(nameof(this.SelectedHamburgerItem));
+                    }
+                }
                 this.RaisePropertyChanged();
             }
         }
 
-        public void Navigate(ViewModelBase vm)
-        {
-            this.SelectedContentViewModel = vm;
-        }
-
-
-        public static MainViewModel Instance { get; private set; }
-        public static HomeViewModel HomeViewModel { get; } = new HomeViewModel();
-        public static ColorsViewModel ColorsViewModel { get; } = new ColorsViewModel();
-        public static FontIconViewModel FontIconViewModel { get; } = new FontIconViewModel();
-        public static AboutViewModel AboutViewModel { get; } = new AboutViewModel();
     }
 }
