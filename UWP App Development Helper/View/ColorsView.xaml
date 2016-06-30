@@ -12,6 +12,11 @@
     <Grid >
 
         <controls:MyPivot ItemsSource="{Binding SubSections}" SelectedItem="{Binding SelectedSubSection, Mode=TwoWay}">
+            <controls:MyPivot.ItemContainerStyle>
+                <Style TargetType="PivotItem">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </controls:MyPivot.ItemContainerStyle>
             <controls:MyPivot.HeaderTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Header}" d:DataContext="{d:DesignInstance viewModel:HeaderViewModelBase}" />

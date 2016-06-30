@@ -9,7 +9,7 @@
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:AccentColorsViewModel}">
 
     <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Auto">
-        <StackPanel >
+        <StackPanel Margin="12,0,12,0" >
             <StackPanel.Resources>
                 <DataTemplate x:Key="ColorField">
                     <Border d:DataContext="{d:DesignInstance viewModel:ColorViewModel}" 

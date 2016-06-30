@@ -18,7 +18,7 @@
     </interactivity:Interaction.Behaviors>
 
     <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Auto">
-        <StackPanel >
+        <StackPanel Margin="12,0,12,0" >
             <StackPanel.Resources>
                 <DataTemplate x:Key="ColorField">
                     <Grid d:DataContext="{d:DesignInstance viewModel:ColorViewModel}" Width="350">
