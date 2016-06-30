@@ -6,24 +6,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:view="using:Koopakiller.Apps.UwpAppDevelopmentHelper.View"
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    xmlns:controls="using:Koopakiller.Apps.UwpAppDevelopmentHelper.Controls"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:ColorsViewModel}">
 
     <Grid >
 
-        <Pivot ItemsSource="{Binding SubSections}" SelectedItem="{Binding SelectedSubSection, Mode=TwoWay}">
-            <Pivot.HeaderTemplate>
+        <controls:MyPivot ItemsSource="{Binding SubSections}" SelectedItem="{Binding SelectedSubSection, Mode=TwoWay}">
+            <controls:MyPivot.HeaderTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Header}" d:DataContext="{d:DesignInstance viewModel:HeaderViewModelBase}" />
                 </DataTemplate>
-            </Pivot.HeaderTemplate>
-            <Pivot.ItemTemplate>
+            </controls:MyPivot.HeaderTemplate>
+            <controls:MyPivot.ItemTemplate>
                 <DataTemplate>
                     <ContentControl Content="{Binding }"
                                     ContentTemplateSelector="{StaticResource AutoTypeTemplateSelector}"
                                     HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
                 </DataTemplate>
-          </Pivot.ItemTemplate>
-        </Pivot>
+            </controls:MyPivot.ItemTemplate>
+        </controls:MyPivot>
 
     </Grid>
 </view:ViewBase>
