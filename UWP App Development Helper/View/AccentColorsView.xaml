@@ -13,7 +13,7 @@
             <StackPanel.Resources>
                 <DataTemplate x:Key="ColorField">
                     <Border d:DataContext="{d:DesignInstance viewModel:ColorViewModel}" 
-                        Background="{Binding Brush}" Width="120" Height="120">
+                            Background="{Binding Brush}" Width="120" Height="120">
                         <TextBlock Text="{Binding DisplayName}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Border>
                 </DataTemplate>
@@ -24,8 +24,7 @@
                   ItemTemplate="{StaticResource ColorField}"/>
 
             <TextBlock Style="{StaticResource SectionHeaderStyle}" Text="Xbox accent colors"/>
-            <GridView ItemsSource="{Binding XboxAccentColors}" 
-                  ItemTemplate="{StaticResource ColorField}"/>
+            <GridView ItemsSource="{Binding XboxAccentColors}" ItemTemplate="{StaticResource ColorField}"/>
 
         </StackPanel>
     </ScrollViewer>
