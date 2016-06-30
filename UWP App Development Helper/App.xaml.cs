@@ -5,6 +5,9 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Threading;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.View;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper
 {
@@ -19,10 +22,12 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
         /// </summary>
         public App()
         {
-
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
+
+            HistoryProvider.Instance.KnownTargets.Add(typeof(SingleFontIconViewModel));
+
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
         }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Xml.Linq;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Graphics.Imaging;
 using Windows.Storage;
@@ -13,10 +14,11 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using GalaSoft.MvvmLight.Command;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
-    public class SingleFontIconViewModel : ViewModelBase
+    public class SingleFontIconViewModel : ViewModelBase, IHistoryItemTarget
     {
         #region .ctor
 
@@ -48,6 +50,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 this.EnumValue = "RatingStarFillLegacy";
                 this.Description = "Solid star";
             }
+
+            HistoryProvider.Instance.Add(this);
         }
 
         public SingleFontIconViewModel(params char[] icons) : this()
@@ -213,5 +217,29 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             return Convert.ToString(chr, 16);
         }
+
+        #region IHistoryItemTarget
+
+        public XElement Serialize()
+        {
+            var el = new XElement(this.SerializationName);
+            el.Add(new XElement("Chars", this.Chars));
+            el.Add(new XElement("Tags", this.Tags));
+            el.Add(new XElement("Description", this.Description));
+            return el;
+        }
+
+        public void Load(XElement data)
+        {
+            this.Chars.Clear();
+            foreach (var chr in data.Element("Chars").Elements().Select(x => x.Value))
+            {
+                this.Chars.Add(chr[0]);
+            }
+        }
+
+        public string SerializationName { get; } = nameof(SingleFontIconViewModel);
+
+        #endregion
     }
 }
