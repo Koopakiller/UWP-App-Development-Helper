@@ -13,6 +13,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public HomeViewModel()
         {
             this.NavigateCommand = new RelayCommand<ItemClickEventArgs>(this.Navigate);
+            this.HistoryNavigateCommand = new RelayCommand<ItemClickEventArgs>(this.HistoryNavigate);
             this.Items = new ObservableCollection<ViewModelLinkViewModel>()
             {
                 new ViewModelLinkViewModel()
@@ -52,11 +53,18 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         public ObservableCollection<ViewModelLinkViewModel> Items { get; }
 
         public ICommand NavigateCommand { get; }
+        public ICommand HistoryNavigateCommand { get; }
 
         private void Navigate(ItemClickEventArgs e)
         {
             var item = (ViewModelLinkViewModel)e.ClickedItem;
             NavigationHelper.NavigateToExisting(item.ViewModelGenerator());
+        }
+
+        private void HistoryNavigate(ItemClickEventArgs e)
+        {
+            var item = (ViewModelBase)(IHistoryItemTarget)e.ClickedItem;
+            NavigationHelper.NavigateToExisting(item);
         }
 
         public HistoryProvider History { get; } = HistoryProvider.Instance;

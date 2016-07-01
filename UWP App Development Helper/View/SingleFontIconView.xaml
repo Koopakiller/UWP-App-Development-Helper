@@ -104,14 +104,14 @@
 
     <Grid Padding="10">
         <StackPanel>
-            <Button Command="{Binding NavigateBackCommand}" Style="{StaticResource ContentOnlyButton}">
+            <Button Command="{Binding NavigateBackCommand}" Style="{StaticResource ContentOnlyButton}" Visibility="{Binding Caller, Converter={StaticResource NullToHiddenConverter}}">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock VerticalAlignment="Center" Text="&#xE0A6;" FontFamily="Segoe MDL2 Assets" FontSize="28"/>
                     <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Text="Back to overview"/>
                 </StackPanel>
             </Button>
 
-            <TextBlock Text="Available Unicodes" Style="{StaticResource SectionHeaderStyle}"/>
+            <TextBlock Text="Available Unicodes" Style="{StaticResource Header1}"/>
             <GridView ItemsSource="{Binding Chars}" Name="PossibleUnicodes" SelectedItem="{Binding SelectedChar, Mode=TwoWay}">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -127,7 +127,7 @@
                 </GridView.ItemTemplate>
             </GridView>
 
-            <TextBlock Text="Source Code" Style="{StaticResource SectionHeaderStyle}"/>
+            <TextBlock Text="Source Code" Style="{StaticResource Header1}"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -172,7 +172,7 @@
 
             </Grid>
 
-            <TextBlock Text="Details" Style="{StaticResource SectionHeaderStyle}"/>
+            <TextBlock Text="Details" Style="{StaticResource Header1}"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -201,7 +201,7 @@
 
             </Grid>
 
-            <TextBlock Text="Save Asset to image file" Style="{StaticResource SectionHeaderStyle}"/>
+            <TextBlock Text="Save Asset to image file" Style="{StaticResource Header1}"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>

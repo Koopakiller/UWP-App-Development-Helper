@@ -40,7 +40,7 @@
 
                         <StackPanel Grid.Row="1" Margin="5">
                             <TextBlock TextWrapping="WrapWholeWords"
-                                           Text="{Binding Header}"/>
+                                       Text="{Binding Header}"/>
                         </StackPanel>
 
                     </Grid>
@@ -49,7 +49,12 @@
         </GridView>
 
         <TextBlock Style="{StaticResource Header2}" Text="History" Margin="10 10 10 0"/>
-        <GridView ItemsSource="{Binding History.History}">
+        <GridView Margin="0" ItemsSource="{Binding History.History}" IsItemClickEnabled="True" SelectionMode="None" Padding="5">
+            <interactivity:Interaction.Behaviors>
+                <core:EventTriggerBehavior EventName="ItemClick">
+                    <core:InvokeCommandAction Command="{Binding HistoryNavigateCommand}" />
+                </core:EventTriggerBehavior>
+            </interactivity:Interaction.Behaviors>
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <ContentControl Content="{Binding PreviewViewModel}"
