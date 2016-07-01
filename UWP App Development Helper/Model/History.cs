@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -17,32 +18,24 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
         ViewModelBase PreviewViewModel { get; }
     }
 
-    public class HistoryItem
-    {
-        public IHistoryItemTarget Target { get; set; }
-    }
-
     public class HistoryProvider
     {
-        private readonly List<HistoryItem> _history;
+        private readonly List<IHistoryItemTarget> _history;
 
         private HistoryProvider()
         {
-            this.History = this._history = new List<HistoryItem>();
+            this.History = this._history = new List<IHistoryItemTarget>();
         }
 
-        public IReadOnlyList<HistoryItem> History { get; }
+        public IReadOnlyList<IHistoryItemTarget> History { get; }
 
         public static HistoryProvider Instance { get; } = new HistoryProvider();
 
-        public Dictionary<string, Type> KnownTargets { get; }=new Dictionary<string, Type>();
+        public Dictionary<string, Type> KnownTargets { get; } = new Dictionary<string, Type>();
 
         public void Add(IHistoryItemTarget target)
         {
-            this._history.Add(new HistoryItem()
-            {
-                Target = target,
-            });
+            this._history.Insert(0, target);
         }
 
         public async Task LoadAsync(IStorageFile file)
@@ -50,7 +43,16 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
             XDocument doc;
             using (var stream = await file.OpenStreamForReadAsync())
             {
-                doc = XDocument.Load(stream);
+                try
+                {
+                    doc = XDocument.Load(stream);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("An error occurred during loading the history file.");
+                    Debug.WriteLine(ex);
+                    return;
+                }
             }
             foreach (var element in doc.Root.Elements())
             {
@@ -67,13 +69,21 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
                 }
                 else
                 {
-                    var instance = Activator.CreateInstance(type) as IHistoryItemTarget;
-                    if (instance == null)
+                    try
                     {
-                        throw new InvalidOperationException($"The type '{type}' does not implement '{nameof(IHistoryItemTarget)}'");
+                        var instance = Activator.CreateInstance(type) as IHistoryItemTarget;
+                        if (instance == null)
+                        {
+                            throw new InvalidOperationException($"The type '{type}' does not implement '{nameof(IHistoryItemTarget)}'");
+                        }
+                        instance.Load(element);
+                        this._history.Add(instance);
                     }
-                    instance.Load(element);
-                    this._history.Add(new HistoryItem() {Target = instance});
+                    catch(Exception ex)
+                    {
+                        Debug.WriteLine("An error occurred during loading an history entry.");
+                        Debug.WriteLine(ex);
+                    }
                 }
             }
         }
@@ -83,7 +93,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
             var doc = new XDocument("History");
             foreach (var historyItem in this.History)
             {
-                doc.Add(historyItem.Target.Serialize());
+                doc.Add(historyItem.Serialize());
             }
             using (var stream = await file.OpenStreamForWriteAsync())
             {

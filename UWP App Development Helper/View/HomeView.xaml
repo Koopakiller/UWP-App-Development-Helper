@@ -11,6 +11,11 @@
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:HomeViewModel}">
 
     <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
         <GridView Margin="0" ItemsSource="{Binding Items}" SelectionMode="None" Padding="5" IsItemClickEnabled="True">
             <interactivity:Interaction.Behaviors>
@@ -48,6 +53,16 @@
             </GridView.ItemTemplate>
         </GridView>
 
+        <GridView Grid.Row="1"  ItemsSource="{Binding History.History}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding PreviewViewModel}"
+                                    ContentTemplateSelector="{StaticResource AutoTypeTemplateSelector}"
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        
     </Grid>
 </view:ViewBase>
 

@@ -50,8 +50,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 this.EnumValue = "RatingStarFillLegacy";
                 this.Description = "Solid star";
             }
-
-            HistoryProvider.Instance.Add(this);
         }
 
         public SingleFontIconViewModel(params char[] icons) : this()

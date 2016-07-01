@@ -13,8 +13,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <FontIcon Grid.Row="0" HorizontalAlignment="Center" Glyph="{Binding }" FontSize="64"/>
-        <TextBlock FontSize="18" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Converter={StaticResource CharToHexConverter}}"/>
+        <FontIcon Grid.Row="0" HorizontalAlignment="Center" Glyph="{Binding Char}" FontSize="64"/>
+        <TextBlock FontSize="18" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Char, Converter={StaticResource CharToHexConverter}}"/>
     </Grid>
 
 </view:ViewBase>

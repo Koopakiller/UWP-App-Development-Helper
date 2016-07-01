@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight.Command;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
@@ -57,5 +58,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             var item = (ViewModelLinkViewModel)e.ClickedItem;
             NavigationHelper.NavigateToExisting(item.ViewModelGenerator());
         }
+
+        public HistoryProvider History { get; } = HistoryProvider.Instance;
     }
 }

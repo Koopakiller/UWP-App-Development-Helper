@@ -28,9 +28,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
 
-            HistoryProvider.Instance.KnownTargets.Add("SingleFontIconViewModel", typeof(SingleFontIconViewModel));
-            this.LoadHistoryAsync().RunSynchronously();
-
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
         }
@@ -81,6 +78,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
             Window.Current.Activate();
 
             DispatcherHelper.Initialize();
+
+            HistoryProvider.Instance.KnownTargets.Add("SingleFontIconViewModel", typeof(SingleFontIconViewModel));
+            this.LoadHistoryAsync();
         }
 
         /// <summary>
@@ -100,12 +100,12 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+        private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
 
             //TODO: Save application state and stop any background activity
-            this.SaveHistoryAsync().RunSynchronously();
+            await this.SaveHistoryAsync();
 
             deferral.Complete();
         }
