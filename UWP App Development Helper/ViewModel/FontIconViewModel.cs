@@ -11,7 +11,6 @@ using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Threading;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
-using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
 using PostSharp.Patterns.Model;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel

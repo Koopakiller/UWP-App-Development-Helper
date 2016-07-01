@@ -222,7 +222,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public XElement Serialize()
         {
-            var el = new XElement(this.SerializationName);
+            var el = new XElement(nameof(SingleFontIconViewModel));
             el.Add(new XElement("Chars", this.Chars));
             el.Add(new XElement("Tags", this.Tags));
             el.Add(new XElement("Description", this.Description));
@@ -237,9 +237,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 this.Chars.Add(chr[0]);
             }
         }
-
-        public string SerializationName { get; } = nameof(SingleFontIconViewModel);
-
+        
         #endregion
     }
 }

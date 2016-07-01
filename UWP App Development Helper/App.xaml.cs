@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Threading;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
-using Koopakiller.Apps.UwpAppDevelopmentHelper.View;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper
@@ -14,7 +16,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    public sealed partial class App 
+    public sealed partial class App
     {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -26,7 +28,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
 
-            HistoryProvider.Instance.KnownTargets.Add(typeof(SingleFontIconViewModel));
+            HistoryProvider.Instance.KnownTargets.Add("SingleFontIconViewModel", typeof(SingleFontIconViewModel));
+            this.LoadHistoryAsync().RunSynchronously();
 
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
@@ -41,7 +44,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
         {
 
 #if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
+            if (Debugger.IsAttached)
             {
                 //x this.DebugSettings.EnableFrameRateCounter = true;
             }
@@ -100,8 +103,30 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
+
             //TODO: Save application state and stop any background activity
+            this.SaveHistoryAsync().RunSynchronously();
+
             deferral.Complete();
+        }
+
+        private async Task LoadHistoryAsync()
+        {
+            var historyFile = await ApplicationData.Current.RoamingFolder.TryGetItemAsync("history.xml") as IStorageFile;
+            if (historyFile == null)
+            {
+                return;
+            }
+            Debug.WriteLine($"Hisory file loading: {historyFile.Path}");
+            await HistoryProvider.Instance.LoadAsync(historyFile);
+            Debug.WriteLine("Hisory file loaded");
+        }
+
+        private async Task SaveHistoryAsync()
+        {
+            var historyFile = await ApplicationData.Current.RoamingFolder.CreateFileAsync("history.xml", CreationCollisionOption.ReplaceExisting);
+            Debug.WriteLine($"Hisory file was saved: {historyFile.Path}");
+            await HistoryProvider.Instance.SaveAsync(historyFile);
         }
     }
 }
