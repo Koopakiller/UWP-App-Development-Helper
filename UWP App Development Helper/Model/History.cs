@@ -36,6 +36,10 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
         public void Add(IHistoryItemTarget target)
         {
             this._history.Insert(0, target);
+            while (this._history.Count > 30)
+            {
+                this._history.RemoveAt(this._history.Count - 1);
+            }
         }
 
         public async Task LoadAsync(IStorageFile file)

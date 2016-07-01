@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
