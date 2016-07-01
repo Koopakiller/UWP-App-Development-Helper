@@ -10,12 +10,7 @@
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:HomeViewModel}">
 
-    <Grid >
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <StackPanel >
         
         <GridView Margin="0" ItemsSource="{Binding Items}" SelectionMode="None" Padding="5" IsItemClickEnabled="True">
             <interactivity:Interaction.Behaviors>
@@ -31,14 +26,14 @@
             </GridView.ItemContainerStyle>
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="310" Height="310" Background="{ThemeResource SystemControlHighlightAltAltHighBrush}" >
+                    <Grid Width="270" Height="150" Background="{ThemeResource SystemControlHighlightAltAltHighBrush}" >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
                         <Border Background="{ThemeResource SystemControlHighlightAccentBrush}" Padding="10">
-                            <FontIcon FontSize="244" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            <FontIcon FontSize="196" HorizontalAlignment="Center" VerticalAlignment="Center"
                                       Glyph="{Binding Glyph}"
                                       Foreground="{ThemeResource SystemControlHighlightAltAltHighBrush}"/>
                         </Border>
@@ -53,7 +48,8 @@
             </GridView.ItemTemplate>
         </GridView>
 
-        <GridView Grid.Row="1"  ItemsSource="{Binding History.History}">
+        <TextBlock Style="{StaticResource Header2}" Text="History" Margin="10 10 10 0"/>
+        <GridView ItemsSource="{Binding History.History}">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <ContentControl Content="{Binding PreviewViewModel}"
@@ -63,6 +59,6 @@
             </GridView.ItemTemplate>
         </GridView>
         
-    </Grid>
+    </StackPanel>
 </view:ViewBase>
 

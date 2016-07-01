@@ -19,11 +19,11 @@
                 </DataTemplate>
             </StackPanel.Resources>
 
-            <TextBlock Style="{StaticResource SectionHeaderStyle}" Text="Default accent colors"/>
+            <TextBlock Style="{StaticResource Header2}" Text="Default accent colors"/>
             <GridView ItemsSource="{Binding DefaultAccentColors}" 
                   ItemTemplate="{StaticResource ColorField}"/>
 
-            <TextBlock Style="{StaticResource SectionHeaderStyle}" Text="Xbox accent colors"/>
+            <TextBlock Style="{StaticResource Header2}" Text="Xbox accent colors"/>
             <GridView ItemsSource="{Binding XboxAccentColors}" ItemTemplate="{StaticResource ColorField}"/>
 
         </StackPanel>

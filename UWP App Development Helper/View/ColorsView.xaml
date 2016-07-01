@@ -19,7 +19,7 @@
             </controls:MyPivot.ItemContainerStyle>
             <controls:MyPivot.HeaderTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Header}" d:DataContext="{d:DesignInstance viewModel:HeaderViewModelBase}" />
+                    <TextBlock Style="{StaticResource Header1}" Text="{Binding Header}" d:DataContext="{d:DesignInstance viewModel:HeaderViewModelBase}" />
                 </DataTemplate>
             </controls:MyPivot.HeaderTemplate>
             <controls:MyPivot.ItemTemplate>
