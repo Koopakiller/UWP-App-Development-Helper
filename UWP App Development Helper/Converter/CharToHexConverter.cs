@@ -6,7 +6,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Converter
 {
     public class CharToHexConverter : IValueConverter
     {
-        public object Convert(object value) => this.Convert(value, null, null, "");
+        //TODO: improve handling of wrong values
+        public string Convert(char value) => this.Convert(value, null, null, "").ToString();
+        public char ConvertBack(string value) => (char)this.ConvertBack(value, null, null, "");
 
         public object Convert(object value, Type targetType, object parameter, string language)
         {

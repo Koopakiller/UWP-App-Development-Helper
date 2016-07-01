@@ -79,7 +79,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
                         instance.Load(element);
                         this._history.Add(instance);
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         Debug.WriteLine("An error occurred during loading an history entry.");
                         Debug.WriteLine(ex);
@@ -90,10 +90,10 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
 
         public async Task SaveAsync(IStorageFile file)
         {
-            var doc = new XDocument("History");
+            var doc = new XDocument(new XElement("History"));
             foreach (var historyItem in this.History)
             {
-                doc.Add(historyItem.Serialize());
+                doc.Root.Add(historyItem.Serialize());
             }
             using (var stream = await file.OpenStreamForWriteAsync())
             {

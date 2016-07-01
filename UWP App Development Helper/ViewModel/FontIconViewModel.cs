@@ -129,19 +129,19 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
             this.Mdl2 = new FontIconCollectionViewModel(
                 doc.Root.Elements("FontIcon")
-                    .Select(x => new SingleFontIconViewModel(
-                        x.Elements("Code")
-                         .Select(y => (char)Convert.ToInt32(y.Value, 16))
-                         .ToArray(),
-                        x.Elements("Tags")
+                    .Select(x => new SingleFontIconViewModel()
+                    {
+                        Chars = x.Elements("Code")
+                            .Select(y => (char) Convert.ToInt32(y.Value, 16))
+                            .ToArray(),
+                        Tags = x.Elements("Tags")
                             ?.FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)
                             ?.Elements("Tag")
                             ?.Select(y => y.Value)
                             ?.ToList(),
-                        x.Elements("Description")?
+                        Description = x.Elements("Description")?
                             .FirstOrDefault(y => int.Parse(y.Attribute("Language").Value) == code)?
-                            .Value)
-                    {
+                            .Value,
                         EnumValue = x.Element("EnumValue")?.Value,
                     })
                     .ToList())

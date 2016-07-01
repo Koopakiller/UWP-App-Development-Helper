@@ -13,6 +13,7 @@ using Windows.Storage.Pickers;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using GalaSoft.MvvmLight.Command;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Converter;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
 
@@ -30,6 +31,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 // ReSharper disable once ExplicitCallerInfoArgument
                 this.RaisePropertyChanged(nameof(this.JoinedTags));
             };
+            this.Chars = new List<char>();
             this.CopyCommand = new RelayCommand<string>(this.ExecuteCopy);
             this.NavigateBackCommand = new RelayCommand(this.NavigateBack);
             this.SaveFontIconImageCommand = new RelayCommand<FontIcon>(async fi => await this.SaveFontImageIconAsync(fi));
@@ -52,29 +54,17 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             }
         }
 
-        public SingleFontIconViewModel(params char[] icons) : this()
-        {
-            this.Chars = new List<char>(icons);
-            this.SelectedChar = this.Chars.FirstOrDefault();
-        }
-
-        public SingleFontIconViewModel(char[] icons, IList<string> tags, string description) : this(icons)
-        {
-            this.Tags = tags;
-            this.Description = description;
-        }
-
         #endregion
 
         #region Properties
 
-        public IList<char> Chars { get; }
+        public IList<char> Chars { get; set; }
 
-        public IList<string> Tags { get; }
+        public IList<string> Tags { get; set; }
 
         public string JoinedTags => string.Join(", ", this.Tags);
 
-        public string Description { get; }
+        public string Description { get; set; }
 
         public string EnumValue { get; set; }
 
@@ -220,20 +210,28 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public XElement Serialize()
         {
+            var cth = new CharToHexConverter();
             var el = new XElement(nameof(SingleFontIconViewModel));
-            el.Add(new XElement("Chars", this.Chars));
-            el.Add(new XElement("Tags", this.Tags));
+            el.Add(new XElement("Chars", this.Chars.Select(x => new XElement("Char", cth.Convert(x)))));
+            el.Add(new XElement("Tags", this.Tags.Select(x => new XElement("Tag", x))));
             el.Add(new XElement("Description", this.Description));
             return el;
         }
 
         public void Load(XElement data)
         {
+            var cth = new CharToHexConverter();
             this.Chars.Clear();
-            foreach (var chr in data.Element("Chars").Elements().Select(x => x.Value))
+            foreach (var chr in data.Element("Chars").Elements("Char").Select(x => cth.ConvertBack(x.Value)))
             {
-                this.Chars.Add(chr[0]);
+                this.Chars.Add(chr);
             }
+            this.Tags.Clear();
+            foreach (var tag in data.Element("Tags").Elements("Tag").Select(x => x.Value))
+            {
+                this.Tags.Add(tag);
+            }
+            this.Description = data.Element("Description").Value;
         }
 
         public ViewModelBase PreviewViewModel
