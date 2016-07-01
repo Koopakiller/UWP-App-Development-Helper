@@ -237,7 +237,20 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 this.Chars.Add(chr[0]);
             }
         }
-        
+
+        public ViewModelBase PreviewViewModel
+        {
+            get
+            {
+                var vm = new SingleFontIconPreviewViewModel()
+                {
+                    Char = this.Chars.FirstOrDefault()
+                };
+                return vm;
+            }
+        }
+
+
         #endregion
     }
 }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Windows.Storage;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
 {
@@ -12,6 +13,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Model
         XElement Serialize();
 
         void Load(XElement data);
+
+        ViewModelBase PreviewViewModel { get; }
     }
 
     public class HistoryItem
