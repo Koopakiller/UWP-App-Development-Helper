@@ -104,7 +104,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GlyphIconSource.cs" />
+    <Compile Include="Controls\Icon.cs" />
+    <Compile Include="Controls\IconSource.cs" />
     <Compile Include="Controls\MyPivot.cs" />
+    <Compile Include="Controls\PathDataIconSource.cs" />
     <Compile Include="Controls\Plaid.cs" />
     <Compile Include="Converter\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converter\CharToHexConverter.cs" />

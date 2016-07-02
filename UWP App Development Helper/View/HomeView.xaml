@@ -8,6 +8,7 @@
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    xmlns:controls="using:Koopakiller.Apps.UwpAppDevelopmentHelper.Controls"
     mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:HomeViewModel}">
 
     <StackPanel >
@@ -33,9 +34,9 @@
                         </Grid.RowDefinitions>
 
                         <Border Background="{ThemeResource SystemControlHighlightAccentBrush}" Padding="10">
-                            <FontIcon FontSize="196" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                      Glyph="{Binding Glyph}"
-                                      Foreground="{ThemeResource SystemControlHighlightAltAltHighBrush}"/>
+                            <controls:Icon Height="261" Width="261" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                           Source="{Binding IconSource}"
+                                           Foreground="{ThemeResource SystemControlHighlightAltAltHighBrush}"/>
                         </Border>
 
                         <StackPanel Grid.Row="1" Margin="5">

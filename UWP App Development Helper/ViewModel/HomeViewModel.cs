@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Input;
 using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight.Command;
+using Koopakiller.Apps.UwpAppDevelopmentHelper.Controls;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Helper;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Model;
 
@@ -19,33 +20,33 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 new ViewModelLinkViewModel()
                 {
                     Header = "Accent Colors",
-                    Glyph = "\uE2B1",
+                    IconSource = new GlyphIconSource("\uE2B1") {FontSize = double.NaN},
                     ViewModelGenerator = () =>
                     {
                         var cvm = new ColorsViewModel();
                         cvm.SelectedSubSection = cvm.SubSections.FirstOrDefault(x => x.GetType() == typeof (AccentColorsViewModel));
                         return cvm;
                     },
-                    ViewModelType = typeof(ColorsViewModel),
+                    ViewModelType = typeof (ColorsViewModel),
                 },
                 new ViewModelLinkViewModel()
                 {
                     Header = "ThemeResource Colors",
-                    Glyph = "\uE2B1",
+                    IconSource = new GlyphIconSource("\uE2B1") {FontSize = double.NaN},
                     ViewModelGenerator = () =>
                     {
                         var cvm = new ColorsViewModel();
                         cvm.SelectedSubSection = cvm.SubSections.FirstOrDefault(x => x.GetType() == typeof (ThemeResourceColorViewModel));
                         return cvm;
                     },
-                    ViewModelType = typeof(ColorsViewModel),
+                    ViewModelType = typeof (ColorsViewModel),
                 },
                 new ViewModelLinkViewModel()
                 {
                     Header = "Font Icons",
-                    Glyph = "\uE128",
+                    IconSource = new GlyphIconSource("\uE128") {FontSize = double.NaN},
                     ViewModelGenerator = () => new FontIconViewModel(),
-                    ViewModelType = typeof(FontIconViewModel),
+                    ViewModelType = typeof (FontIconViewModel),
                 },
             };
         }

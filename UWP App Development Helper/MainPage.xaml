@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
+    xmlns:controls="using:Koopakiller.Apps.UwpAppDevelopmentHelper.Controls"
     mc:Ignorable="d" >
     <Page.DataContext>
         <viewModel:MainViewModel />
@@ -21,7 +22,7 @@
                                         <ColumnDefinition Width="24"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <FontIcon Grid.Column="0" Glyph="{Binding Glyph}" HorizontalAlignment="Left"/>
+                                    <controls:Icon Grid.Column="0" Source="{Binding IconSource}" HorizontalAlignment="Stretch"/>
                                     <TextBlock Grid.Column="1" Text="{Binding Header}" Margin="10 1 0 1"/>
                                 </Grid>
                             </DataTemplate>
