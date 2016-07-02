@@ -26,6 +26,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Controls
             var value = (IconSource)e.NewValue;
             icon.Content = value.CreateControl(icon.ActualWidth, icon.ActualHeight);
         }
+
         private void OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
             this.Source?.UpdateControlSize(this.ActualWidth, this.ActualHeight);
