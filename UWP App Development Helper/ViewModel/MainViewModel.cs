@@ -70,10 +70,16 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public ICommand MenuItemSelectedCommand { get; }
 
-        private void OnMenuItemSelected(ItemClickEventArgs e)
+        private async void OnMenuItemSelected(ItemClickEventArgs e)
         {
+            var lastSelected = this._selectedHamburgerItem;
             var item = (NavigationViewModelBase)e.ClickedItem;
-            item.NavigateAsync();
+            await item.NavigateAsync();
+
+            if (item.GetTargetViewModelType() == null)
+            {
+                this.SelectedHamburgerItem = lastSelected;
+            }
         }
 
         public IList<NavigationViewModelBase> UpperHamburgerMenuItems { get; private set; }
@@ -84,10 +90,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             get { return this._selectedHamburgerItem; }
             set
             {
-                if (value.GetTargetViewModelType() != null)
-                {
-                    this._selectedHamburgerItem = value;
-                }
+                this._selectedHamburgerItem = value;
                 this.RaisePropertyChanged();
             }
         }
