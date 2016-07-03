@@ -35,9 +35,10 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Controls
         {
             return new PathDataIconSource(await FileIO.ReadTextAsync(file));
         }
+
         public static async Task<PathDataIconSource> FromResourceAsync(string filePath)
         {
-            var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri($"ms-appx:///Resources/{filePath}"));
+            var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri($"ms-appx:///Resources{(filePath.StartsWith("/") ? "" : "/")}{filePath}"));
             return await FromStorageFileAsync(file);
         }
     }
