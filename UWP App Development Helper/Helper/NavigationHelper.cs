@@ -15,7 +15,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Helper
         
         public static void NavigateToExisting(Type type)
         {
-            var target = MainViewModel.UpperHamburgerMenuItems.Concat(MainViewModel.LowerHamburgerMenuItems).FirstOrDefault(x => x.ViewModelType == type);
+            var target = MainViewModel.UpperHamburgerMenuItems.Concat(MainViewModel.LowerHamburgerMenuItems)
+                                                              .FirstOrDefault(x => (x as ViewModelNavigationViewModel)?.TargetViewModelType == type);
             MainViewModel.SelectedHamburgerItem = target;
         }
     }

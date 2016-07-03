@@ -21,6 +21,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
     public class SingleFontIconViewModel : ViewModelBase, IHistoryItemTarget
     {
+        private IList<char> _chars;
+
         #region .ctor
 
         public SingleFontIconViewModel()
@@ -52,13 +54,27 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 this.EnumValue = "RatingStarFillLegacy";
                 this.Description = "Solid star";
             }
+
+
         }
 
         #endregion
 
         #region Properties
 
-        public IList<char> Chars { get; set; }
+        public IList<char> Chars
+        {
+            get { return this._chars; }
+            set
+            {
+                this._chars = value;
+                this.RaisePropertyChanged();
+                if (this._chars != null)
+                {
+                    this.SelectedChar = this.Chars.FirstOrDefault();
+                }
+            }
+        }
 
         public IList<string> Tags { get; set; }
 
@@ -68,13 +84,13 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 
         public string EnumValue { get; set; }
 
+        public char SelectedChar { get; set; }
+
         public ICommand CopyCommand { get; }
 
         public ICommand NavigateBackCommand { get; }
 
         public ICommand SaveFontIconImageCommand { get; }
-
-        public char SelectedChar { get; set; }
 
         public IReadOnlyCollection<double> CommonFontSizes { get; } =
             new double[] { 8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72, 96, 144, 192, 288, 384, 576 };

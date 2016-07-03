@@ -66,6 +66,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
+            DispatcherHelper.Initialize();
 
             if (rootFrame.Content == null)
             {
@@ -77,7 +78,6 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper
             // Ensure the current window is active
             Window.Current.Activate();
 
-            DispatcherHelper.Initialize();
 
             HistoryProvider.Instance.KnownTargets.Add("SingleFontIconViewModel", typeof(SingleFontIconViewModel));
             await this.LoadHistoryAsync();

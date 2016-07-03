@@ -1,16 +1,17 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Koopakiller.Apps.UwpAppDevelopmentHelper.Controls;
 
 namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
 {
-    public class ViewModelLinkViewModel : ViewModelBase
+    public abstract class NavigationViewModelBase : ViewModelBase
     {
-        public Type ViewModelType { get; set; }
+        public abstract Task NavigateAsync();
 
         public string Header { get; set; }
 
-        public Func<ViewModelBase> ViewModelGenerator { get; set; }
-
         public IconSource IconSource { get; set; }
+
+        public abstract Type GetTargetViewModelType();
     }
 }

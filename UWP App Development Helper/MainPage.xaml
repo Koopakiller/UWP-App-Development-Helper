@@ -6,6 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel"
     xmlns:controls="using:Koopakiller.Apps.UwpAppDevelopmentHelper.Controls"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     mc:Ignorable="d" >
     <Page.DataContext>
         <viewModel:MainViewModel />
@@ -17,7 +19,7 @@
                     <Grid Background="Transparent">
                         <Grid.Resources>
                             <DataTemplate x:Key="HamburgerMenuItemDataTemplate">
-                                <Grid d:DataContext="{d:DesignInstance viewModel:ViewModelLinkViewModel}">
+                                <Grid d:DataContext="{d:DesignInstance viewModel:ViewModelNavigationViewModel}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="24"/>
                                         <ColumnDefinition Width="*"/>
@@ -135,19 +137,31 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        
+
                         <ToggleButton Grid.Row="0" Name="HamburgerMenuButton" Background="Transparent" IsChecked="false" BorderThickness="0">
                             <FontIcon Glyph="&#xE700;" Width="24" Margin="2"/>
                         </ToggleButton>
-                        
-                        <ListView Grid.Row="1"
+
+                        <ListView Grid.Row="1" IsItemClickEnabled="True"
                                   ItemsSource="{Binding UpperHamburgerMenuItems}" SelectedItem="{Binding SelectedHamburgerItem, Mode=TwoWay}"
-                                  ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}" />
-                        
-                        <ListView Grid.Row="2" VerticalAlignment="Bottom"
+                                  ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}" >
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="ItemClick">
+                                    <core:InvokeCommandAction Command="{Binding MenuItemSelectedCommand}" />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                        </ListView>
+
+                        <ListView Grid.Row="2" VerticalAlignment="Bottom" IsItemClickEnabled="True"
                                  ItemsSource="{Binding LowerHamburgerMenuItems}"  SelectedItem="{Binding SelectedHamburgerItem, Mode=TwoWay}"
-                                 ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}"/>
-                        
+                                 ItemTemplate="{StaticResource HamburgerMenuItemDataTemplate}" ItemContainerStyle="{StaticResource HamburgerMenuItemContainerStyle}">
+                            <interactivity:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="ItemClick">
+                                    <core:InvokeCommandAction Command="{Binding MenuItemSelectedCommand}" />
+                                </core:EventTriggerBehavior>
+                            </interactivity:Interaction.Behaviors>
+                        </ListView>
+
                     </Grid>
                 </ScrollViewer>
             </SplitView.Pane>

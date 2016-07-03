@@ -15,9 +15,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             this.NavigateCommand = new RelayCommand<ItemClickEventArgs>(this.Navigate);
             this.HistoryNavigateCommand = new RelayCommand<ItemClickEventArgs>(this.HistoryNavigate);
-            this.Items = new ObservableCollection<ViewModelLinkViewModel>()
+            this.Items = new ObservableCollection<ViewModelNavigationViewModel>()
             {
-                new ViewModelLinkViewModel()
+                new ViewModelNavigationViewModel()
                 {
                     Header = "Accent Colors",
                     IconSource = new GlyphIconSource("\uE2B1") {FontSize = double.NaN},
@@ -27,9 +27,9 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                         cvm.SelectedSubSection = cvm.SubSections.FirstOrDefault(x => x.GetType() == typeof (AccentColorsViewModel));
                         return cvm;
                     },
-                    ViewModelType = typeof (ColorsViewModel),
+                    TargetViewModelType = typeof (ColorsViewModel),
                 },
-                new ViewModelLinkViewModel()
+                new ViewModelNavigationViewModel()
                 {
                     Header = "ThemeResource Colors",
                     IconSource = new GlyphIconSource("\uE2B1") {FontSize = double.NaN},
@@ -39,27 +39,28 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                         cvm.SelectedSubSection = cvm.SubSections.FirstOrDefault(x => x.GetType() == typeof (ThemeResourceColorViewModel));
                         return cvm;
                     },
-                    ViewModelType = typeof (ColorsViewModel),
+                    TargetViewModelType = typeof (ColorsViewModel),
                 },
-                new ViewModelLinkViewModel()
+                new ViewModelNavigationViewModel()
                 {
                     Header = "Font Icons",
                     IconSource = new GlyphIconSource("\uE128") {FontSize = double.NaN},
                     ViewModelGenerator = () => new FontIconViewModel(),
-                    ViewModelType = typeof (FontIconViewModel),
+                    TargetViewModelType = typeof (FontIconViewModel),
                 },
             };
         }
 
-        public ObservableCollection<ViewModelLinkViewModel> Items { get; }
+        public ObservableCollection<ViewModelNavigationViewModel> Items { get; }
 
         public ICommand NavigateCommand { get; }
         public ICommand HistoryNavigateCommand { get; }
 
-        private void Navigate(ItemClickEventArgs e)
+        private async void Navigate(ItemClickEventArgs e)
         {
-            var item = (ViewModelLinkViewModel)e.ClickedItem;
-            NavigationHelper.NavigateToExisting(item.ViewModelGenerator());
+            var item = (NavigationViewModelBase)e.ClickedItem;
+            await item.NavigateAsync();
+            //NavigationHelper.NavigateToExisting(item.ViewModelGenerator());
         }
 
         private void HistoryNavigate(ItemClickEventArgs e)
