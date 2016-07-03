@@ -1,3 +1,6 @@
+using System;
+using System.Threading.Tasks;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Shapes;
@@ -26,6 +29,16 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.Controls
         {
             this._path.Width = width;
             this._path.Height = height;
+        }
+
+        public static async Task<PathDataIconSource> FromStorageFileAsync(IStorageFile file)
+        {
+            return new PathDataIconSource(await FileIO.ReadTextAsync(file));
+        }
+        public static async Task<PathDataIconSource> FromResourceAsync(string filePath)
+        {
+            var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri($"ms-appx:///Resources/{filePath}"));
+            return await FromStorageFileAsync(file);
         }
     }
 }

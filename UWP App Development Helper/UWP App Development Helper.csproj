@@ -97,6 +97,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\mdl2.xml" />
+    <Content Include="Resources\PathData\GitHub.txt" />
     <Content Include="Resources\ThemeResources.txt" />
     <None Include="project.json" />
   </ItemGroup>
