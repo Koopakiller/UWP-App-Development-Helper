@@ -19,6 +19,11 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
         {
             this.MenuItemSelectedCommand = new RelayCommand<ItemClickEventArgs>(this.OnMenuItemSelected);
             NavigationHelper.MainViewModel = this;
+            this.LoadMenuItems();
+        }
+
+        private async void LoadMenuItems()
+        {
             this.UpperHamburgerMenuItems = new ObservableCollection<NavigationViewModelBase>()
             {
                 new ViewModelNavigationViewModel()
@@ -49,7 +54,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                 new UriLinkNavigationViewModel()
                 {
                     Header = "Source on GitHub",
-                    IconSource = PathDataIconSource.FromResourceAsync(@"PathData/GitHub.txt").Result,
+                    IconSource =await  PathDataIconSource.FromResourceAsync(@"PathData/GitHub.txt"),
                     Uri = new Uri(@"https://github.com/Koopakiller/UWP-App-Development-Helper"),
                 },
                 new ViewModelNavigationViewModel()
@@ -60,7 +65,7 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
                     TargetViewModelType = typeof (AboutViewModel),
                 },
             };
-            this.UpperHamburgerMenuItems.FirstOrDefault().NavigateAsync();
+            await this.UpperHamburgerMenuItems.FirstOrDefault().NavigateAsync();
         }
 
         public ICommand MenuItemSelectedCommand { get; }
@@ -71,8 +76,8 @@ namespace Koopakiller.Apps.UwpAppDevelopmentHelper.ViewModel
             item.NavigateAsync();
         }
 
-        public IList<NavigationViewModelBase> UpperHamburgerMenuItems { get; }
-        public IList<NavigationViewModelBase> LowerHamburgerMenuItems { get; }
+        public IList<NavigationViewModelBase> UpperHamburgerMenuItems { get; private set; }
+        public IList<NavigationViewModelBase> LowerHamburgerMenuItems { get; private set; }
 
         public NavigationViewModelBase SelectedHamburgerItem
         {
