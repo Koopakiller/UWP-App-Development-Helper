@@ -21,7 +21,8 @@
 
             <TextBlock Style="{StaticResource Header2}" Text="Default accent colors"/>
             <GridView ItemsSource="{Binding DefaultAccentColors}" 
-                  ItemTemplate="{StaticResource ColorField}"/>
+                      ItemTemplate="{StaticResource ColorField}">
+            </GridView>
 
             <TextBlock Style="{StaticResource Header2}" Text="Xbox accent colors"/>
             <GridView ItemsSource="{Binding XboxAccentColors}" ItemTemplate="{StaticResource ColorField}"/>
