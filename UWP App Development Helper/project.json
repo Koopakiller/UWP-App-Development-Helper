@@ -1,13 +1,10 @@
 ﻿{
   "dependencies": {
-    "Microsoft.ApplicationInsights": "2.0.1",
-    "Microsoft.ApplicationInsights.PersistenceChannel": "1.2.3",
-    "Microsoft.ApplicationInsights.WindowsApps": "1.1.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
     "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
     "MvvmLight": "5.3.0",
     "MvvmLightLibs": "5.3.0",
-    "PostSharp": "4.2.27",
+    "PostSharp": "4.3.20",
     "PostSharp.Patterns.Model": "4.2.27",
     "Win2D.uwp": "1.18.0"
   },
